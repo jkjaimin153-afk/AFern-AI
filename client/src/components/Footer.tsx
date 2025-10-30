@@ -47,47 +47,51 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-card border-t border-border">
-      <div className="container mx-auto max-w-7xl px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+    <footer className="relative border-t border-white/10" style={{ background: "rgba(10, 15, 30, 0.95)" }}>
+      <div className="absolute inset-0 gradient-mesh opacity-20" />
+      <div className="container mx-auto max-w-7xl px-6 py-16 relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <Phone className="h-6 w-6 text-accent" />
-              <span className="font-serif text-2xl font-bold">InFlowCalls</span>
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center glow-purple">
+                <Phone className="h-7 w-7 text-white" />
+              </div>
+              <span className="text-3xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">InFlowCalls</span>
             </div>
-            <p className="text-muted-foreground mb-4">
+            <p className="text-muted-foreground text-lg mb-6 max-w-md">
               Enterprise-grade AI receptionist & outbound caller that answers, qualifies and books — 24/7.
             </p>
-            <div className="flex space-x-2 mb-6">
-              <Button variant="ghost" size="icon" data-testid="link-twitter" aria-label="Twitter" asChild>
+            <div className="flex space-x-2 mb-8">
+              <Button variant="ghost" size="icon" className="glassmorphism border border-white/10 hover:border-primary/50" data-testid="link-twitter" aria-label="Twitter" asChild>
                 <a href="https://twitter.com/inflowcalls" target="_blank" rel="noopener noreferrer">
                   <Twitter className="h-5 w-5" />
                 </a>
               </Button>
-              <Button variant="ghost" size="icon" data-testid="link-linkedin" aria-label="LinkedIn" asChild>
+              <Button variant="ghost" size="icon" className="glassmorphism border border-white/10 hover:border-primary/50" data-testid="link-linkedin" aria-label="LinkedIn" asChild>
                 <a href="https://linkedin.com/company/inflowcalls" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="h-5 w-5" />
                 </a>
               </Button>
-              <Button variant="ghost" size="icon" data-testid="link-github" aria-label="GitHub" asChild>
+              <Button variant="ghost" size="icon" className="glassmorphism border border-white/10 hover:border-primary/50" data-testid="link-github" aria-label="GitHub" asChild>
                 <a href="https://github.com/inflowcalls" target="_blank" rel="noopener noreferrer">
                   <Github className="h-5 w-5" />
                 </a>
               </Button>
             </div>
-            <form onSubmit={handleNewsletterSubmit} className="flex gap-2">
+            <form onSubmit={handleNewsletterSubmit} className="flex gap-3">
               <Input
                 type="email"
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
+                className="glassmorphism border-white/10 h-12 text-base"
                 data-testid="input-newsletter-email"
                 aria-label="Newsletter email"
               />
               <Button 
                 type="submit" 
-                className="bg-accent text-accent-foreground hover:bg-accent/90"
+                className="bg-gradient-to-r from-primary to-accent text-white hover:opacity-90 h-12 px-6 font-semibold"
                 disabled={newsletterMutation.isPending}
                 data-testid="button-newsletter-submit"
               >
@@ -97,13 +101,13 @@ export function Footer() {
           </div>
 
           <div className="lg:pl-12">
-            <h3 className="font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
+            <h3 className="text-xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Quick Links</h3>
+            <ul className="space-y-4">
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <Link 
                     href={link.href}
-                    className="text-muted-foreground hover:text-accent transition-colors" 
+                    className="text-muted-foreground hover:text-primary transition-colors text-lg" 
                     data-testid={`link-footer-${link.name.toLowerCase().replace(/\s+/g, '-')}`}
                   >
                     {link.name}
@@ -114,8 +118,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} InFlowCalls. All rights reserved.</p>
+        <div className="border-t border-white/10 pt-8 text-center text-muted-foreground">
+          <p className="text-sm">&copy; {new Date().getFullYear()} InFlowCalls. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -16,14 +16,14 @@ export function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60" style={{ boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)" }}>
+    <header className="sticky top-0 z-50 w-full border-b border-white/10 backdrop-blur-xl" style={{ background: "rgba(10, 15, 30, 0.8)" }}>
       <div className="container mx-auto max-w-7xl px-6 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-3 hover-elevate active-elevate-2 rounded-lg px-3 py-2" data-testid="link-home">
-            <div className="w-10 h-10 rounded-lg bg-black flex items-center justify-center">
-              <Phone className="h-6 w-6 text-orange-400" />
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center glow-purple">
+              <Phone className="h-6 w-6 text-white" />
             </div>
-            <span className="font-serif text-3xl font-bold text-foreground">InFlowCalls</span>
+            <span className="text-3xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">InFlowCalls</span>
           </Link>
 
           <nav className="hidden md:flex items-center space-x-1">
@@ -31,7 +31,7 @@ export function Header() {
               <Button 
                 key={item.name}
                 variant="ghost"
-                className={location === item.href ? "bg-accent/10 text-accent" : ""}
+                className={location === item.href ? "bg-primary/10 text-primary border border-primary/20" : "text-foreground/80 hover:text-foreground"}
                 data-testid={`link-nav-${item.name.toLowerCase()}`}
                 asChild
               >
@@ -41,7 +41,7 @@ export function Header() {
           </nav>
 
           <div className="hidden md:flex items-center space-x-3">
-            <Button className="bg-accent text-accent-foreground hover:bg-accent/90" data-testid="button-demo-header" asChild>
+            <Button className="bg-gradient-to-r from-primary to-accent text-white hover:opacity-90 glow-purple font-semibold" data-testid="button-demo-header" asChild>
               <Link href="/demo">Request Demo</Link>
             </Button>
           </div>
@@ -57,13 +57,13 @@ export function Header() {
         </div>
 
         {mobileMenuOpen && (
-          <div className="md:hidden pt-4 pb-2 border-t border-border mt-4">
+          <div className="md:hidden pt-4 pb-2 border-t border-white/10 mt-4">
             <nav className="flex flex-col space-y-2">
               {navigation.map((item) => (
                 <Button 
                   key={item.name}
                   variant="ghost" 
-                  className={`w-full justify-start ${location === item.href ? "bg-accent/10 text-accent" : ""}`}
+                  className={`w-full justify-start ${location === item.href ? "bg-primary/10 text-primary" : ""}`}
                   onClick={() => setMobileMenuOpen(false)}
                   data-testid={`link-mobile-${item.name.toLowerCase()}`}
                   asChild
@@ -71,7 +71,7 @@ export function Header() {
                   <Link href={item.href}>{item.name}</Link>
                 </Button>
               ))}
-              <Button className="w-full bg-accent text-accent-foreground hover:bg-accent/90" onClick={() => setMobileMenuOpen(false)} data-testid="button-mobile-demo" asChild>
+              <Button className="w-full bg-gradient-to-r from-primary to-accent text-white hover:opacity-90" onClick={() => setMobileMenuOpen(false)} data-testid="button-mobile-demo" asChild>
                 <Link href="/demo">Request Demo</Link>
               </Button>
             </nav>

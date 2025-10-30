@@ -19,9 +19,11 @@ Preferred communication style: Simple, everyday language.
 **UI Component System**: Radix UI primitives with shadcn/ui patterns, styled using Tailwind CSS with a custom design system. Components follow the "new-york" style variant with extensive use of CSS variables for theming.
 
 **Design System**:
-- **Color Palette**: Light mode default with bright, approachable colors (Teal #137C8B primary, Coral #FF7A59 accent, Saffron Yellow #FFC857 highlights)
-- **Typography**: Playfair Display for headings (serif, premium feel), Inter for body text (clean sans-serif)
-- **Custom CSS Variables**: HSL-based color system with alpha channel support for dynamic theming
+- **Color Palette**: Futuristic dark mode with purple/cyan gradient accents (#0A0F1E background, #9333EA primary purple, #00C4FF cyan, #A855F7 accent purple)
+- **Visual Style**: Corporate AI aesthetic inspired by vapi.ai and fin.ai - glassmorphism effects, gradient backgrounds, glowing interactions, modern rounded corners
+- **Typography**: Inter for all text (modern, clean sans-serif), large bold headlines with gradient text effects
+- **Effects**: Backdrop blur, purple glow on interactive elements, gradient mesh backgrounds, smooth transitions
+- **Custom CSS Variables**: HSL-based color system with purple/cyan gradients, glow utilities, glassmorphism utilities
 - **Responsive Design**: Mobile-first approach with breakpoint at 768px, max content width 1200-1400px
 
 **State Management**: TanStack Query (React Query) for server state with custom query client configuration. No global client state management library - relies on React hooks and component state.

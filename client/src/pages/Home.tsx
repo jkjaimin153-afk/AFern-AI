@@ -45,20 +45,32 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 to-background py-16 md:py-24">
-        <div className="container mx-auto max-w-4xl px-6 relative z-10">
-          <div className="text-center space-y-6">
-            <h1 className="font-serif text-5xl md:text-6xl font-bold leading-tight text-foreground" data-testid="text-hero-title">
-              Never Miss A Call. <span className="text-accent">Turn Conversations Into Customers.</span>
+      <section className="relative overflow-hidden py-20 md:py-32">
+        <div className="absolute inset-0 gradient-mesh opacity-50" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
+        
+        <div className="container mx-auto max-w-5xl px-6 relative z-10">
+          <div className="text-center space-y-8">
+            <div className="inline-block px-4 py-2 rounded-full border border-primary/30 bg-primary/5 backdrop-blur-sm mb-4">
+              <span className="text-sm font-medium text-primary">Enterprise AI Voice Technology</span>
+            </div>
+            
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold leading-none tracking-tight" data-testid="text-hero-title">
+              Never Miss A Call.{" "}
+              <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
+                Turn Conversations Into Customers.
+              </span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+            
+            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
               InFlowCalls is an enterprise-grade AI receptionist & outbound caller that answers, qualifies and books — 24/7 — integrated with your calendar, CRM, and POS.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <Link href="/demo">
                 <Button 
                   size="lg" 
-                  className="bg-accent text-accent-foreground hover:bg-accent/90 h-14 px-8 text-lg hover:scale-105 transition-transform"
+                  className="bg-primary text-primary-foreground hover:bg-primary/90 h-14 px-10 text-lg font-semibold glow-purple"
                   data-testid="button-request-demo-hero"
                 >
                   Request a 5-Min Demo
@@ -67,7 +79,7 @@ export default function Home() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="h-14 px-8 text-lg border-accent/50 hover:bg-accent/10"
+                className="h-14 px-10 text-lg font-semibold glassmorphism border-white/10"
                 onClick={() => setAudioModalOpen(true)}
                 data-testid="button-listen-demo"
               >
@@ -77,72 +89,99 @@ export default function Home() {
             </div>
           </div>
         </div>
+        
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
       </section>
 
-      <section className="py-8 bg-secondary/10 border-y border-secondary/20">
-        <div className="container mx-auto max-w-7xl px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div data-testid="kpi-answered" className="relative">
-              <div className="text-5xl font-bold font-serif text-accent mb-2">98%</div>
-              <p className="text-foreground font-medium">Answered calls automatically</p>
+      <section className="py-12 relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-secondary/5" />
+        <div className="container mx-auto max-w-7xl px-6 relative">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+            <div data-testid="kpi-answered" className="relative group">
+              <div className="text-6xl md:text-7xl font-bold bg-gradient-to-br from-primary to-accent bg-clip-text text-transparent mb-3">98%</div>
+              <p className="text-lg text-foreground/90 font-medium">Answered calls automatically</p>
+              <div className="absolute inset-0 -z-10 bg-primary/5 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
             </div>
-            <div data-testid="kpi-booking" className="relative">
-              <div className="text-5xl font-bold font-serif text-accent mb-2">5</div>
-              <p className="text-foreground font-medium">Avg time to booking</p>
+            <div data-testid="kpi-booking" className="relative group">
+              <div className="text-6xl md:text-7xl font-bold bg-gradient-to-br from-secondary to-primary bg-clip-text text-transparent mb-3">5</div>
+              <p className="text-lg text-foreground/90 font-medium">Avg time to booking</p>
+              <div className="absolute inset-0 -z-10 bg-secondary/5 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
             </div>
-            <div data-testid="kpi-businesses" className="relative">
-              <div className="text-5xl font-bold font-serif text-accent mb-2">15+</div>
-              <p className="text-foreground font-medium">Businesses onboarded</p>
+            <div data-testid="kpi-businesses" className="relative group">
+              <div className="text-6xl md:text-7xl font-bold bg-gradient-to-br from-accent to-secondary bg-clip-text text-transparent mb-3">15+</div>
+              <p className="text-lg text-foreground/90 font-medium">Businesses onboarded</p>
+              <div className="absolute inset-0 -z-10 bg-accent/5 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-20 md:py-32">
+      <section className="py-24 md:py-32 relative">
         <div className="container mx-auto max-w-7xl px-6">
-          <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6" data-testid="text-features-title">
-              Enterprise-Grade Intelligence, <span className="text-accent">Effortless Setup</span>
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6" data-testid="text-features-title">
+              Enterprise-Grade Intelligence,{" "}
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                Effortless Setup
+              </span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
               Powered by advanced AI that understands context, handles complex conversations, and integrates seamlessly with your existing workflow.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6">
             {features.map((feature, idx) => (
-              <Card key={idx} className="p-8 hover-elevate active-elevate-2 transition-all cursor-pointer" data-testid={`card-feature-${idx}`}>
-                <feature.icon className="h-12 w-12 text-accent mb-4" />
-                <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
-                <p className="text-muted-foreground">{feature.description}</p>
-              </Card>
+              <div 
+                key={idx} 
+                className="group relative p-8 rounded-2xl glassmorphism border border-white/10 hover-elevate transition-all cursor-pointer" 
+                data-testid={`card-feature-${idx}`}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="relative">
+                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-6 glow-purple">
+                    <feature.icon className="h-7 w-7 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
+                  <p className="text-muted-foreground text-lg leading-relaxed">{feature.description}</p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-20 md:py-32 bg-gradient-to-br from-primary/5 to-background">
-        <div className="container mx-auto max-w-7xl px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+      <section className="py-24 md:py-32 relative overflow-hidden">
+        <div className="absolute inset-0 gradient-mesh opacity-30" />
+        <div className="container mx-auto max-w-7xl px-6 relative">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6" data-testid="text-benefits-title">
-                Built for Modern Businesses
+              <h2 className="text-5xl md:text-6xl font-bold mb-8" data-testid="text-benefits-title">
+                Built for{" "}
+                <span className="bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">
+                  Modern Businesses
+                </span>
               </h2>
-              <div className="space-y-4">
+              <div className="space-y-6">
                 {benefits.map((benefit, idx) => (
-                  <div key={idx} className="flex items-start gap-3" data-testid={`benefit-${idx}`}>
+                  <div key={idx} className="flex items-start gap-4 group" data-testid={`benefit-${idx}`}>
                     <div className="mt-1 flex-shrink-0">
-                      <div className="w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center">
-                        <Check className="h-4 w-4 text-accent" />
+                      <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center glow-purple">
+                        <Check className="h-5 w-5 text-white" />
                       </div>
                     </div>
-                    <p className="text-lg">{benefit}</p>
+                    <p className="text-lg md:text-xl text-foreground/90 group-hover:text-foreground transition-colors">{benefit}</p>
                   </div>
                 ))}
               </div>
-              <div className="mt-8">
+              <div className="mt-10">
                 <Link href="/product">
-                  <Button size="lg" variant="outline" className="border-accent/50" data-testid="button-explore-features">
+                  <Button 
+                    size="lg" 
+                    variant="outline" 
+                    className="border-primary/30 glassmorphism h-12 px-8 text-lg font-semibold"
+                    data-testid="button-explore-features"
+                  >
                     Explore All Features
                   </Button>
                 </Link>
@@ -150,59 +189,73 @@ export default function Home() {
             </div>
 
             <div className="relative">
-              <Card className="p-8 bg-card/50 backdrop-blur-sm">
-                <div className="space-y-6">
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
-                      <Phone className="h-6 w-6 text-accent" />
+              <div className="relative p-8 rounded-2xl glassmorphism border border-white/10">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl" />
+                <div className="relative space-y-8">
+                  <div className="flex items-center gap-5">
+                    <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-accent to-accent/60 flex items-center justify-center glow-purple flex-shrink-0">
+                      <Phone className="h-8 w-8 text-white" />
                     </div>
-                    <div className="flex-1">
-                      <div className="h-2 bg-accent/20 rounded-full w-3/4 mb-2" />
-                      <div className="h-2 bg-accent/10 rounded-full w-1/2" />
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                      <Calendar className="h-6 w-6 text-primary" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="h-2 bg-primary/20 rounded-full w-2/3 mb-2" />
-                      <div className="h-2 bg-primary/10 rounded-full w-1/3" />
+                    <div className="flex-1 space-y-3">
+                      <div className="h-3 bg-gradient-to-r from-accent/40 to-transparent rounded-full w-3/4" />
+                      <div className="h-3 bg-gradient-to-r from-accent/20 to-transparent rounded-full w-1/2" />
                     </div>
                   </div>
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
-                      <TrendingUp className="h-6 w-6 text-accent" />
+                  <div className="flex items-center gap-5">
+                    <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center glow-purple flex-shrink-0">
+                      <Calendar className="h-8 w-8 text-white" />
                     </div>
-                    <div className="flex-1">
-                      <div className="h-2 bg-accent/20 rounded-full w-4/5 mb-2" />
-                      <div className="h-2 bg-accent/10 rounded-full w-2/5" />
+                    <div className="flex-1 space-y-3">
+                      <div className="h-3 bg-gradient-to-r from-primary/40 to-transparent rounded-full w-2/3" />
+                      <div className="h-3 bg-gradient-to-r from-primary/20 to-transparent rounded-full w-1/3" />
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-5">
+                    <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-secondary to-secondary/60 flex items-center justify-center glow-cyan flex-shrink-0">
+                      <TrendingUp className="h-8 w-8 text-white" />
+                    </div>
+                    <div className="flex-1 space-y-3">
+                      <div className="h-3 bg-gradient-to-r from-secondary/40 to-transparent rounded-full w-4/5" />
+                      <div className="h-3 bg-gradient-to-r from-secondary/20 to-transparent rounded-full w-2/5" />
                     </div>
                   </div>
                 </div>
-              </Card>
+              </div>
+              <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 via-accent/20 to-secondary/20 rounded-3xl blur-2xl -z-10 opacity-50" />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-20 md:py-32">
-        <div className="container mx-auto max-w-7xl px-6 text-center">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">
-            Ready to Transform Your Calling Experience?
-          </h2>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join hundreds of businesses automating their phone operations with InFlowCalls.
-          </p>
-          <Link href="/demo">
-            <Button 
-              size="lg" 
-              className="bg-accent text-accent-foreground hover:bg-accent/90 h-14 px-12 text-lg"
-              data-testid="button-cta-bottom"
-            >
-              Get Started Today
-            </Button>
-          </Link>
+      <section className="py-24 md:py-32 relative overflow-hidden">
+        <div className="absolute inset-0 gradient-mesh opacity-40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
+        
+        <div className="container mx-auto max-w-4xl px-6 text-center relative z-10">
+          <div className="relative p-12 md:p-16 rounded-3xl glassmorphism border border-white/10">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10 rounded-3xl" />
+            <div className="relative">
+              <h2 className="text-5xl md:text-6xl font-bold mb-6">
+                Ready to Transform Your{" "}
+                <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
+                  Calling Experience?
+                </span>
+              </h2>
+              <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-2xl mx-auto">
+                Join hundreds of businesses automating their phone operations with InFlowCalls.
+              </p>
+              <Link href="/demo">
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-to-r from-primary to-accent text-white hover:opacity-90 h-16 px-12 text-xl font-semibold glow-purple"
+                  data-testid="button-cta-bottom"
+                >
+                  Get Started Today
+                </Button>
+              </Link>
+            </div>
+          </div>
+          <div className="absolute -inset-8 bg-gradient-to-r from-primary/20 via-accent/20 to-secondary/20 rounded-3xl blur-3xl -z-10 opacity-50" />
         </div>
       </section>
 

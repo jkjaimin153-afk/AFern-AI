@@ -1,207 +1,161 @@
 # InFlowCalls.com Design Guidelines
 
-## Design Approach
-Premium, high-converting enterprise website with approachable, bright aesthetic. Light, welcoming color palette with energetic accents that feels professional yet friendly. Emphasize clarity, modern sophistication, and visual interest through gradients, subtle effects, and strategic accent placement.
+## Design Philosophy
+Futuristic enterprise AI platform with dark, sophisticated aesthetic. Deep navy backgrounds, purple/cyan gradients, glassmorphism, and glowing interactions convey cutting-edge technology while maintaining professional credibility.
 
-## Color Palette
+## Color System
 
-### Primary Colors
-- **Primary Teal**: #137C8B (trustworthy, professional - use for buttons, headlines, key actions)
-- **Accent Coral**: #FF7A59 (energetic, warm - use for highlights, hover states, CTAs)
-- **Saffron Yellow**: #FFC857 (optimistic - use sparingly for ROI stats, success indicators)
+### Core Palette
+- **Background**: #0A0F1E (deep navy)
+- **Primary**: #9333EA (purple - CTAs, brand)
+- **Secondary**: #00C4FF (cyan - accents, interactions)
+- **Tertiary**: #A855F7 (light purple - gradients)
 
-### Neutral Base
-- **Background**: #F5F7FA (light, soft neutral - main page background)
-- **Surface White**: #FFFFFF (cards, elevated surfaces)
-- **Text Primary**: #2C3E50 (dark charcoal for headlines)
-- **Text Secondary**: #4A4F5A (soft gray for body copy)
-- **Text Tertiary**: #8B95A5 (light gray for supporting text)
+### Surfaces & Glass
+- **Card Base**: rgba(255,255,255,0.05) + backdrop-blur(16px)
+- **Card Border**: rgba(147,51,234,0.3)
+- **Hover State**: rgba(255,255,255,0.08)
+- **Elevated**: rgba(147,51,234,0.5) border + blur(20px)
+- **Glow**: box-shadow: 0 0 40px rgba(147,51,234,0.2-0.4)
+
+### Typography Colors
+- **Primary**: #FFFFFF (headlines)
+- **Body**: rgba(255,255,255,0.85)
+- **Secondary**: rgba(255,255,255,0.6)
+- **Tertiary**: rgba(255,255,255,0.4)
 
 ### Gradients
-- **Hero Gradient**: Teal (#137C8B) → Aqua (#00C4CC) - use behind CTAs and hero sections
-- **Accent Gradient**: Coral (#FF7A59) → Peach (#FFB199) - use for highlights and interactive elements
-- **Logo Gradient**: Teal (#137C8B) → Bright Aqua (#4DD9E8) - metallic effect with subtle glow
-
-### Theme
-- **Default**: Light mode (bright, approachable)
-- **Dark Mode**: Available as toggle - charcoal (#1A1F2E) background with teal (#137C8B) accents
+- **Hero**: #9333EA → #00C4FF
+- **Accent**: #A855F7 → #9333EA
+- **Text**: Apply hero gradient with background-clip: text
+- **Glow**: #9333EA, 20-40px blur, 0.4-0.6 opacity
 
 ## Typography
-- **Headlines**: Playfair Display SC (refined serif with wide kerning for premium feel)
-  - Hero H1: 60-72px desktop, bold weight
-  - H2: 40-48px, semibold
-  - H3: 28-32px, semibold
-  - Color: Primary teal (#137C8B) for main headlines
-- **Body Copy**: Inter (clean, readable sans-serif)
-  - Base: 16px / 1.6 line-height
-  - Color: #4A4F5A (soft gray)
-- **Tone**: Confident yet friendly, clear, approachable for SMB pages; professional for enterprise/technical pages
+**Font**: Inter (headlines/body), JetBrains Mono (code)
 
-## Layout System
-- **Max Content Width**: 1200-1400px
-- **Gutter**: 24px
-- **Grid**: Responsive grid-based layout
-- **Spacing**: Strategic use of whitespace with visual accents to prevent "too simple" feel
-- **Cards**: 
-  - Rounded corners (12-16px)
-  - Soft shadows with subtle teal/coral border accents
-  - Hover: lift effect with enhanced shadow + accent border glow
-- **Visual Accents**: 
-  - Gradient washes behind hero CTAs
-  - Corner ribbons or pill badges for ROI stats
-  - Dotted connector lines in feature grids
-  - Glassmorphism overlays for audio players
-  - Subtle border accents in teal/coral on interactive elements
+**Scale**:
+- H1: 72-84px desktop / 48px mobile, bold, gradient
+- H2: 48-56px, bold
+- H3: 32-40px, semibold
+- Body: 18px / 1.7 line-height
 
-## Logo Design
+## Layout
+- **Max Width**: 1400px sections, 1200px content
+- **Spacing**: Tailwind scale (4,8,12,16,20,24,32)
+- **Section Padding**: py-20 to py-32 desktop, py-12 to py-16 mobile
+- **Rounded**: 1rem (cards/buttons)
+- **Grid**: 3-col desktop, 2-col tablet, 1-col mobile
 
-### Premium InFlowCalls Logo
-- **Wordmark**: Playfair Display SC with increased kerning, bold weight
-- **Emblem**: Circular badge featuring:
-  - Abstract call-wave glyph (flowing sine wave merging with phone icon)
-  - Metallic gradient: Teal (#137C8B) → Bright Aqua (#4DD9E8)
-  - Faint inner glow for premium depth
-  - Gold accent ring for luxury touch
-- **Variants**: 
-  - Horizontal: Logo + wordmark side-by-side
-  - Stacked: Logo above wordmark (for mobile)
-  - Monochrome: Single-color version for special uses
-  - Favicon: Simplified emblem only
-
-## Navigation & Header
-- **Sticky Navigation**: Light background (#FFFFFF) with subtle shadow, teal accent border bottom
-- **Primary CTA**: Teal button with gradient on hover
-- **Premium Logo**: Horizontal variant with gradient emblem
-- **Customer Portal Login**: Top-right, coral accent on hover
-- **Floating Demo Button**: Persistent bottom-right, coral gradient with pulse animation
-- **Structure**: 8-10 main navigation items with teal active state
-
-## Component Design
+## Components
 
 ### Buttons
-- **Primary**: Teal (#137C8B) with gradient overlay on hover, white text
-- **Secondary**: Coral (#FF7A59) with gradient overlay on hover, white text
-- **Outline**: Teal border with teal text, gradient background on hover
-- **Accent**: Saffron yellow for special CTAs (limited use)
-- **All buttons**: Rounded (8px), medium font weight, subtle shadow
+**Primary**: Purple gradient (#9333EA → #A855F7), white text, glow on hover  
+**Secondary**: Glassmorphism + purple border  
+**Outline**: 2px purple border, transparent, glow on hover  
+**Ghost**: No background, cyan text, subtle underline hover  
+**Blur Context**: Use backdrop-blur-md + rgba(10,15,30,0.6) on images  
+**All**: 1rem rounded, medium-bold, 300ms transitions
 
 ### Cards
-- **Background**: White (#FFFFFF) on light background
-- **Border**: 1px solid light gray with teal accent on left/top edge
-- **Shadow**: Soft, multi-layer shadow
-- **Hover**: Lift effect (translateY -4px) + enhanced shadow + accent border glow
-- **Special Cards**: Glassmorphism effect for audio players (frosted glass with backdrop blur)
+**Base**: Glassmorphism + purple border glow  
+**Hover**: Lift 4px, intensify glow, brighten background  
+**Feature**: Gradient circular icon, title, description  
+**Pricing**: Highlighted tier gets stronger glow + gradient border
 
 ### Forms
-- **Inputs**: White background, light gray border, teal focus ring
-- **Labels**: Soft gray (#4A4F5A), clear hierarchy
-- **Validation**: Coral for errors, teal for success
-- **Spacing**: Generous padding for breathing room
+**Inputs**: Glassmorphism rgba(255,255,255,0.08), purple border (0.3 opacity)  
+**Focus**: Cyan glow  
+**Labels**: White, semibold  
+**Validation**: Cyan success, #EF4444 errors  
+**Submit**: Primary gradient button
 
-### Visual Accents
-- **ROI Stats**: Circular badges with saffron gradient backgrounds
-- **Feature Icons**: Teal/coral gradient circles with white icons
-- **Section Dividers**: Dotted lines with gradient fade
-- **Highlight Boxes**: Light teal/coral background tints (5-10% opacity)
+### Interactive
+**Tabs**: Glassmorphism inactive, gradient + glow active  
+**Toggles**: Purple gradient when on  
+**Accordions**: Glassmorphism + purple border, cyan expand icon  
+**Audio**: Enhanced glass + animated waveform
 
-## Animation & Interactions
-- **Hero**: Fade + subtle parallax, gradient animation
-- **Cards**: Lift on hover (translateY -4px) + glow effect
-- **CTAs**: Pulse animation on floating button, gradient shift on hover
-- **Audio Players**: Waveform animation, glassmorphism fade-in
-- **Performance**: Respect prefers-reduced-motion
-- **Philosophy**: Smooth, purposeful animations that add delight without distraction
+## Navigation
+**Header**: Glassmorphism sticky, backdrop-blur-md, bottom gradient border (1px, 0.2 opacity)  
+**Logo**: Horizontal gradient (purple→cyan) with 12px glow  
+**Links**: White, purple underline + glow on hover  
+**Primary CTA**: Purple gradient + glow  
+**Portal**: Top-right, cyan hover  
+**Floating Demo**: Bottom-right, pulsing glow animation
 
-## Images & Visual Assets
-- **Hero Sections**: High-quality lifestyle photography with gradient overlays
-  - People on phones in bright, modern offices
-  - Boutique hotels with natural lighting
-  - Small business storefronts
-  - Field technicians in action
-  - Salon/spa environments with warm tones
-  - Law firm/professional settings
-- **Background Art**: Abstract AI waveforms with teal/coral gradients
-- **Product Assets**: Animated waveform demo with gradient play button
-- **Icons**: Lucide React icons with teal/coral gradient fills
-- **Premium Emblem**: Call-wave glyph with metallic gradient
+## Animations
+- **Load**: Fade-in + scale(0.98→1.0), 600ms
+- **Scroll**: Stagger fade-up for grids
+- **Hover**: 300ms glow transitions
+- **CTA Pulse**: 2s infinite subtle glow
+- **Waveform**: Sync to audio
+- **Gradients**: 10s rotation on heroes
+- **Performance**: GPU-accelerated, respect prefers-reduced-motion
 
-## Page-Specific Requirements
+## Images & Assets
+**Hero Photography**: High-contrast tech scenes (modern offices, AI visualizations, sleek interfaces) + rgba(10,15,30,0.7) overlay + purple gradient accent
 
-### Home/Landing Page
-- Large hero with gradient background overlay (teal→aqua)
-- Animated waveform demo with coral play button
-- Dual CTAs with gradient backgrounds and hover effects
-- Trust strip with integration logos + HIPAA/SOC2 badges on light background
-- KPI band with saffron gradient circular badges
-- Three hero variations for A/B testing
+**Backgrounds**: Animated gradient mesh, floating particles, glowing grid patterns, neural network visuals
 
-### Product/Features Page
-- 11 feature modules with gradient icon backgrounds
-- Dotted connector lines between features
-- Accent borders on feature cards
-- Screenshot mocks with subtle shadows
+**Icons**: Lucide React with purple/cyan gradients or white + glow
 
-### Industry Vertical Pages (6 pages)
-- Industry-specific hero with gradient overlay
-- Pain points in coral-accented boxes
-- Solutions in teal-accented boxes
-- Sample call script with glassmorphism container
-- Integration logos with hover effects
-- ROI calculator with saffron accent badges
+## Page Structures
 
-### Demo & Audio Library
-- Interactive audio player with glassmorphism effect
-- Gradient play buttons (coral)
-- Transcript toggles with accent highlights
-- Embedded calendar widget with teal theme
+### Landing (8-10 sections)
+1. Hero: Full viewport, gradient, dual CTAs, floating dashboard
+2. Trust Strip: Logo cards, compliance badges
+3. Stats: 3-4 metrics, gradient circular badges
+4. Features: 3-col glassmorphism grid
+5. Demo: Audio player + waveform
+6. Use Cases: 2-col industry scenarios
+7. Integrations: Logo grid + hover glow
+8. Testimonials: Glass cards + purple borders
+9. CTA: Full-width gradient
+10. Footer: Multi-column glass
 
-### Integrations Page
-- Logo grid with subtle shadow cards
-- Hover: accent border glow (teal)
-- Category headers with gradient underlines
-- "Request an integration" form with coral submit button
+### Features
+Hero + 11 modules in 3-col grid (4-col xl), gradient icons, comparison table, accordion specs
 
-### Pricing Page
-- 4-tier comparison table with teal header
-- Popular tier: coral accent border and badge
-- Calculator widget with gradient result badges
-- Billing FAQ with expandable sections (teal icons)
+### Industry Verticals (6 pages)
+Industry hero → pain points (red accents) → solutions (purple/cyan) → call script (glass code) → ROI calc → vertical integrations → testimonials
 
-### Developer/API Page
-- Code snippet examples with teal syntax highlighting
-- Endpoint cards with accent left borders
-- Technical but still visually appealing with strategic gradients
+### Demo/Audio
+Large glass player + waveform, 3-col playlist, transcript toggle, Calendly (purple theme), filter tags
 
-## Accessibility
-- WCAG 2.1 AA compliance
-- Semantic HTML throughout
-- Sufficient color contrast (all text meets 4.5:1 minimum)
-- Keyboard navigation support
-- Skip-to-content link
-- Alt text for all images
-- Aria labels for all interactive elements
-- Focus indicators with teal rings
+### Integrations
+Hero visualization, category grids (4-5 col), glass hover cards, request form, API section + code
+
+### Pricing
+4-tier comparison, popular tier enhanced, cyan checkmarks, ROI calculator, FAQ accordion, volume callout
+
+### Developer/API
+Technical hero + code, 2-col endpoint cards, API explorer, purple syntax theme, SDK cards, webhooks
+
+## Accessibility (WCAG 2.1 AA)
+- White on #0A0F1E: 14.9:1 contrast
+- Semantic HTML
+- Cyan focus rings (keyboard nav)
+- Glass skip links
+- Alt text required
+- Aria labels on interactive elements
 
 ## Footer
-- Light background (#FFFFFF) with subtle top border
-- Multi-column layout with teal headings
-- Quick links with teal hover states
-- Social icons with gradient on hover
-- Newsletter form with coral submit button
-- Privacy, terms, accessibility links
+Glassmorphism + gradient top border, 4-col (Product/Company/Resources/Legal), white headings + gradient underlines, rgba(255,255,255,0.7) links (cyan hover), newsletter form, social icons + purple glow
 
 ## Conversion Elements
-- Multiple form types with consistent teal/coral theming
-- Calendar integration with brand colors
-- Gradient CTAs strategically placed throughout
-- Audio demo with glassmorphism player
-- Interactive calculators with saffron result badges
-- Floating demo button with pulse animation
+- Multiple gradient CTAs throughout
+- Persistent floating demo (bottom-right, pulsing)
+- Interactive ROI calculators
+- Glass audio players
+- Branded Calendly embeds
+- Success animations (glow pulse)
 
 ## Technical Notes
-- Responsive design for all viewports
-- Lazy-load offscreen images
-- Optimized image formats
-- Smooth gradient transitions
-- Fast loading while maintaining premium visual effects
-- CSS custom properties for easy theme adjustments
+- Mobile-first responsive
+- CSS custom properties for gradients/glows
+- GPU-accelerated (transform/opacity only)
+- Lazy-load images (blur-up)
+- Optimize backdrop-filter usage
+- Reduced-motion fallbacks
+
+**Logo**: Bold Inter wordmark + abstract AI wave icon, gradient fill (#9333EA→#00C4FF), 12px outer glow. Variants: horizontal, icon-only, simplified favicon.
