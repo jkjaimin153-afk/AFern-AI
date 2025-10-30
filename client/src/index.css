@@ -49,11 +49,11 @@
 
   --popover-border: 240 15% 20%;
 
-  --primary: 11 100% 67%;  /* #FF7A59 - coral orange */
+  --primary: 11 100% 67%;  /* #FF7A59 - coral (original) */
 
   --primary-foreground: 0 0% 100%;
 
-  --secondary: 28 100% 58%;  /* #FFA726 - warm amber */
+  --secondary: 42 100% 67%;  /* #FFC857 - saffron yellow (original) */
 
   --secondary-foreground: 240 25% 6%;
 
@@ -61,7 +61,7 @@
 
   --muted-foreground: 240 5% 64%;  /* #9CA3AF - gray text */
 
-  --accent: 16 100% 72%;  /* #FFB199 - soft peach */
+  --accent: 11 100% 67%;  /* #FF7A59 - coral (original) */
 
   --accent-foreground: 0 0% 100%;
 
@@ -72,8 +72,8 @@
   --input: 240 15% 20%;
   --ring: 11 100% 67%;
   --chart-1: 11 100% 67%;  /* coral */
-  --chart-2: 28 100% 58%;  /* amber */
-  --chart-3: 16 100% 72%;  /* peach */
+  --chart-2: 42 100% 67%;  /* saffron */
+  --chart-3: 28 100% 58%;  /* amber */
   --chart-4: 240 5% 64%;  /* gray */
   --chart-5: 240 15% 40%;
 
@@ -152,23 +152,23 @@
 
 /* Futuristic gradient utilities */
 @layer utilities {
-  .gradient-orange-peach {
-    background: linear-gradient(135deg, #FF7A59 0%, #FFB199 100%);
+  .gradient-orange-yellow {
+    background: linear-gradient(135deg, #FF7A59 0%, #FFC857 100%);
   }
   
-  .gradient-orange-amber {
-    background: linear-gradient(135deg, #FF7A59 0%, #FFA726 100%);
+  .gradient-coral-saffron {
+    background: linear-gradient(135deg, #FF7A59 0%, #FFC857 100%);
   }
   
   .gradient-cyber {
-    background: linear-gradient(135deg, #FF6B35 0%, #FF7A59 50%, #FFA726 100%);
+    background: linear-gradient(135deg, #FF6B35 0%, #FF7A59 50%, #FFC857 100%);
   }
   
   .gradient-mesh {
     background: 
       radial-gradient(at 0% 0%, hsla(11, 100%, 67%, 0.15) 0px, transparent 50%),
-      radial-gradient(at 100% 100%, hsla(28, 100%, 58%, 0.15) 0px, transparent 50%),
-      radial-gradient(at 50% 50%, hsla(16, 100%, 72%, 0.1) 0px, transparent 50%);
+      radial-gradient(at 100% 100%, hsla(42, 100%, 67%, 0.15) 0px, transparent 50%),
+      radial-gradient(at 50% 50%, hsla(28, 100%, 58%, 0.1) 0px, transparent 50%);
   }
   
   .glassmorphism {
@@ -182,7 +182,7 @@
   }
   
   .glow-cyan {
-    box-shadow: 0 0 20px rgba(255, 167, 38, 0.3), 0 0 40px rgba(255, 167, 38, 0.1);
+    box-shadow: 0 0 20px rgba(255, 200, 87, 0.3), 0 0 40px rgba(255, 200, 87, 0.1);
   }
   
   .accent-border-glow {
