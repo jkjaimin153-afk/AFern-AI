@@ -1,13 +1,14 @@
-import { SiHubspot, SiTwilio } from "react-icons/si";
 import googleCalendarLogo from "@assets/image_1761794157605.png";
 import salesforceLogo from "@assets/image_1761794193457.png";
+import hubspotLogo from "@assets/image_1761794277306.png";
+import twilioLogo from "@assets/image_1761794313036.png";
 
 export default function Integrations() {
   const integrations = [
-    { name: "Google Calendar", logo: googleCalendarLogo, type: "image" as const, description: "Two-way calendar sync" },
-    { name: "Salesforce", logo: salesforceLogo, type: "image" as const, description: "CRM integration" },
-    { name: "HubSpot", icon: SiHubspot, type: "icon" as const, description: "Marketing automation" },
-    { name: "Twilio", icon: SiTwilio, type: "icon" as const, description: "Phone infrastructure" },
+    { name: "Google Calendar", logo: googleCalendarLogo, description: "Two-way calendar sync" },
+    { name: "Salesforce", logo: salesforceLogo, description: "CRM integration" },
+    { name: "HubSpot", logo: hubspotLogo, description: "Marketing automation" },
+    { name: "Twilio", logo: twilioLogo, description: "Phone infrastructure" },
   ];
 
   return (
@@ -24,24 +25,17 @@ export default function Integrations() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {integrations.map((integration, idx) => {
-              const Icon = integration.type === "icon" ? integration.icon : null;
-              return (
-                <div key={idx} className="flex flex-col items-center text-center space-y-4" data-testid={`integration-${idx}`}>
-                  <div className="w-20 h-20 rounded-xl bg-card border border-border flex items-center justify-center hover-elevate p-3">
-                    {integration.type === "image" ? (
-                      <img src={integration.logo} alt={integration.name} className="w-full h-full object-contain" />
-                    ) : Icon ? (
-                      <Icon className="w-10 h-10" style={{ color: 'inherit' }} />
-                    ) : null}
-                  </div>
-                  <div>
-                    <h3 className="font-bold mb-1 text-accent">{integration.name}</h3>
-                    <p className="text-sm text-muted-foreground">{integration.description}</p>
-                  </div>
+            {integrations.map((integration, idx) => (
+              <div key={idx} className="flex flex-col items-center text-center space-y-4" data-testid={`integration-${idx}`}>
+                <div className="w-20 h-20 rounded-xl bg-card border border-border flex items-center justify-center hover-elevate p-3">
+                  <img src={integration.logo} alt={integration.name} className="w-full h-full object-contain" />
                 </div>
-              );
-            })}
+                <div>
+                  <h3 className="font-bold mb-1 text-accent">{integration.name}</h3>
+                  <p className="text-sm text-muted-foreground">{integration.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
 
           <div className="mt-16 text-center">
