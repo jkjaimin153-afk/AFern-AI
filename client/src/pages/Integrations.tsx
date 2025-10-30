@@ -1,6 +1,6 @@
 import googleCalendarLogo from "@assets/image_1761794157605.png";
 import salesforceLogo from "@assets/image_1761794193457.png";
-import hubspotLogo from "@assets/image_1761794277306.png";
+import hubspotLogo from "@assets/image_1761794546960.png";
 import twilioLogo from "@assets/image_1761794313036.png";
 
 export default function Integrations() {
