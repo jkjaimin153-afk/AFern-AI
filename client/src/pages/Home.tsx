@@ -76,12 +76,6 @@ export default function Home() {
               </Button>
             </div>
           </div>
-
-          <div className="mt-12 pt-8 border-t border-border">
-            <p className="text-center text-sm text-muted-foreground">
-              SOC2-ready
-            </p>
-          </div>
         </div>
       </section>
 
