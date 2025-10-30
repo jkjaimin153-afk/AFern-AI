@@ -1,11 +1,12 @@
-import { SiGooglecalendar, SiSalesforce, SiHubspot, SiTwilio } from "react-icons/si";
+import { SiSalesforce, SiHubspot, SiTwilio } from "react-icons/si";
+import googleCalendarLogo from "@assets/image_1761794157605.png";
 
 export default function Integrations() {
   const integrations = [
-    { name: "Google Calendar", icon: SiGooglecalendar, description: "Two-way calendar sync" },
-    { name: "Salesforce", icon: SiSalesforce, description: "CRM integration" },
-    { name: "HubSpot", icon: SiHubspot, description: "Marketing automation" },
-    { name: "Twilio", icon: SiTwilio, description: "Phone infrastructure" },
+    { name: "Google Calendar", logo: googleCalendarLogo, type: "image", description: "Two-way calendar sync" },
+    { name: "Salesforce", icon: SiSalesforce, type: "icon", description: "CRM integration" },
+    { name: "HubSpot", icon: SiHubspot, type: "icon", description: "Marketing automation" },
+    { name: "Twilio", icon: SiTwilio, type: "icon", description: "Phone infrastructure" },
   ];
 
   return (
@@ -24,11 +25,15 @@ export default function Integrations() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {integrations.map((integration, idx) => (
               <div key={idx} className="flex flex-col items-center text-center space-y-4" data-testid={`integration-${idx}`}>
-                <div className="w-20 h-20 rounded-xl bg-card border border-border flex items-center justify-center hover-elevate">
-                  <integration.icon className="w-10 h-10" style={{ color: 'inherit' }} />
+                <div className="w-20 h-20 rounded-xl bg-card border border-border flex items-center justify-center hover-elevate p-3">
+                  {integration.type === "image" ? (
+                    <img src={integration.logo} alt={integration.name} className="w-full h-full object-contain" />
+                  ) : (
+                    <integration.icon className="w-10 h-10" style={{ color: 'inherit' }} />
+                  )}
                 </div>
                 <div>
-                  <h3 className="font-bold mb-1">{integration.name}</h3>
+                  <h3 className="font-bold mb-1 text-accent">{integration.name}</h3>
                   <p className="text-sm text-muted-foreground">{integration.description}</p>
                 </div>
               </div>
