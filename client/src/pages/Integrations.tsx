@@ -1,10 +1,10 @@
-import { SiGooglecalendar, SiSalesforce, SiStripe, SiTwilio } from "react-icons/si";
+import { SiGooglecalendar, SiSalesforce, SiHubspot, SiTwilio } from "react-icons/si";
 
 export default function Integrations() {
   const integrations = [
     { name: "Google Calendar", icon: SiGooglecalendar, description: "Two-way calendar sync" },
     { name: "Salesforce", icon: SiSalesforce, description: "CRM integration" },
-    { name: "Stripe", icon: SiStripe, description: "Payment processing" },
+    { name: "HubSpot", icon: SiHubspot, description: "Marketing automation" },
     { name: "Twilio", icon: SiTwilio, description: "Phone infrastructure" },
   ];
 
