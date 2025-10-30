@@ -1,5 +1,5 @@
 import googleCalendarLogo from "@assets/image_1761794157605.png";
-import salesforceLogo from "@assets/image_1761794594240.png";
+import salesforceLogo from "@assets/512px-Salesforce.com_logo.svg_1761794725607.png";
 import hubspotLogo from "@assets/image_1761794546960.png";
 import twilioLogo from "@assets/image_1761794313036.png";
 
