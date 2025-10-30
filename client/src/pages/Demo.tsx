@@ -67,6 +67,7 @@ export default function Demo() {
     {
       title: "Inbound Booking Call",
       scenario: "Customer calling to schedule a service appointment",
+      audioFile: "/demo-audio/inbound-booking.mp3",
       transcript: [
         { speaker: "AI", text: "Thanks for calling QuickFix Plumbing, this is InFlow — how can I help today?" },
         { speaker: "Caller", text: "I have a burst pipe in the kitchen." },
@@ -77,20 +78,9 @@ export default function Demo() {
       howItWorked: "AI detected urgency, collected address, checked calendar availability, booked appointment in ServiceTitan, sent confirmation SMS.",
     },
     {
-      title: "Payment Capture Call",
-      scenario: "Collecting deposit for appointment confirmation",
-      transcript: [
-        { speaker: "AI", text: "I can secure your appointment with a $50 deposit. May I collect payment now?" },
-        { speaker: "Caller", text: "Yes, that works." },
-        { speaker: "AI", text: "Great. I'll need your card number, expiration, and CVV." },
-        { speaker: "Caller", text: "[Provides payment info]" },
-        { speaker: "AI", text: "Payment processed. You're all set! Confirmation sent to your email." },
-      ],
-      howItWorked: "AI initiated PCI-compliant payment flow via Stripe, processed deposit securely, updated booking status, sent receipt.",
-    },
-    {
       title: "Outbound Reminder Call",
       scenario: "Automated appointment reminder",
+      audioFile: "/demo-audio/outbound-reminder.mp3",
       transcript: [
         { speaker: "AI", text: "Hi, this is InFlow for Deerfield Inn. Reminder of your 2PM check-in tomorrow." },
         { speaker: "Guest", text: "Thanks! I'll be there." },
@@ -101,16 +91,18 @@ export default function Demo() {
       howItWorked: "System triggered outbound call 24h before check-in, confirmed attendance, updated PMS, avoided no-show.",
     },
     {
-      title: "Multilingual Call",
-      scenario: "Auto-detection and response in caller's language",
+      title: "Spanish Language Call",
+      scenario: "AI auto-detects and responds in Spanish",
+      audioFile: "/demo-audio/spanish-call.mp3",
       transcript: [
-        { speaker: "AI", text: "Thank you for calling. ¿Prefiere español? Press 1. For English, press 2." },
-        { speaker: "Caller", text: "[Presses 1]" },
-        { speaker: "AI", text: "Perfecto. ¿Cómo puedo ayudarle hoy?" },
-        { speaker: "Caller", text: "Necesito hacer una reservación." },
-        { speaker: "AI", text: "Claro, ¿para cuántas personas y qué fecha?" },
+        { speaker: "Caller", text: "Hola, necesito hacer una cita." },
+        { speaker: "AI", text: "¡Claro! ¿Para qué servicio necesitas la cita?" },
+        { speaker: "Caller", text: "Limpieza dental." },
+        { speaker: "AI", text: "Perfecto. Tengo disponibilidad el martes a las 3pm. ¿Te funciona?" },
+        { speaker: "Caller", text: "Sí, está bien." },
+        { speaker: "AI", text: "Excelente, te enviaré un mensaje de confirmación. ¡Hasta pronto!" },
       ],
-      howItWorked: "AI auto-detected Spanish preference, switched language seamlessly, completed booking in Spanish, sent confirmation in caller's language.",
+      howItWorked: "Detected Spanish language in first 2 seconds, switched to Spanish voice model, completed full booking workflow in Spanish.",
     },
   ];
 
@@ -158,7 +150,7 @@ export default function Demo() {
                           data-testid={`audio-demo-${idx}`}
                           style={{ height: '40px' }}
                         >
-                          <source src={`/demo-audio-${idx + 1}.mp3`} type="audio/mpeg" />
+                          <source src={demo.audioFile} type="audio/mpeg" />
                           Your browser does not support the audio element.
                         </audio>
                       </div>
