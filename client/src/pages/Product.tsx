@@ -53,7 +53,7 @@ export default function Product() {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {features.map((feature, idx) => (
-              <Card key={idx} className="p-8 hover-elevate active-elevate-2 transition-all" data-testid={`card-product-feature-${idx}`}>
+              <Card key={idx} className="p-8 hover-elevate active-elevate-2 transition-all h-full flex flex-col" data-testid={`card-product-feature-${idx}`}>
                 <div className="flex flex-col items-center text-center mb-6">
                   <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center mb-4">
                     <feature.icon className="h-8 w-8 text-accent" />
@@ -61,7 +61,7 @@ export default function Product() {
                   <h3 className="text-2xl font-bold font-serif">{feature.title}</h3>
                 </div>
                 <p className="text-muted-foreground mb-6 text-center">{feature.description}</p>
-                <ul className="space-y-3">
+                <ul className="space-y-3 flex-1">
                   {feature.benefits.map((benefit, bidx) => (
                     <li key={bidx} className="flex items-start gap-2 text-sm">
                       <Zap className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" />
