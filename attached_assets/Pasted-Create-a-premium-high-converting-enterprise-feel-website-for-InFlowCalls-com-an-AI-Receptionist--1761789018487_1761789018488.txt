@@ -1,0 +1,324 @@
+Create a premium, high-converting, enterprise-feel website for InFlowCalls.com, an AI Receptionist + Outbound Caller product for SMBs and mid-market customers. The site must be visually elegant, modern, and corporate-luxury: navy-blue + black primary palette, bright accent color for CTAs (electric teal or bright cyan), lots of negative space, 2xl rounded cards, soft shadows, and premium typography (serif headline + clean geometric sans for body). The site must feel higher-end than common competitors: polished animations, micro-interactions, and subtle motion — but fast and accessible.
+
+Style tone: confident, clear, slightly conversational for SMB pages, more formal for enterprise technical pages. Every single piece of copy should be original and conversion-focused. Do not publish any actual pricing yet — show zeros in numeric fields.
+
+Global site settings
+
+Domain: InFlowCalls.com. Use site title “InFlowCalls — AI Receptionist & Calling”.
+
+Favicon: minimal monogram “IC” in navy on black or inverse.
+
+Primary colors: Navy (#0b2340), Rich Black (#000000), Accent cyan (#00e0ff). Neutral greys for text.
+
+Fonts: Playfair Display (or other elegant serif) for headings; Inter or Montserrat for body. Use large hero type (60–72px desktop).
+
+Layout: responsive, grid-based, 1200–1400px max content width, 24px gutter.
+
+Microcopy for accessibility: alt text for all images, aria labels for all buttons and forms.
+
+Animations: hero fade + parallax, subtle card hover (scale 1.02), CTA micro-shake on hover. Keep animations performant (prefers-reduced-motion respected).
+
+Imagery: high-quality lifestyle photography (people on phones, boutique hotels, small-business storefronts, field technicians). Use abstract AI waveforms and stylized phone icons as background art.
+
+Logo: premium wordmark + minimal icon (phone waveform + incoming arrow). Provide SVG and PNG with transparent background and navy/black variants.
+
+Required pages & exact content blocks
+
+Produce the following pages and blocks in order. For each block create original copy, heading hierarchy (H1/H2/H3), calls-to-action, and suggested micro-interactions.
+
+1) Home (Landing / Hero)
+
+Hero H1: “Never Miss A Call. Turn Conversations Into Customers.”
+
+Subheadline: “InFlowCalls is an enterprise-grade AI receptionist & outbound caller that answers, qualifies and books — 24/7 — integrated with your calendar, CRM, and POS.”
+
+Primary CTA: “Request a 5-Min Demo” (bright cyan button). Secondary CTA: “Listen to demo call” (outline).
+
+Trust strip under hero: 6 integration logos (Google Calendar, HubSpot, Stripe, Twilio, ServiceTitan, Clio) + “HIPAA-ready option • SOC2-ready”.
+
+Hero assets: short animated 12–15s product demo waveform + play button that opens sample audio modal (two demo call examples — booking and payment).
+
+KPI band: Three stats (placeholders): “Answered calls automatically: 0%”, “Avg time to booking: 0 mins”, “Businesses onboarded: 0+”. Use numbers as placeholders (0).
+
+2) Product / Features (sectioned with micro-pages)
+
+Create a full product page with these feature modules (each module with icon, 2–3 sentence description, 1–2 bullets for benefits, and a small screenshot mock):
+
+Natural Language Understanding (NLU) — "understands intent, context, and slot-filling"
+
+Two-way Calendar Sync & Scheduling — Google / Office365 / Calendly sync
+
+Outbound Calling & Reminders — automated confirmations, no-shows recovery
+
+Payments on Call — Stripe/PayPal deposits & invoicing capture
+
+CRM Sync & Lead Creation — HubSpot / Salesforce / Zoho / Clio
+
+PMS & Field Service Integrations — ServiceTitan, Housecall Pro, hotel PMSs
+
+Conversation Intelligence & Transcription — call summary, sentiment, and highlights
+
+Human Escalation / Live Agent Handoff — hybrid model with SLA options
+
+Compliance & Security — TLS, encrypted recordings, Data residency options, HIPAA BAA available
+
+Multi-language Auto-detect & Support
+
+API & Webhooks + Developer Console
+
+3) Industries (landing with subpages — create 6 vertical pages)
+
+Main industries landing with short intro and card links to each vertical. Then create full pages for:
+
+Home Services (plumbers, HVAC, electricians) — example flows, integrations (Housecall Pro, ServiceTitan), sample scripts for emergency triage and estimate booking.
+
+Hospitality (motels, boutique hotels) — integrate with PMS, sample check-in call audio transcript and booking flow.
+
+Healthcare & Wellness (chiropractors, dentists, small clinics) — HIPAA-ready notes, appointment reminders, triage flow.
+
+Legal & Professional Services (law firms, accountants) — intake forms, Clio integration, conflict check notes.
+
+Salons & Spas — appointment confirmations, deposits.
+
+E-commerce & Retail — order status calls, returns, pickups; integrate with Shopify/Shopify admin via Zapier.
+
+For each vertical include:
+
+Pain points (3 bullets)
+
+How InFlowCalls solves them (3 bullets)
+
+Sample call script (a short 6–10 line dialogue showing inbound call handling)
+
+Integrations required
+
+KPIs & ROI example (use placeholders — show formula & sample calculation but put numbers as 0)
+
+4) Demo & Audio Library
+
+Interactive demo player with 4 scenario audio examples (inbound booking, payment capture, outbound reminder, tricky multilingual call).
+
+Transcripts and “How it worked” annotation toggles for each demo.
+
+“Request a live demo” form with calendar widget.
+
+5) Integrations (full page)
+
+Grid of logos by category: CRM, Scheduling, Telephony, Payments, PMS/Field Service, Workflow (Zapier/Make).
+
+For each logo show a short one-line explanation of what the integration does with InFlowCalls (e.g., “HubSpot — create contact & log call transcript automatically”).
+
+“Request an integration” form (choose integration, priority, notes).
+
+6) Pricing (layout only — placeholders)
+
+Pricing tier table: Starter, Growth, Pro, Enterprise. Show features per tier. Replace all numeric pricing with 0 and note “pricing temporarily hidden — contact sales”.
+
+Per-call & per-seat calculator widget with zeroed rates but fully functional UI.
+
+Billing FAQ and enterprise contract CTA.
+
+7) Case Studies & ROI
+
+Two full case studies (use placeholder customer names like “Deerfield Inn — Motel Pilot” and “QuickFix Plumbing — Service Area Pilot”). Each must include Challenge → Solution → Results (show placeholders for metrics).
+
+ROI calculator: user inputs missed calls per week, avg job value, conversion rate — show math and projected recovered revenue (values default to 0).
+
+8) Developer & API Docs (public page + docs stub)
+
+Show API endpoints: /webhooks/call, /api/transcripts, /api/schedule, /api/transfer (example request & response schemas).
+
+Webhook examples, OAuth flow for native integrations, sample Node.js + Python snippet for sending a webhook.
+
+SDK download buttons and links to Postman collection (stub).
+
+Security section: token rotation, scopes, rate limits.
+
+9) Security & Compliance
+
+SOC2 readiness statement, optional HIPAA BAA process, GDPR data subject request process, data retention options, encryption details, and a downloadable security whitepaper PDF.
+
+Contact for compliance: security@inflowcalls.com
+.
+
+10) About / Team / Careers
+
+Short story: origin, mission, values.
+
+Founders section: headshots, short bios.
+
+Careers: list of open roles (placeholder text), culture highlights.
+
+11) Resources / Blog / Knowledge Base
+
+SEO-ready blog templates: “How AI receptionists save small businesses”, “Setting up InFlowCalls with ServiceTitan”, etc.
+
+Knowledge base structure: Getting started, Integrations, Troubleshooting, API reference.
+
+12) Footer
+
+Quick links, contact info, social icons, privacy, terms, accessibility statement, newsletter sign-up.
+
+Exact copy snippets (paste-ready)
+
+Include the following ready-to-paste copy blocks in the design:
+
+Hero CTA microcopy:
+
+Primary CTA: “Request a 5-Min Demo”
+
+Secondary CTA: “Listen to demo call”
+
+Feature snippets (one-liners):
+
+NLU: “Understands caller intent, context, and urgency — so the right action happens every time.”
+
+Scheduling: “Two-way calendar sync — prevent double bookings and auto-confirm in real time.”
+
+Payments: “Accept deposits and payments on the call with PCI-compliant flows.”
+
+Sample inbound call script (for Home Services):
+
+AI: “Thanks for calling QuickFix Plumbing, this is InFlow — how can I help today?”
+
+Caller: “I have a burst pipe in the kitchen.”
+
+AI: “I’m sorry to hear that. Is anyone in immediate danger or is the leak contained?”
+
+Caller: “No danger, just lots of water.”
+
+AI: “I can book an emergency visit. What’s the address and preferred time — morning or afternoon?”
+
+(then capture address, preferred time, create ticket in ServiceTitan, send confirmation text)
+
+Sample outbound reminder script:
+
+AI: “Hi, this is InFlow for Deerfield Inn. This is a reminder of your 2PM check-in on Oct 0. Reply ‘YES’ to confirm or press 1 to change your reservation.”
+
+FAQ starter Qs:
+
+“How accurate is the AI?” — short answer: “Our AI handles X% of routine calls; human fallback available.” (use X as placeholder)
+
+“Do you integrate with my PMS/CRM?” — “We integrate natively with common systems and via Zapier for everything else.”
+
+Legal microcopy:
+
+Privacy: “We encrypt recordings in transit and at rest. HIPAA BAA available on request.”
+
+Terms: short user agreement summary and link to full TOS.
+
+Visual & UX requirements (exact)
+
+Navigation: sticky nav with 8–10px shadow. CTA on right.
+
+Use a “request demo” floating button bottom-right (persistent).
+
+Use customer-portal login (top-right).
+
+Implement light/dark toggle but default to dark/navy theme.
+
+Provide 3 hero variations for A/B testing: (1) product-led, (2) industry-led, (3) ROI-led (numbers).
+
+Accessibility: WCAG 2.1 AA compliance, keyboard nav, skip-to-content link, semantic HTML.
+
+SEO / Metadata / Schema
+
+Create unique meta title and description for each page; supply 5–7 target keywords for SEO and a 150–160 char meta description for home page.
+
+Home meta title: “InFlowCalls — AI Receptionist & Outbound Calling for Small Business”
+
+Home meta description: “InFlowCalls automates call answering, booking and outbound reminders — integrated to CRMs, calendars and PMSs. HIPAA-ready options.”
+
+Add JSON-LD for Organization, WebSite, Product, and BreadcrumbList.
+
+Create XML sitemap and robots.txt.
+
+Analytics, Tracking & Marketing
+
+Install Google Tag Manager + GTM container stub, Google Analytics 4 event suggestions (demo button clicks, audio plays, integration clicks, pricing view).
+
+Add Hotjar or similar session replay snippet option.
+
+Add Mailchimp / Klaviyo newsletter form integration.
+
+Add pixel stubs for LinkedIn and Facebook.
+
+Performance & Dev notes (deliverable-ready)
+
+Frontend: React (Next.js) or static JAMstack (preferred Next.js for SSR + SEO).
+
+CSS: TailwindCSS recommended; provide a Tailwind config with navy/black/cyan tokens.
+
+Images: use responsive images (srcset), lazy-load offscreen images.
+
+Hosting: Vercel or Netlify recommended; CDN for assets, automated HTTPS.
+
+Telephony: use Twilio programmable voice or SIP trunking; expose SIP settings in admin.
+
+Database & backend: PostgreSQL for events, S3 for recordings, Redis for job queue.
+
+Infrastructure: Dockerized services, CI/CD, automated backups, monitoring (Prometheus / Grafana).
+
+Provide an admin panel wireframe: dashboard, call logs, transcripts, integration settings, billing settings.
+
+Provide deployment checklists and runbook for incident responses (e.g., telephony outage).
+
+Marketing assets to generate
+
+Produce these assets (placeholders okay) and wire them into the site:
+
+4 demo audio files (wav/mp3) + transcripts.
+
+6 hero-processed images (hotel, plumber, salon, law firm, clinic, ecommerce).
+
+3 explainer videos (30–60s) — hero, how-it-works, integrations.
+
+Downloadable PDFs: Security Whitepaper, HIPAA Info Sheet, Quick Start Guide.
+
+Onsite conversion flows & CTAs
+
+Demo request → Calendly/Google Calendar integrated scheduling with time-zone detection.
+
+“Try a Live Demo” → open a sandbox phone number that plays real demo flows (if possible).
+
+Contact form: name, business, phone, website, industry (dropdown), integrations (multi-select).
+
+Sales lead scoring: mark requests from specific industries as high-priority.
+
+Unique differentiation instructions (make it not like competitors)
+
+Avoid generic stock hero images of call centers. Use intimate business photography (owner on phone, hotel concierge).
+
+Hero must include audible demo (users can hear how it sounds — competitors sometimes hide audio).
+
+Offer “vertical playbook” snapshots on the home page (tiny cards showing a one-sentence playbook for each industry) — this will feel specialized vs. “general” competitors.
+
+Emphasize “fast install” (24–72 hours) in copy and a “Setup time estimator” on the checkout/demo flow.
+
+Provide a clear “human fallback” option in pricing and pages — many competitors bury this or charge separately. Make it visible.
+
+Provide an ROI calculator that uses real business math (lost leads → recovered revenue) with shareable results.
+
+Final builder instructions
+
+Write all text in clear, persuasive English. No lorem ipsum.
+
+Use headings and subheadings exactly as specified above.
+
+Replace all numeric results, pricing and KPI displayed numbers with 0 placeholders and include a subtle label “(pricing temporarily hidden)”.
+
+When referencing competitor content for ideas, do not copy. Produce new phrasing and unique examples.
+
+Deliver final website as:
+
+Fully rendered HTML/CSS/JS site (or Next.js codebase).
+
+A style guide (colors, typography, component list).
+
+Content inventory (CSV/Excel) with all copy, image alt text, meta tags, and demo audio transcripts.
+
+A deployment README with API keys/integration steps, and a checklist to remove the 0 placeholders once pricing is decided.
+
+Example meta/prompts for the generator (one-line copy to paste into UI)
+
+“Design and build InFlowCalls.com — a premium AI receptionist & outbound caller website with navy/black theme, electric-cyan CTAs, full product pages, six vertical landing pages, audio demo library, integration center, pricing page with zeros as placeholders, API docs, security pages, 3 case studies, SEO metadata, accessible responsive design, and admin/developer deliverables. Prioritize high-conversion flows, original copy, quick-install messaging, and clear hybrid human fallback options. Provide all assets, codebase, style guide, and content inventory.”
