@@ -2,95 +2,95 @@
 @tailwind components;
 @tailwind utilities;
 
-/* LIGHT MODE (DEFAULT) */
+/* DARK MODE (DEFAULT) - Futuristic AI Theme */
 :root {
-  --button-outline: rgba(0,0,0, .10);
-  --badge-outline: rgba(0,0,0, .05);
+  --button-outline: rgba(255,255,255, .15);
+  --badge-outline: rgba(255,255,255, .10);
 
   /* Automatic computation of border around primary / danger buttons */
-  --opaque-button-border-intensity: -8; /* In terms of percentages */
+  --opaque-button-border-intensity: 10; /* In terms of percentages */
 
   /* Backgrounds applied on top of other backgrounds when hovered/active */
-  --elevate-1: rgba(0,0,0, .03);
-  --elevate-2: rgba(0,0,0, .08);
+  --elevate-1: rgba(147, 51, 234, .08);  /* Purple glow */
+  --elevate-2: rgba(147, 51, 234, .15);
 
-  /* Bright, approachable palette */
-  --background: 211 33% 97%;  /* #F5F7FA - soft light neutral */
+  /* Dark, futuristic palette */
+  --background: 240 25% 6%;  /* #0A0F1E - deep navy/black */
 
-  --foreground: 210 29% 24%;  /* #2C3E50 - dark charcoal for headlines */
+  --foreground: 0 0% 98%;  /* #FAFAFA - bright white text */
 
-  --border: 217 12% 85%;  /* light gray border */
+  --border: 240 15% 18%;  /* subtle border */
 
-  --card: 0 0% 100%;  /* #FFFFFF - pure white cards */
+  --card: 240 20% 10%;  /* #14192B - slightly lighter card */
 
-  --card-foreground: 210 29% 24%;  /* dark charcoal text on cards */
+  --card-foreground: 0 0% 98%;
 
-  --card-border: 217 12% 85%;  /* light gray border */
+  --card-border: 240 15% 20%;
 
-  --sidebar: 0 0% 100%;  /* white sidebar */
+  --sidebar: 240 20% 8%;
 
-  --sidebar-foreground: 210 29% 24%;
+  --sidebar-foreground: 0 0% 95%;
 
-  --sidebar-border: 217 12% 85%;
+  --sidebar-border: 240 15% 18%;
 
-  --sidebar-primary: 0 0% 0%;  /* black */
+  --sidebar-primary: 271 81% 56%;  /* purple */
 
   --sidebar-primary-foreground: 0 0% 100%;
 
-  --sidebar-accent: 211 33% 95%;  /* very light gray */
+  --sidebar-accent: 240 20% 15%;
 
-  --sidebar-accent-foreground: 210 29% 24%;
+  --sidebar-accent-foreground: 0 0% 95%;
 
-  --sidebar-ring: 11 100% 67%;  /* coral */
+  --sidebar-ring: 271 81% 56%;
 
-  --popover: 0 0% 100%;
+  --popover: 240 20% 10%;
 
-  --popover-foreground: 210 29% 24%;
+  --popover-foreground: 0 0% 98%;
 
-  --popover-border: 217 12% 85%;
+  --popover-border: 240 15% 20%;
 
-  --primary: 0 0% 0%;  /* #000000 - black for buttons/headlines */
+  --primary: 271 81% 56%;  /* #9333EA - vivid purple */
 
-  --primary-foreground: 0 0% 100%;  /* white text on primary */
+  --primary-foreground: 0 0% 100%;
 
-  --secondary: 42 100% 67%;  /* #FFC857 - saffron yellow */
+  --secondary: 193 100% 50%;  /* #00C4FF - cyan */
 
-  --secondary-foreground: 210 29% 24%;  /* dark text on secondary */
+  --secondary-foreground: 240 25% 6%;
 
-  --muted: 211 33% 95%;  /* very light background for muted sections */
+  --muted: 240 20% 12%;
 
-  --muted-foreground: 217 12% 59%;  /* #8B95A5 - tertiary text */
+  --muted-foreground: 240 5% 64%;  /* #9CA3AF - gray text */
 
-  --accent: 11 100% 67%;  /* #FF7A59 - coral accent */
+  --accent: 271 91% 65%;  /* #A855F7 - bright purple accent */
 
-  --accent-foreground: 0 0% 100%;  /* white text on accent */
+  --accent-foreground: 0 0% 100%;
 
   --destructive: 0 84% 60%;
 
   --destructive-foreground: 0 0% 100%;
 
-  --input: 217 12% 85%;
-  --ring: 11 100% 67%;  /* coral */
-  --chart-1: 0 0% 0%;  /* black */
-  --chart-2: 11 100% 67%;  /* coral */
-  --chart-3: 42 100% 67%;  /* saffron */
-  --chart-4: 210 29% 24%;  /* dark charcoal */
-  --chart-5: 217 12% 59%;  /* gray */
+  --input: 240 15% 20%;
+  --ring: 271 81% 56%;
+  --chart-1: 271 81% 56%;  /* purple */
+  --chart-2: 193 100% 50%;  /* cyan */
+  --chart-3: 280 100% 70%;  /* magenta */
+  --chart-4: 240 5% 64%;  /* gray */
+  --chart-5: 240 15% 40%;
 
-  --font-sans: Inter, sans-serif;
-  --font-serif: 'Playfair Display SC', 'Playfair Display', serif;
-  --font-mono: Menlo, Monaco, 'Courier New', monospace;
-  --radius: 0.75rem; /* 12px for subtle rounding */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --radius: 1rem; /* 16px for modern rounding */
   
-  /* Enhanced shadows for depth */
-  --shadow-2xs: 0px 1px 2px 0px rgba(19, 124, 139, 0.05);
-  --shadow-xs: 0px 1px 3px 0px rgba(19, 124, 139, 0.08);
-  --shadow-sm: 0px 2px 4px -1px rgba(19, 124, 139, 0.06), 0px 1px 2px 0px rgba(19, 124, 139, 0.10);
-  --shadow: 0px 4px 6px -1px rgba(19, 124, 139, 0.08), 0px 2px 4px -2px rgba(19, 124, 139, 0.12);
-  --shadow-md: 0px 6px 12px -2px rgba(19, 124, 139, 0.10), 0px 3px 6px -3px rgba(19, 124, 139, 0.15);
-  --shadow-lg: 0px 10px 20px -5px rgba(19, 124, 139, 0.12), 0px 4px 8px -4px rgba(19, 124, 139, 0.18);
-  --shadow-xl: 0px 20px 30px -10px rgba(19, 124, 139, 0.15), 0px 8px 16px -8px rgba(19, 124, 139, 0.20);
-  --shadow-2xl: 0px 25px 40px -15px rgba(19, 124, 139, 0.18);
+  /* Enhanced shadows with purple glow */
+  --shadow-2xs: 0px 1px 2px 0px rgba(147, 51, 234, 0.1);
+  --shadow-xs: 0px 1px 3px 0px rgba(147, 51, 234, 0.15);
+  --shadow-sm: 0px 2px 4px -1px rgba(147, 51, 234, 0.12), 0px 1px 2px 0px rgba(147, 51, 234, 0.20);
+  --shadow: 0px 4px 6px -1px rgba(147, 51, 234, 0.15), 0px 2px 4px -2px rgba(147, 51, 234, 0.25);
+  --shadow-md: 0px 6px 12px -2px rgba(147, 51, 234, 0.18), 0px 3px 6px -3px rgba(147, 51, 234, 0.30);
+  --shadow-lg: 0px 10px 20px -5px rgba(147, 51, 234, 0.20), 0px 4px 8px -4px rgba(147, 51, 234, 0.35);
+  --shadow-xl: 0px 20px 30px -10px rgba(147, 51, 234, 0.25), 0px 8px 16px -8px rgba(147, 51, 234, 0.40);
+  --shadow-2xl: 0px 25px 40px -15px rgba(147, 51, 234, 0.30);
   
   --tracking-normal: 0em;
   --spacing: 0.25rem;
@@ -126,97 +126,14 @@
   --destructive-border: hsl(from hsl(var(--destructive)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
 }
 
-/* DARK MODE */
-.dark {
-  --button-outline: rgba(255,255,255, .10);
-  --badge-outline: rgba(255,255,255, .05);
-
-  --opaque-button-border-intensity: 9;  /* In terms of percentages */
-
-  /* Backgrounds applied on top of other backgrounds when hovered/active */
-  --elevate-1: rgba(255,255,255, .04);
-  --elevate-2: rgba(255,255,255, .09);
-
-  --background: 220 20% 12%;  /* #1A1F2E - charcoal */
-
-  --foreground: 211 33% 92%;  /* light text */
-
-  --border: 220 20% 20%;
-
-  --card: 220 20% 16%;  /* darker charcoal cards */
-
-  --card-foreground: 211 33% 92%;
-
-  --card-border: 186 75% 31%;  /* teal accent border */
-
-  --sidebar: 220 20% 14%;
-
-  --sidebar-foreground: 211 33% 92%;
-
-  --sidebar-border: 220 20% 20%;
-
-  --sidebar-primary: 186 75% 31%;
-
-  --sidebar-primary-foreground: 0 0% 100%;
-
-  --sidebar-accent: 220 20% 20%;
-
-  --sidebar-accent-foreground: 211 33% 92%;
-
-  --sidebar-ring: 11 100% 67%;  /* coral */
-
-  --popover: 220 20% 16%;
-
-  --popover-foreground: 211 33% 92%;
-
-  --popover-border: 220 20% 20%;
-
-  --primary: 0 0% 0%;  /* black */
-
-  --primary-foreground: 0 0% 100%;
-
-  --secondary: 42 100% 67%;  /* saffron */
-
-  --secondary-foreground: 220 20% 12%;
-
-  --muted: 220 20% 18%;
-
-  --muted-foreground: 217 12% 59%;
-
-  --accent: 11 100% 67%;  /* coral */
-
-  --accent-foreground: 0 0% 100%;
-
-  --destructive: 0 84% 60%;
-
-  --destructive-foreground: 0 0% 100%;
-
-  --input: 220 20% 25%;
-  --ring: 11 100% 67%;  /* coral */
-  --chart-1: 0 0% 100%;  /* white */
-  --chart-2: 11 100% 75%;  /* coral */
-  --chart-3: 42 100% 75%;  /* saffron */
-  --chart-4: 211 33% 92%;  /* light gray */
-  --chart-5: 217 12% 70%;  /* gray */
-
-  /* Darker shadows for dark mode */
-  --shadow-2xs: 0px 1px 2px 0px rgba(0, 0, 0, 0.20);
-  --shadow-xs: 0px 1px 3px 0px rgba(0, 0, 0, 0.25);
-  --shadow-sm: 0px 2px 4px -1px rgba(0, 0, 0, 0.22), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
-  --shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.25), 0px 2px 4px -2px rgba(0, 0, 0, 0.35);
-  --shadow-md: 0px 6px 12px -2px rgba(0, 0, 0, 0.28), 0px 3px 6px -3px rgba(0, 0, 0, 0.40);
-  --shadow-lg: 0px 10px 20px -5px rgba(0, 0, 0, 0.30), 0px 4px 8px -4px rgba(0, 0, 0, 0.45);
-  --shadow-xl: 0px 20px 30px -10px rgba(0, 0, 0, 0.35), 0px 8px 16px -8px rgba(0, 0, 0, 0.50);
-  --shadow-2xl: 0px 25px 40px -15px rgba(0, 0, 0, 0.40);
-
-  /* Automatically computed borders - intensity can be controlled by the user by the --opaque-button-border-intensity setting */
-  --sidebar-primary-border: hsl(from hsl(var(--sidebar-primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
-  --sidebar-accent-border: hsl(from hsl(var(--sidebar-accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
-  --primary-border: hsl(from hsl(var(--primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
-  --secondary-border: hsl(from hsl(var(--secondary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
-  --muted-border: hsl(from hsl(var(--muted)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
-  --accent-border: hsl(from hsl(var(--accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
-  --destructive-border: hsl(from hsl(var(--destructive)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+/* Light mode is no longer used - keeping for compatibility */
+.light {
+  --background: 0 0% 100%;
+  --foreground: 240 25% 6%;
+  --card: 0 0% 98%;
+  --card-foreground: 240 25% 6%;
+  --muted: 240 5% 96%;
+  --muted-foreground: 240 4% 46%;
 }
 
 @layer base {
@@ -233,37 +150,60 @@
   }
 }
 
-/* Gradient utilities for visual accents */
+/* Futuristic gradient utilities */
 @layer utilities {
-  .gradient-teal-aqua {
-    background: linear-gradient(135deg, #137C8B 0%, #00C4CC 100%);
+  .gradient-purple-pink {
+    background: linear-gradient(135deg, #9333EA 0%, #EC4899 100%);
   }
   
-  .gradient-coral-peach {
-    background: linear-gradient(135deg, #FF7A59 0%, #FFB199 100%);
+  .gradient-purple-cyan {
+    background: linear-gradient(135deg, #9333EA 0%, #00C4FF 100%);
   }
   
-  .gradient-logo {
-    background: linear-gradient(135deg, #137C8B 0%, #4DD9E8 100%);
+  .gradient-cyber {
+    background: linear-gradient(135deg, #6366F1 0%, #A855F7 50%, #EC4899 100%);
+  }
+  
+  .gradient-mesh {
+    background: 
+      radial-gradient(at 0% 0%, hsla(271, 91%, 65%, 0.2) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, hsla(193, 100%, 50%, 0.2) 0px, transparent 50%),
+      radial-gradient(at 50% 50%, hsla(280, 100%, 70%, 0.1) 0px, transparent 50%);
   }
   
   .glassmorphism {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(20, 25, 43, 0.6);
+    backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
   }
   
-  .dark .glassmorphism {
-    background: rgba(26, 31, 46, 0.7);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+  .glow-purple {
+    box-shadow: 0 0 20px rgba(147, 51, 234, 0.3), 0 0 40px rgba(147, 51, 234, 0.1);
+  }
+  
+  .glow-cyan {
+    box-shadow: 0 0 20px rgba(0, 196, 255, 0.3), 0 0 40px rgba(0, 196, 255, 0.1);
   }
   
   .accent-border-glow {
-    box-shadow: 0 0 0 1px hsl(var(--accent) / 0.2), 0 0 10px hsl(var(--accent) / 0.15);
+    box-shadow: 0 0 0 1px hsl(var(--accent) / 0.4), 0 0 20px hsl(var(--accent) / 0.2);
   }
   
   .primary-border-glow {
-    box-shadow: 0 0 0 1px hsl(var(--primary) / 0.2), 0 0 10px hsl(var(--primary) / 0.15);
+    box-shadow: 0 0 0 1px hsl(var(--primary) / 0.4), 0 0 20px hsl(var(--primary) / 0.2);
+  }
+  
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 10px rgba(147, 51, 234, 0.2), 0 0 20px rgba(147, 51, 234, 0.1);
+    }
+    to {
+      box-shadow: 0 0 20px rgba(147, 51, 234, 0.4), 0 0 40px rgba(147, 51, 234, 0.2);
+    }
   }
 
   /* Hide ugly search cancel button in Chrome until we can style it properly */
