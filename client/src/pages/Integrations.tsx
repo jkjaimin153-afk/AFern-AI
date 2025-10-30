@@ -27,7 +27,7 @@ export default function Integrations() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {integrations.map((integration, idx) => (
               <div key={idx} className="flex flex-col items-center text-center space-y-4" data-testid={`integration-${idx}`}>
-                <div className="w-20 h-20 flex items-center justify-center p-3">
+                <div className="w-20 h-20 rounded-xl bg-card border border-border flex items-center justify-center hover-elevate p-3">
                   <img src={integration.logo} alt={integration.name} className="w-full h-full object-contain" />
                 </div>
                 <div>
