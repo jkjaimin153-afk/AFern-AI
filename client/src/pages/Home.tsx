@@ -40,7 +40,6 @@ export default function Home() {
     "Book appointments automatically 24/7",
     "Reduce front desk costs by up to 80%",
     "Integrate with your existing tools",
-    "HIPAA-ready and SOC2-compliant options",
     "Multilingual support out of the box",
   ];
 
@@ -97,7 +96,7 @@ export default function Home() {
 
           <div className="mt-16 pt-12 border-t border-border">
             <p className="text-center text-sm text-muted-foreground">
-              HIPAA-ready option • SOC2-ready
+              SOC2-ready
             </p>
           </div>
         </div>
