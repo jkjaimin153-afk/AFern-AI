@@ -25,7 +25,7 @@ export default function Integrations() {
             {integrations.map((integration, idx) => (
               <div key={idx} className="flex flex-col items-center text-center space-y-4" data-testid={`integration-${idx}`}>
                 <div className="w-20 h-20 rounded-xl bg-card border border-border flex items-center justify-center hover-elevate">
-                  <integration.icon className="w-10 h-10 text-accent" />
+                  <integration.icon className="w-10 h-10" style={{ color: 'inherit' }} />
                 </div>
                 <div>
                   <h3 className="font-bold mb-1">{integration.name}</h3>
