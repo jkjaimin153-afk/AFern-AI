@@ -28,7 +28,7 @@ export default function Product() {
     {
       icon: Globe,
       title: "Integration & Intelligence",
-      description: "Connect with your tools, collect customer info, and communicate in 50+ languages with AI chatbots across all channels.",
+      description: "Connect with your tools, collect customer info, and communicate in 50+ languages with AI chatbots across all channels. Seamlessly sync data between platforms for a unified customer experience.",
       benefits: [
         "PMS & CRM integrations",
         "Multi-language support",
@@ -60,7 +60,7 @@ export default function Product() {
                   </div>
                   <h3 className="text-2xl font-bold font-serif">{feature.title}</h3>
                 </div>
-                <p className="text-muted-foreground mb-6 text-center min-h-[6rem]">{feature.description}</p>
+                <p className="text-muted-foreground mb-6 text-center">{feature.description}</p>
                 <ul className="space-y-3 flex-1">
                   {feature.benefits.map((benefit, bidx) => (
                     <li key={bidx} className="flex items-start gap-2 text-sm">
