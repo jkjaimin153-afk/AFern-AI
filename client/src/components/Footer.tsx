@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Phone, Mail, MapPin, Twitter, Linkedin, Github } from "lucide-react";
+import { Phone, Twitter, Linkedin, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
@@ -43,27 +43,13 @@ export function Footer() {
     { name: "Industries", href: "/industries" },
     { name: "Demo", href: "/demo" },
     { name: "Integrations", href: "/integrations" },
-    { name: "Pricing", href: "/pricing" },
-    { name: "Case Studies", href: "/case-studies" },
-  ];
-
-  const company = [
-    { name: "About Us", href: "/about" },
-    { name: "Careers", href: "/about#careers" },
-    { name: "Security", href: "/security" },
-    { name: "API Docs", href: "/developers" },
-  ];
-
-  const legal = [
-    { name: "Privacy Policy", href: "/privacy" },
-    { name: "Terms of Service", href: "/terms" },
-    { name: "Accessibility", href: "/accessibility" },
+    { name: "Resources", href: "/resources" },
   ];
 
   return (
     <footer className="bg-card border-t border-border">
       <div className="container mx-auto max-w-7xl px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <Phone className="h-6 w-6 text-accent" />
@@ -125,50 +111,6 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
-
-          <div>
-            <h3 className="font-semibold mb-4">Company</h3>
-            <ul className="space-y-2">
-              {company.map((link) => (
-                <li key={link.name}>
-                  <Link 
-                    href={link.href}
-                    className="text-muted-foreground hover:text-accent transition-colors" 
-                    data-testid={`link-footer-${link.name.toLowerCase().replace(/\s+/g, '-')}`}
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-semibold mb-4">Legal</h3>
-            <ul className="space-y-2 mb-6">
-              {legal.map((link) => (
-                <li key={link.name}>
-                  <Link 
-                    href={link.href}
-                    className="text-muted-foreground hover:text-accent transition-colors" 
-                    data-testid={`link-footer-${link.name.toLowerCase().replace(/\s+/g, '-')}`}
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <div className="space-y-2 text-sm text-muted-foreground">
-              <div className="flex items-start gap-2">
-                <Mail className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                <span>contact@inflowcalls.com</span>
-              </div>
-              <div className="flex items-start gap-2">
-                <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                <span>San Francisco, CA</span>
-              </div>
-            </div>
           </div>
         </div>
 
