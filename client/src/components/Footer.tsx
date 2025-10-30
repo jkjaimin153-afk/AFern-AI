@@ -42,7 +42,6 @@ export function Footer() {
     { name: "Product", href: "/product" },
     { name: "Industries", href: "/industries" },
     { name: "Demo", href: "/demo" },
-    { name: "Integrations", href: "/integrations" },
     { name: "Resources", href: "/resources" },
   ];
 
