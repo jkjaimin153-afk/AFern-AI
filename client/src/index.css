@@ -11,8 +11,8 @@
   --opaque-button-border-intensity: 10; /* In terms of percentages */
 
   /* Backgrounds applied on top of other backgrounds when hovered/active */
-  --elevate-1: rgba(147, 51, 234, .08);  /* Purple glow */
-  --elevate-2: rgba(147, 51, 234, .15);
+  --elevate-1: rgba(255, 122, 89, .08);  /* Orange glow */
+  --elevate-2: rgba(255, 122, 89, .15);
 
   /* Dark, futuristic palette */
   --background: 240 25% 6%;  /* #0A0F1E - deep navy/black */
@@ -33,7 +33,7 @@
 
   --sidebar-border: 240 15% 18%;
 
-  --sidebar-primary: 271 81% 56%;  /* purple */
+  --sidebar-primary: 11 100% 67%;  /* coral orange */
 
   --sidebar-primary-foreground: 0 0% 100%;
 
@@ -41,7 +41,7 @@
 
   --sidebar-accent-foreground: 0 0% 95%;
 
-  --sidebar-ring: 271 81% 56%;
+  --sidebar-ring: 11 100% 67%;
 
   --popover: 240 20% 10%;
 
@@ -49,11 +49,11 @@
 
   --popover-border: 240 15% 20%;
 
-  --primary: 271 81% 56%;  /* #9333EA - vivid purple */
+  --primary: 11 100% 67%;  /* #FF7A59 - coral orange */
 
   --primary-foreground: 0 0% 100%;
 
-  --secondary: 193 100% 50%;  /* #00C4FF - cyan */
+  --secondary: 28 100% 58%;  /* #FFA726 - warm amber */
 
   --secondary-foreground: 240 25% 6%;
 
@@ -61,7 +61,7 @@
 
   --muted-foreground: 240 5% 64%;  /* #9CA3AF - gray text */
 
-  --accent: 271 91% 65%;  /* #A855F7 - bright purple accent */
+  --accent: 16 100% 72%;  /* #FFB199 - soft peach */
 
   --accent-foreground: 0 0% 100%;
 
@@ -70,10 +70,10 @@
   --destructive-foreground: 0 0% 100%;
 
   --input: 240 15% 20%;
-  --ring: 271 81% 56%;
-  --chart-1: 271 81% 56%;  /* purple */
-  --chart-2: 193 100% 50%;  /* cyan */
-  --chart-3: 280 100% 70%;  /* magenta */
+  --ring: 11 100% 67%;
+  --chart-1: 11 100% 67%;  /* coral */
+  --chart-2: 28 100% 58%;  /* amber */
+  --chart-3: 16 100% 72%;  /* peach */
   --chart-4: 240 5% 64%;  /* gray */
   --chart-5: 240 15% 40%;
 
@@ -82,15 +82,15 @@
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
   --radius: 1rem; /* 16px for modern rounding */
   
-  /* Enhanced shadows with purple glow */
-  --shadow-2xs: 0px 1px 2px 0px rgba(147, 51, 234, 0.1);
-  --shadow-xs: 0px 1px 3px 0px rgba(147, 51, 234, 0.15);
-  --shadow-sm: 0px 2px 4px -1px rgba(147, 51, 234, 0.12), 0px 1px 2px 0px rgba(147, 51, 234, 0.20);
-  --shadow: 0px 4px 6px -1px rgba(147, 51, 234, 0.15), 0px 2px 4px -2px rgba(147, 51, 234, 0.25);
-  --shadow-md: 0px 6px 12px -2px rgba(147, 51, 234, 0.18), 0px 3px 6px -3px rgba(147, 51, 234, 0.30);
-  --shadow-lg: 0px 10px 20px -5px rgba(147, 51, 234, 0.20), 0px 4px 8px -4px rgba(147, 51, 234, 0.35);
-  --shadow-xl: 0px 20px 30px -10px rgba(147, 51, 234, 0.25), 0px 8px 16px -8px rgba(147, 51, 234, 0.40);
-  --shadow-2xl: 0px 25px 40px -15px rgba(147, 51, 234, 0.30);
+  /* Enhanced shadows with orange glow */
+  --shadow-2xs: 0px 1px 2px 0px rgba(255, 122, 89, 0.1);
+  --shadow-xs: 0px 1px 3px 0px rgba(255, 122, 89, 0.15);
+  --shadow-sm: 0px 2px 4px -1px rgba(255, 122, 89, 0.12), 0px 1px 2px 0px rgba(255, 122, 89, 0.20);
+  --shadow: 0px 4px 6px -1px rgba(255, 122, 89, 0.15), 0px 2px 4px -2px rgba(255, 122, 89, 0.25);
+  --shadow-md: 0px 6px 12px -2px rgba(255, 122, 89, 0.18), 0px 3px 6px -3px rgba(255, 122, 89, 0.30);
+  --shadow-lg: 0px 10px 20px -5px rgba(255, 122, 89, 0.20), 0px 4px 8px -4px rgba(255, 122, 89, 0.35);
+  --shadow-xl: 0px 20px 30px -10px rgba(255, 122, 89, 0.25), 0px 8px 16px -8px rgba(255, 122, 89, 0.40);
+  --shadow-2xl: 0px 25px 40px -15px rgba(255, 122, 89, 0.30);
   
   --tracking-normal: 0em;
   --spacing: 0.25rem;
@@ -152,23 +152,23 @@
 
 /* Futuristic gradient utilities */
 @layer utilities {
-  .gradient-purple-pink {
-    background: linear-gradient(135deg, #9333EA 0%, #EC4899 100%);
+  .gradient-orange-peach {
+    background: linear-gradient(135deg, #FF7A59 0%, #FFB199 100%);
   }
   
-  .gradient-purple-cyan {
-    background: linear-gradient(135deg, #9333EA 0%, #00C4FF 100%);
+  .gradient-orange-amber {
+    background: linear-gradient(135deg, #FF7A59 0%, #FFA726 100%);
   }
   
   .gradient-cyber {
-    background: linear-gradient(135deg, #6366F1 0%, #A855F7 50%, #EC4899 100%);
+    background: linear-gradient(135deg, #FF6B35 0%, #FF7A59 50%, #FFA726 100%);
   }
   
   .gradient-mesh {
     background: 
-      radial-gradient(at 0% 0%, hsla(271, 91%, 65%, 0.2) 0px, transparent 50%),
-      radial-gradient(at 100% 100%, hsla(193, 100%, 50%, 0.2) 0px, transparent 50%),
-      radial-gradient(at 50% 50%, hsla(280, 100%, 70%, 0.1) 0px, transparent 50%);
+      radial-gradient(at 0% 0%, hsla(11, 100%, 67%, 0.15) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, hsla(28, 100%, 58%, 0.15) 0px, transparent 50%),
+      radial-gradient(at 50% 50%, hsla(16, 100%, 72%, 0.1) 0px, transparent 50%);
   }
   
   .glassmorphism {
@@ -178,11 +178,11 @@
   }
   
   .glow-purple {
-    box-shadow: 0 0 20px rgba(147, 51, 234, 0.3), 0 0 40px rgba(147, 51, 234, 0.1);
+    box-shadow: 0 0 20px rgba(255, 122, 89, 0.3), 0 0 40px rgba(255, 122, 89, 0.1);
   }
   
   .glow-cyan {
-    box-shadow: 0 0 20px rgba(0, 196, 255, 0.3), 0 0 40px rgba(0, 196, 255, 0.1);
+    box-shadow: 0 0 20px rgba(255, 167, 38, 0.3), 0 0 40px rgba(255, 167, 38, 0.1);
   }
   
   .accent-border-glow {
@@ -199,10 +199,10 @@
   
   @keyframes glow {
     from {
-      box-shadow: 0 0 10px rgba(147, 51, 234, 0.2), 0 0 20px rgba(147, 51, 234, 0.1);
+      box-shadow: 0 0 10px rgba(255, 122, 89, 0.2), 0 0 20px rgba(255, 122, 89, 0.1);
     }
     to {
-      box-shadow: 0 0 20px rgba(147, 51, 234, 0.4), 0 0 40px rgba(147, 51, 234, 0.2);
+      box-shadow: 0 0 20px rgba(255, 122, 89, 0.4), 0 0 40px rgba(255, 122, 89, 0.2);
     }
   }
 
