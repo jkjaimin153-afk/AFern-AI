@@ -1,7 +1,7 @@
 import googleCalendarLogo from "@assets/image_1761794157605.png";
 import salesforceLogo from "@assets/512px-Salesforce.com_logo.svg_1761794725607.png";
 import hubspotLogo from "@assets/image_1761794546960.png";
-import twilioLogo from "@assets/image_1761794313036.png";
+import twilioLogo from "@assets/1024px-Twilio_logo_1761794782516.png";
 
 export default function Integrations() {
   const integrations = [
@@ -31,7 +31,7 @@ export default function Integrations() {
                   <img src={integration.logo} alt={integration.name} className="w-full h-full object-contain" />
                 </div>
                 <div>
-                  <h3 className="font-bold mb-1 text-accent">{integration.name}</h3>
+                  <h3 className="font-bold mb-1 text-accent text-lg">{integration.name}</h3>
                   <p className="text-sm text-muted-foreground">{integration.description}</p>
                 </div>
               </div>
