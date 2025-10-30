@@ -13,7 +13,6 @@ export default function Product() {
         "Natural language understanding with 95%+ accuracy",
         "Context-aware conversation flows",
         "Intelligent call routing and escalation",
-        "24/7 availability without breaks",
       ],
     },
     {
@@ -24,7 +23,6 @@ export default function Product() {
         "Real-time availability checking across calendars",
         "Automated reminder calls and confirmations",
         "Intelligent rescheduling workflows",
-        "Timezone-aware booking management",
       ],
     },
     {
@@ -62,7 +60,7 @@ export default function Product() {
                   </div>
                   <h3 className="text-2xl font-bold font-serif">{feature.title}</h3>
                 </div>
-                <p className="text-muted-foreground mb-6 text-center">{feature.description}</p>
+                <p className="text-muted-foreground mb-6 text-center min-h-[6rem]">{feature.description}</p>
                 <ul className="space-y-3 flex-1">
                   {feature.benefits.map((benefit, bidx) => (
                     <li key={bidx} className="flex items-start gap-2 text-sm">
