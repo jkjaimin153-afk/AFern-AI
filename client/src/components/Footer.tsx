@@ -96,7 +96,7 @@ export function Footer() {
             </form>
           </div>
 
-          <div>
+          <div className="lg:pl-12">
             <h3 className="font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
