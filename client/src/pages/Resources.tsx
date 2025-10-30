@@ -16,7 +16,7 @@ export default function Resources() {
     },
     {
       question: "Is there a setup fee?",
-      answer: "No setup fees. You can get started immediately with our simple onboarding process.",
+      answer: "Setup fees depend on your specific integration requirements and will be determined during the discovery call. We'll provide a transparent quote based on your needs.",
     },
     {
       question: "Can I cancel anytime?",
