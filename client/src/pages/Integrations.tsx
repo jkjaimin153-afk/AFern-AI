@@ -48,7 +48,7 @@ export default function Integrations() {
                 Contact us to discuss custom integrations for your business
               </p>
               <Link href="/demo">
-                <Button size="lg" className="w-full" data-testid="button-request-demo">
+                <Button size="lg" className="w-full bg-accent text-accent-foreground hover:bg-accent border border-accent-border" data-testid="button-request-demo">
                   Request Demo
                 </Button>
               </Link>
