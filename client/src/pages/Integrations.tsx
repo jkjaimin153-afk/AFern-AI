@@ -2,6 +2,9 @@ import googleCalendarLogo from "@assets/image_1761794157605.png";
 import salesforceLogo from "@assets/512px-Salesforce.com_logo.svg_1761794725607.png";
 import hubspotLogo from "@assets/image_1761794546960.png";
 import twilioLogo from "@assets/1024px-Twilio_logo_1761794782516.png";
+import { Link } from "wouter";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 
 export default function Integrations() {
   const integrations = [
@@ -38,9 +41,18 @@ export default function Integrations() {
             ))}
           </div>
 
-          <div className="mt-16 text-center">
-            <p className="text-muted-foreground mb-4">Need another integration?</p>
-            <p className="text-sm text-muted-foreground">Contact us to discuss custom integrations</p>
+          <div className="mt-16 flex justify-center">
+            <Card className="max-w-md w-full p-8 text-center">
+              <h3 className="font-bold text-xl mb-2">Need another integration?</h3>
+              <p className="text-muted-foreground mb-6">
+                Contact us to discuss custom integrations for your business
+              </p>
+              <Link href="/demo">
+                <Button size="lg" className="w-full" data-testid="button-request-demo">
+                  Request Demo
+                </Button>
+              </Link>
+            </Card>
           </div>
         </div>
       </section>
