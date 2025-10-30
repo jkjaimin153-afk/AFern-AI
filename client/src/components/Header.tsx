@@ -20,11 +20,11 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60" style={{ boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)" }}>
       <div className="container mx-auto max-w-7xl px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center space-x-2 hover-elevate active-elevate-2 rounded-lg px-3 py-2" data-testid="link-home">
-            <div className="w-8 h-8 rounded-lg bg-black flex items-center justify-center">
-              <Phone className="h-5 w-5 text-orange-400" />
+          <Link href="/" className="flex items-center space-x-3 hover-elevate active-elevate-2 rounded-lg px-3 py-2" data-testid="link-home">
+            <div className="w-10 h-10 rounded-lg bg-black flex items-center justify-center">
+              <Phone className="h-6 w-6 text-orange-400" />
             </div>
-            <span className="font-serif text-2xl font-bold text-foreground">InFlowCalls</span>
+            <span className="font-serif text-3xl font-bold text-foreground">InFlowCalls</span>
           </Link>
 
           <nav className="hidden md:flex items-center space-x-1">
@@ -32,8 +32,7 @@ export function Header() {
               <Button 
                 key={item.name}
                 variant="ghost"
-                size="lg"
-                className={`text-lg ${location === item.href ? "bg-accent/10 text-accent" : ""}`}
+                className={location === item.href ? "bg-accent/10 text-accent" : ""}
                 data-testid={`link-nav-${item.name.toLowerCase()}`}
                 asChild
               >
