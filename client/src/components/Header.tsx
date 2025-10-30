@@ -31,8 +31,9 @@ export function Header() {
             {navigation.map((item) => (
               <Button 
                 key={item.name}
-                variant="ghost" 
-                className={location === item.href ? "bg-accent/10 text-accent" : ""}
+                variant="ghost"
+                size="lg"
+                className={`text-lg ${location === item.href ? "bg-accent/10 text-accent" : ""}`}
                 data-testid={`link-nav-${item.name.toLowerCase()}`}
                 asChild
               >
