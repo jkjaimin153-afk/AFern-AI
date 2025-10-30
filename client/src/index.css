@@ -25,7 +25,7 @@
 
   --card-foreground: 210 29% 24%;  /* dark charcoal text on cards */
 
-  --card-border: 186 75% 80%;  /* light teal accent border */
+  --card-border: 217 12% 85%;  /* light gray border */
 
   --sidebar: 0 0% 100%;  /* white sidebar */
 
@@ -33,7 +33,7 @@
 
   --sidebar-border: 217 12% 85%;
 
-  --sidebar-primary: 186 75% 31%;  /* teal */
+  --sidebar-primary: 0 0% 0%;  /* black */
 
   --sidebar-primary-foreground: 0 0% 100%;
 
@@ -41,7 +41,7 @@
 
   --sidebar-accent-foreground: 210 29% 24%;
 
-  --sidebar-ring: 186 75% 31%;
+  --sidebar-ring: 11 100% 67%;  /* coral */
 
   --popover: 0 0% 100%;
 
@@ -49,7 +49,7 @@
 
   --popover-border: 217 12% 85%;
 
-  --primary: 186 75% 31%;  /* #137C8B - teal for buttons/headlines */
+  --primary: 0 0% 0%;  /* #000000 - black for buttons/headlines */
 
   --primary-foreground: 0 0% 100%;  /* white text on primary */
 
@@ -70,12 +70,12 @@
   --destructive-foreground: 0 0% 100%;
 
   --input: 217 12% 85%;
-  --ring: 186 75% 31%;
-  --chart-1: 186 75% 31%;  /* teal */
+  --ring: 11 100% 67%;  /* coral */
+  --chart-1: 0 0% 0%;  /* black */
   --chart-2: 11 100% 67%;  /* coral */
   --chart-3: 42 100% 67%;  /* saffron */
-  --chart-4: 186 75% 50%;  /* bright aqua */
-  --chart-5: 280 65% 60%;  /* purple */
+  --chart-4: 210 29% 24%;  /* dark charcoal */
+  --chart-5: 217 12% 59%;  /* gray */
 
   --font-sans: Inter, sans-serif;
   --font-serif: 'Playfair Display SC', 'Playfair Display', serif;
@@ -163,7 +163,7 @@
 
   --sidebar-accent-foreground: 211 33% 92%;
 
-  --sidebar-ring: 186 75% 31%;
+  --sidebar-ring: 11 100% 67%;  /* coral */
 
   --popover: 220 20% 16%;
 
@@ -171,7 +171,7 @@
 
   --popover-border: 220 20% 20%;
 
-  --primary: 186 75% 31%;  /* teal */
+  --primary: 0 0% 0%;  /* black */
 
   --primary-foreground: 0 0% 100%;
 
@@ -192,12 +192,12 @@
   --destructive-foreground: 0 0% 100%;
 
   --input: 220 20% 25%;
-  --ring: 186 75% 31%;
-  --chart-1: 186 75% 50%;
-  --chart-2: 11 100% 75%;
-  --chart-3: 42 100% 75%;
-  --chart-4: 186 75% 60%;
-  --chart-5: 280 65% 70%;
+  --ring: 11 100% 67%;  /* coral */
+  --chart-1: 0 0% 100%;  /* white */
+  --chart-2: 11 100% 75%;  /* coral */
+  --chart-3: 42 100% 75%;  /* saffron */
+  --chart-4: 211 33% 92%;  /* light gray */
+  --chart-5: 217 12% 70%;  /* gray */
 
   /* Darker shadows for dark mode */
   --shadow-2xs: 0px 1px 2px 0px rgba(0, 0, 0, 0.20);

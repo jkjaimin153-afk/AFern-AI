@@ -52,8 +52,8 @@ export default function Home() {
         <div className="container mx-auto max-w-7xl px-6 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
-              <h1 className="font-serif text-5xl md:text-hero-mobile lg:text-hero font-bold leading-tight text-white drop-shadow-lg" data-testid="text-hero-title">
-                Never Miss A Call. <span className="text-secondary">Turn Conversations Into Customers.</span>
+              <h1 className="font-serif text-6xl md:text-7xl lg:text-8xl font-bold leading-tight text-white drop-shadow-lg" data-testid="text-hero-title">
+                Never Miss A Call. <span className="text-accent">Turn Conversations Into Customers.</span>
               </h1>
               <p className="text-lg md:text-xl text-white/90 leading-relaxed drop-shadow-md">
                 InFlowCalls is an enterprise-grade AI receptionist & outbound caller that answers, qualifies and books — 24/7 — integrated with your calendar, CRM, and POS.
