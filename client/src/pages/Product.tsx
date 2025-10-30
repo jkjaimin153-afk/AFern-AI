@@ -28,7 +28,7 @@ export default function Product() {
     {
       icon: Globe,
       title: "Integration & Intelligence",
-      description: "Connect with your tools, collect customer info, and communicate in 50+ languages with AI chatbots across all channels. Seamlessly sync data between platforms for a unified customer experience.",
+      description: "Connect with your tools, collect customer info, and communicate in 50+ languages with AI chatbots across all channels. Seamlessly sync data for unified operations.",
       benefits: [
         "PMS & CRM integrations",
         "Multi-language support",
