@@ -12,7 +12,6 @@ export function Header() {
     { name: "Industries", href: "/industries" },
     { name: "Demo", href: "/demo" },
     { name: "Integrations", href: "/integrations" },
-    { name: "Pricing", href: "/pricing" },
     { name: "Resources", href: "/resources" },
   ];
 

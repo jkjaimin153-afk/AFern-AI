@@ -1,35 +1,26 @@
 import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 
 export default function Resources() {
-  const blogPosts = [
+  const faqs = [
     {
-      title: "How AI Receptionists Save Small Businesses",
-      category: "Industry Insights",
-      date: "March 15, 2024",
-      readTime: "5 min read",
-      excerpt: "Discover the ROI of AI-powered call handling and how businesses are recovering lost revenue.",
+      question: "How accurate is the AI?",
+      answer: "Our AI handles 95%+ of routine calls with high accuracy. For complex situations, calls are seamlessly transferred to your team with full context.",
     },
     {
-      title: "Setting Up InFlowCalls with ServiceTitan",
-      category: "Integration Guide",
-      date: "March 10, 2024",
-      readTime: "8 min read",
-      excerpt: "Step-by-step guide to connecting InFlowCalls with your ServiceTitan account for seamless field service management.",
+      question: "Do you integrate with my PMS/CRM?",
+      answer: "We integrate natively with common systems like HubSpot, Salesforce, ServiceTitan, and more. For others, we support integration via Zapier and custom webhooks.",
     },
     {
-      title: "Best Practices for AI Call Scripts",
-      category: "Best Practices",
-      date: "March 5, 2024",
-      readTime: "6 min read",
-      excerpt: "Learn how to optimize your AI call flows for better customer experience and higher conversion rates.",
+      question: "What happens if the AI can't handle a call?",
+      answer: "Calls are intelligently escalated to your team with complete conversation history and context, ensuring a smooth handoff.",
     },
     {
-      title: "HIPAA Compliance for Healthcare Providers",
-      category: "Compliance",
-      date: "February 28, 2024",
-      readTime: "10 min read",
-      excerpt: "Everything you need to know about using InFlowCalls in a HIPAA-compliant manner.",
+      question: "Is there a setup fee?",
+      answer: "No setup fees. You can get started immediately with our simple onboarding process.",
+    },
+    {
+      question: "Can I cancel anytime?",
+      answer: "Yes, all plans are month-to-month with no long-term contracts required. Enterprise plans have flexible terms.",
     },
   ];
 
@@ -42,30 +33,20 @@ export default function Resources() {
               <span className="text-accent">Resources</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Guides and insights to help you get the most out of InFlowCalls
+              Frequently asked questions about InFlowCalls
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {blogPosts.map((post, idx) => (
-              <Card key={idx} className="p-6 hover-elevate active-elevate-2 transition-all cursor-pointer" data-testid={`card-blog-${idx}`}>
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="px-3 py-1 bg-accent/10 border border-accent/20 rounded-full text-xs font-semibold text-accent">
-                    {post.category}
-                  </span>
-                  <span className="text-xs text-muted-foreground">•</span>
-                  <span className="text-xs text-muted-foreground">{post.readTime}</span>
-                </div>
-                <h3 className="font-bold text-xl mb-2">{post.title}</h3>
-                <p className="text-sm text-muted-foreground mb-4">{post.excerpt}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-xs text-muted-foreground">{post.date}</span>
-                  <Button variant="ghost" size="sm" data-testid={`button-read-blog-${idx}`}>
-                    Read More →
-                  </Button>
-                </div>
-              </Card>
-            ))}
+          <div className="mb-16">
+            <h2 className="font-serif text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+            <div className="max-w-3xl mx-auto space-y-6">
+              {faqs.map((faq, idx) => (
+                <Card key={idx} className="p-6" data-testid={`card-faq-${idx}`}>
+                  <h3 className="font-bold text-lg mb-2">{faq.question}</h3>
+                  <p className="text-muted-foreground">{faq.answer}</p>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </section>
