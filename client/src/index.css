@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* LIGHT MODE */
+/* LIGHT MODE (DEFAULT) */
 :root {
   --button-outline: rgba(0,0,0, .10);
   --badge-outline: rgba(0,0,0, .05);
@@ -14,80 +14,84 @@
   --elevate-1: rgba(0,0,0, .03);
   --elevate-2: rgba(0,0,0, .08);
 
-  --background: 0 0% 0%;
+  /* Bright, approachable palette */
+  --background: 211 33% 97%;  /* #F5F7FA - soft light neutral */
 
-  --foreground: 0 0% 98%;
+  --foreground: 210 29% 24%;  /* #2C3E50 - dark charcoal for headlines */
 
-  --border: 210 100% 15%;
+  --border: 217 12% 85%;  /* light gray border */
 
-  --card: 210 100% 8%;
+  --card: 0 0% 100%;  /* #FFFFFF - pure white cards */
 
-  --card-foreground: 0 0% 98%;
+  --card-foreground: 210 29% 24%;  /* dark charcoal text on cards */
 
-  --card-border: 210 100% 15%;
+  --card-border: 186 75% 80%;  /* light teal accent border */
 
-  --sidebar: 210 100% 12%;
+  --sidebar: 0 0% 100%;  /* white sidebar */
 
-  --sidebar-foreground: 0 0% 98%;
+  --sidebar-foreground: 210 29% 24%;
 
-  --sidebar-border: 210 100% 18%;
+  --sidebar-border: 217 12% 85%;
 
-  --sidebar-primary: 210 100% 15%;
+  --sidebar-primary: 186 75% 31%;  /* teal */
 
-  --sidebar-primary-foreground: 180 100% 97%;
+  --sidebar-primary-foreground: 0 0% 100%;
 
-  --sidebar-accent: 210 100% 20%;
+  --sidebar-accent: 211 33% 95%;  /* very light gray */
 
-  --sidebar-accent-foreground: 0 0% 98%;
+  --sidebar-accent-foreground: 210 29% 24%;
 
-  --sidebar-ring: 189 100% 50%;
+  --sidebar-ring: 186 75% 31%;
 
-  --popover: 210 100% 10%;
+  --popover: 0 0% 100%;
 
-  --popover-foreground: 0 0% 98%;
+  --popover-foreground: 210 29% 24%;
 
-  --popover-border: 210 100% 18%;
+  --popover-border: 217 12% 85%;
 
-  --primary: 210 100% 15%;
+  --primary: 186 75% 31%;  /* #137C8B - teal for buttons/headlines */
 
-  --primary-foreground: 180 100% 97%;
+  --primary-foreground: 0 0% 100%;  /* white text on primary */
 
-  --secondary: 210 100% 12%;
+  --secondary: 42 100% 67%;  /* #FFC857 - saffron yellow */
 
-  --secondary-foreground: 0 0% 98%;
+  --secondary-foreground: 210 29% 24%;  /* dark text on secondary */
 
-  --muted: 210 100% 15%;
+  --muted: 211 33% 95%;  /* very light background for muted sections */
 
-  --muted-foreground: 0 0% 70%;
+  --muted-foreground: 217 12% 59%;  /* #8B95A5 - tertiary text */
 
-  --accent: 189 100% 50%;
+  --accent: 11 100% 67%;  /* #FF7A59 - coral accent */
 
-  --accent-foreground: 0 0% 0%;
+  --accent-foreground: 0 0% 100%;  /* white text on accent */
 
-  --destructive: 0 84% 32%;
+  --destructive: 0 84% 60%;
 
-  --destructive-foreground: 0 0% 98%;
+  --destructive-foreground: 0 0% 100%;
 
-  --input: 220 13% 75%;
-  --ring: 189 100% 50%;
-  --chart-1: 203 92% 25%;
-  --chart-2: 189 100% 42%;
-  --chart-3: 280 65% 35%;
-  --chart-4: 25 90% 45%;
-  --chart-5: 150 75% 30%;
+  --input: 217 12% 85%;
+  --ring: 186 75% 31%;
+  --chart-1: 186 75% 31%;  /* teal */
+  --chart-2: 11 100% 67%;  /* coral */
+  --chart-3: 42 100% 67%;  /* saffron */
+  --chart-4: 186 75% 50%;  /* bright aqua */
+  --chart-5: 280 65% 60%;  /* purple */
 
   --font-sans: Inter, sans-serif;
-  --font-serif: Playfair Display, serif;
-  --font-mono: Menlo, monospace;
-  --radius: 1.25rem; /* 20px for 2xl rounded */
-  --shadow-2xs: 0px 2px 0px 0px hsl(220 20% 20% / 0.05);
-  --shadow-xs: 0px 2px 0px 0px hsl(220 20% 20% / 0.08);
-  --shadow-sm: 0px 2px 0px 0px hsl(220 20% 20% / 0.05), 0px 1px 2px -1px hsl(220 20% 20% / 0.10);
-  --shadow: 0px 2px 0px 0px hsl(220 20% 20% / 0.05), 0px 1px 2px -1px hsl(220 20% 20% / 0.10);
-  --shadow-md: 0px 2px 0px 0px hsl(220 20% 20% / 0.05), 0px 2px 4px -1px hsl(220 20% 20% / 0.12);
-  --shadow-lg: 0px 2px 0px 0px hsl(220 20% 20% / 0.06), 0px 4px 6px -1px hsl(220 20% 20% / 0.15);
-  --shadow-xl: 0px 2px 0px 0px hsl(220 20% 20% / 0.08), 0px 8px 10px -1px hsl(220 20% 20% / 0.18);
-  --shadow-2xl: 0px 2px 0px 0px hsl(220 20% 20% / 0.10);
+  --font-serif: 'Playfair Display SC', 'Playfair Display', serif;
+  --font-mono: Menlo, Monaco, 'Courier New', monospace;
+  --radius: 0.75rem; /* 12px for subtle rounding */
+  
+  /* Enhanced shadows for depth */
+  --shadow-2xs: 0px 1px 2px 0px rgba(19, 124, 139, 0.05);
+  --shadow-xs: 0px 1px 3px 0px rgba(19, 124, 139, 0.08);
+  --shadow-sm: 0px 2px 4px -1px rgba(19, 124, 139, 0.06), 0px 1px 2px 0px rgba(19, 124, 139, 0.10);
+  --shadow: 0px 4px 6px -1px rgba(19, 124, 139, 0.08), 0px 2px 4px -2px rgba(19, 124, 139, 0.12);
+  --shadow-md: 0px 6px 12px -2px rgba(19, 124, 139, 0.10), 0px 3px 6px -3px rgba(19, 124, 139, 0.15);
+  --shadow-lg: 0px 10px 20px -5px rgba(19, 124, 139, 0.12), 0px 4px 8px -4px rgba(19, 124, 139, 0.18);
+  --shadow-xl: 0px 20px 30px -10px rgba(19, 124, 139, 0.15), 0px 8px 16px -8px rgba(19, 124, 139, 0.20);
+  --shadow-2xl: 0px 25px 40px -15px rgba(19, 124, 139, 0.18);
+  
   --tracking-normal: 0em;
   --spacing: 0.25rem;
 
@@ -122,6 +126,7 @@
   --destructive-border: hsl(from hsl(var(--destructive)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
 }
 
+/* DARK MODE */
 .dark {
   --button-outline: rgba(255,255,255, .10);
   --badge-outline: rgba(255,255,255, .05);
@@ -132,76 +137,77 @@
   --elevate-1: rgba(255,255,255, .04);
   --elevate-2: rgba(255,255,255, .09);
 
-  --background: 0 0% 0%;
+  --background: 220 20% 12%;  /* #1A1F2E - charcoal */
 
-  --foreground: 210 20% 92%;
+  --foreground: 211 33% 92%;  /* light text */
 
-  --border: 210 50% 20%;
+  --border: 220 20% 20%;
 
-  --card: 210 100% 8%;
+  --card: 220 20% 16%;  /* darker charcoal cards */
 
-  --card-foreground: 210 20% 92%;
+  --card-foreground: 211 33% 92%;
 
-  --card-border: 210 60% 12%;
+  --card-border: 186 75% 31%;  /* teal accent border */
 
-  --sidebar: 210 100% 10%;
+  --sidebar: 220 20% 14%;
 
-  --sidebar-foreground: 210 20% 92%;
+  --sidebar-foreground: 211 33% 92%;
 
-  --sidebar-border: 210 50% 14%;
+  --sidebar-border: 220 20% 20%;
 
-  --sidebar-primary: 210 100% 15%;
+  --sidebar-primary: 186 75% 31%;
 
-  --sidebar-primary-foreground: 180 100% 97%;
+  --sidebar-primary-foreground: 0 0% 100%;
 
-  --sidebar-accent: 210 60% 16%;
+  --sidebar-accent: 220 20% 20%;
 
-  --sidebar-accent-foreground: 210 20% 92%;
+  --sidebar-accent-foreground: 211 33% 92%;
 
-  --sidebar-ring: 189 100% 50%;
+  --sidebar-ring: 186 75% 31%;
 
-  --popover: 210 100% 8%;
+  --popover: 220 20% 16%;
 
-  --popover-foreground: 210 20% 92%;
+  --popover-foreground: 211 33% 92%;
 
-  --popover-border: 210 50% 16%;
+  --popover-border: 220 20% 20%;
 
-  --primary: 210 100% 15%;
+  --primary: 186 75% 31%;  /* teal */
 
-  --primary-foreground: 180 100% 97%;
+  --primary-foreground: 0 0% 100%;
 
-  --secondary: 210 50% 18%;
+  --secondary: 42 100% 67%;  /* saffron */
 
-  --secondary-foreground: 210 20% 92%;
+  --secondary-foreground: 220 20% 12%;
 
-  --muted: 210 40% 14%;
+  --muted: 220 20% 18%;
 
-  --muted-foreground: 215 12% 65%;
+  --muted-foreground: 217 12% 59%;
 
-  --accent: 189 100% 50%;
+  --accent: 11 100% 67%;  /* coral */
 
-  --accent-foreground: 0 0% 0%;
+  --accent-foreground: 0 0% 100%;
 
-  --destructive: 0 84% 32%;
+  --destructive: 0 84% 60%;
 
-  --destructive-foreground: 0 0% 98%;
+  --destructive-foreground: 0 0% 100%;
 
-  --input: 210 50% 30%;
-  --ring: 189 100% 50%;
-  --chart-1: 189 100% 60%;
-  --chart-2: 203 85% 65%;
-  --chart-3: 280 70% 70%;
-  --chart-4: 25 95% 65%;
-  --chart-5: 150 80% 60%;
+  --input: 220 20% 25%;
+  --ring: 186 75% 31%;
+  --chart-1: 186 75% 50%;
+  --chart-2: 11 100% 75%;
+  --chart-3: 42 100% 75%;
+  --chart-4: 186 75% 60%;
+  --chart-5: 280 65% 70%;
 
-  --shadow-2xs: 0px 2px 0px 0px hsl(220 50% 5% / 0.10);
-  --shadow-xs: 0px 2px 0px 0px hsl(220 50% 5% / 0.15);
-  --shadow-sm: 0px 2px 0px 0px hsl(220 50% 5% / 0.10), 0px 1px 2px -1px hsl(220 50% 5% / 0.20);
-  --shadow: 0px 2px 0px 0px hsl(220 50% 5% / 0.10), 0px 1px 2px -1px hsl(220 50% 5% / 0.20);
-  --shadow-md: 0px 2px 0px 0px hsl(220 50% 5% / 0.12), 0px 2px 4px -1px hsl(220 50% 5% / 0.25);
-  --shadow-lg: 0px 2px 0px 0px hsl(220 50% 5% / 0.15), 0px 4px 6px -1px hsl(220 50% 5% / 0.30);
-  --shadow-xl: 0px 2px 0px 0px hsl(220 50% 5% / 0.20), 0px 8px 10px -1px hsl(220 50% 5% / 0.35);
-  --shadow-2xl: 0px 2px 0px 0px hsl(220 50% 5% / 0.25);
+  /* Darker shadows for dark mode */
+  --shadow-2xs: 0px 1px 2px 0px rgba(0, 0, 0, 0.20);
+  --shadow-xs: 0px 1px 3px 0px rgba(0, 0, 0, 0.25);
+  --shadow-sm: 0px 2px 4px -1px rgba(0, 0, 0, 0.22), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
+  --shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.25), 0px 2px 4px -2px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0px 6px 12px -2px rgba(0, 0, 0, 0.28), 0px 3px 6px -3px rgba(0, 0, 0, 0.40);
+  --shadow-lg: 0px 10px 20px -5px rgba(0, 0, 0, 0.30), 0px 4px 8px -4px rgba(0, 0, 0, 0.45);
+  --shadow-xl: 0px 20px 30px -10px rgba(0, 0, 0, 0.35), 0px 8px 16px -8px rgba(0, 0, 0, 0.50);
+  --shadow-2xl: 0px 25px 40px -15px rgba(0, 0, 0, 0.40);
 
   /* Automatically computed borders - intensity can be controlled by the user by the --opaque-button-border-intensity setting */
   --sidebar-primary-border: hsl(from hsl(var(--sidebar-primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
@@ -221,29 +227,44 @@
   body {
     @apply font-sans antialiased bg-background text-foreground;
   }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
 }
 
-/**
- * Using the elevate system.
- * Automatic contrast adjustment.
- *
- * <element className="hover-elevate" />
- * <element className="active-elevate-2" />
- *
- * // Using the tailwind utility when a data attribute is "on"
- * <element className="toggle-elevate data-[state=on]:toggle-elevated" />
- * // Or manually controlling the toggle state
- * <element className="toggle-elevate toggle-elevated" />
- *
- * Elevation systems have to handle many states.
- * - not-hovered, vs. hovered vs. active  (three mutually exclusive states)
- * - toggled or not
- * - focused or not (this is not handled with these utilities)
- *
- * Even without handling focused or not, this is six possible combinations that
- * need to be distinguished from eachother visually.
- */
+/* Gradient utilities for visual accents */
 @layer utilities {
+  .gradient-teal-aqua {
+    background: linear-gradient(135deg, #137C8B 0%, #00C4CC 100%);
+  }
+  
+  .gradient-coral-peach {
+    background: linear-gradient(135deg, #FF7A59 0%, #FFB199 100%);
+  }
+  
+  .gradient-logo {
+    background: linear-gradient(135deg, #137C8B 0%, #4DD9E8 100%);
+  }
+  
+  .glassmorphism {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .dark .glassmorphism {
+    background: rgba(26, 31, 46, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .accent-border-glow {
+    box-shadow: 0 0 0 1px hsl(var(--accent) / 0.2), 0 0 10px hsl(var(--accent) / 0.15);
+  }
+  
+  .primary-border-glow {
+    box-shadow: 0 0 0 1px hsl(var(--primary) / 0.2), 0 0 10px hsl(var(--primary) / 0.15);
+  }
 
   /* Hide ugly search cancel button in Chrome until we can style it properly */
   input[type="search"]::-webkit-search-cancel-button {
@@ -277,10 +298,8 @@
     pointer-events: none;
     position: absolute;
     inset: 0px;
-    /*border-radius: inherit;   match rounded corners */
     border-radius: inherit;
     z-index: -1;
-    /* sits behind content but above backdrop */
   }
 
   .toggle-elevate.toggle-elevated::before {
@@ -309,10 +328,8 @@
     pointer-events: none;
     position: absolute;
     inset: 0px;
-    /*border-radius: inherit;   match rounded corners */
     border-radius: inherit;
     z-index: 999;
-    /* sits in front of content */
   }
 
   .hover-elevate:hover:not(.no-default-hover-elevate)::after,

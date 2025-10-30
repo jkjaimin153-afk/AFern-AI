@@ -2,6 +2,7 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Phone, Menu, X } from "lucide-react";
 import { useState } from "react";
+import logoImage from "@assets/generated_images/Premium_InFlowCalls_circular_logo_emblem_f0bc7f45.png";
 
 export function Header() {
   const [location] = useLocation();
@@ -20,9 +21,9 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60" style={{ boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)" }}>
       <div className="container mx-auto max-w-7xl px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center space-x-2 hover-elevate active-elevate-2 rounded-lg px-3 py-2" data-testid="link-home">
-            <Phone className="h-6 w-6 text-accent" />
-            <span className="font-serif text-2xl font-bold text-foreground">InFlowCalls</span>
+          <Link href="/" className="flex items-center space-x-3 hover-elevate active-elevate-2 rounded-lg px-3 py-2" data-testid="link-home">
+            <img src={logoImage} alt="InFlowCalls Logo" className="h-10 w-10" />
+            <span className="font-serif text-2xl font-bold text-primary tracking-wide">InFlowCalls</span>
           </Link>
 
           <nav className="hidden md:flex items-center space-x-1">

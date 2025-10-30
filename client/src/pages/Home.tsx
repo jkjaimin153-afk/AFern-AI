@@ -46,15 +46,16 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      <section className="relative overflow-hidden bg-gradient-to-br from-background via-primary/5 to-background py-20 md:py-32">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(0,224,255,0.1),transparent_50%)]" />
+      <section className="relative overflow-hidden gradient-teal-aqua py-20 md:py-32">
+        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/30 to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,122,89,0.15),transparent_50%)]" />
         <div className="container mx-auto max-w-7xl px-6 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
-              <h1 className="font-serif text-5xl md:text-hero-mobile lg:text-hero font-bold leading-tight text-foreground" data-testid="text-hero-title">
-                Never Miss A Call. <span className="text-accent">Turn Conversations Into Customers.</span>
+              <h1 className="font-serif text-5xl md:text-hero-mobile lg:text-hero font-bold leading-tight text-white drop-shadow-lg" data-testid="text-hero-title">
+                Never Miss A Call. <span className="text-secondary">Turn Conversations Into Customers.</span>
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              <p className="text-lg md:text-xl text-white/90 leading-relaxed drop-shadow-md">
                 InFlowCalls is an enterprise-grade AI receptionist & outbound caller that answers, qualifies and books — 24/7 — integrated with your calendar, CRM, and POS.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -116,20 +117,26 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-4 bg-card border-y border-border">
+      <section className="py-8 bg-secondary/10 border-y border-secondary/20">
         <div className="container mx-auto max-w-7xl px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div data-testid="kpi-answered">
-              <div className="text-4xl md:text-5xl font-bold font-serif text-accent mb-2">0%</div>
-              <p className="text-muted-foreground">Answered calls automatically</p>
+            <div data-testid="kpi-answered" className="relative">
+              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full gradient-coral-peach mb-3 shadow-lg">
+                <span className="text-3xl font-bold font-serif text-white">0%</span>
+              </div>
+              <p className="text-foreground font-medium">Answered calls automatically</p>
             </div>
-            <div data-testid="kpi-booking">
-              <div className="text-4xl md:text-5xl font-bold font-serif text-accent mb-2">0 mins</div>
-              <p className="text-muted-foreground">Avg time to booking</p>
+            <div data-testid="kpi-booking" className="relative">
+              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary shadow-lg mb-3">
+                <span className="text-2xl font-bold font-serif text-white">0m</span>
+              </div>
+              <p className="text-foreground font-medium">Avg time to booking</p>
             </div>
-            <div data-testid="kpi-businesses">
-              <div className="text-4xl md:text-5xl font-bold font-serif text-accent mb-2">0+</div>
-              <p className="text-muted-foreground">Businesses onboarded</p>
+            <div data-testid="kpi-businesses" className="relative">
+              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full gradient-logo shadow-lg mb-3">
+                <span className="text-3xl font-bold font-serif text-white">0+</span>
+              </div>
+              <p className="text-foreground font-medium">Businesses onboarded</p>
             </div>
           </div>
         </div>
