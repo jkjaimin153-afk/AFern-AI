@@ -25,22 +25,22 @@ export function Header() {
             <span className="text-3xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">InFlowCalls</span>
           </Link>
 
-          <nav className="hidden md:flex items-center space-x-1">
-            {navigation.map((item) => (
-              <Button 
-                key={item.name}
-                variant="ghost"
-                className={location === item.href ? "bg-primary/10 text-primary border border-primary/20" : "text-foreground/80 hover:text-foreground"}
-                data-testid={`link-nav-${item.name.toLowerCase()}`}
-                asChild
-              >
-                <Link href={item.href}>{item.name}</Link>
-              </Button>
-            ))}
-          </nav>
+          <div className="hidden md:flex items-center gap-1">
+            <nav className="flex items-center space-x-1">
+              {navigation.map((item) => (
+                <Button 
+                  key={item.name}
+                  variant="ghost"
+                  className={location === item.href ? "bg-primary/10 text-primary border border-primary/20" : "text-foreground/80 hover:text-foreground"}
+                  data-testid={`link-nav-${item.name.toLowerCase()}`}
+                  asChild
+                >
+                  <Link href={item.href}>{item.name}</Link>
+                </Button>
+              ))}
+            </nav>
 
-          <div className="hidden md:flex items-center space-x-3">
-            <Button className="bg-gradient-to-r from-primary to-accent text-white hover:opacity-90 glow-purple font-semibold" data-testid="button-demo-header" asChild>
+            <Button className="bg-gradient-to-r from-primary to-accent text-white hover:opacity-90 glow-purple font-semibold ml-2" data-testid="button-demo-header" asChild>
               <Link href="/demo">Request Demo</Link>
             </Button>
           </div>
