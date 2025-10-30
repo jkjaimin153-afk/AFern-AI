@@ -13,6 +13,7 @@ export default function Product() {
         "Natural language understanding with 95%+ accuracy",
         "Context-aware conversation flows",
         "Intelligent call routing and escalation",
+        "24/7 availability without breaks",
       ],
     },
     {
@@ -23,6 +24,7 @@ export default function Product() {
         "Real-time availability checking across calendars",
         "Automated reminder calls and confirmations",
         "Intelligent rescheduling workflows",
+        "Timezone-aware booking management",
       ],
     },
     {
