@@ -151,13 +151,16 @@ export default function Demo() {
                         </button>
                       </div>
                       <p className="text-sm text-muted-foreground mb-4">{demo.scenario}</p>
-                      <div className="bg-muted rounded-lg p-4 flex items-center gap-3">
-                        <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
-                          <Play className="h-6 w-6 text-accent" />
-                        </div>
-                        <div className="flex-1">
-                          <div className="text-sm text-muted-foreground">Audio player placeholder</div>
-                        </div>
+                      <div className="bg-muted rounded-lg p-4">
+                        <audio 
+                          controls 
+                          className="w-full" 
+                          data-testid={`audio-demo-${idx}`}
+                          style={{ height: '40px' }}
+                        >
+                          <source src={`/demo-audio-${idx + 1}.mp3`} type="audio/mpeg" />
+                          Your browser does not support the audio element.
+                        </audio>
                       </div>
                     </div>
                     
