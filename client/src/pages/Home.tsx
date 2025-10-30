@@ -45,56 +45,39 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 to-background py-20 md:py-32">
-        <div className="container mx-auto max-w-7xl px-6 relative z-10">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <h1 className="font-serif text-5xl md:text-6xl font-bold leading-tight text-foreground" data-testid="text-hero-title">
-                Never Miss A Call. <span className="text-accent">Turn Conversations Into Customers.</span>
-              </h1>
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                InFlowCalls is an enterprise-grade AI receptionist & outbound caller that answers, qualifies and books — 24/7 — integrated with your calendar, CRM, and POS.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/demo">
-                  <Button 
-                    size="lg" 
-                    className="bg-accent text-accent-foreground hover:bg-accent/90 h-14 px-8 text-lg hover:scale-105 transition-transform"
-                    data-testid="button-request-demo-hero"
-                  >
-                    Request a 5-Min Demo
-                  </Button>
-                </Link>
+      <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 to-background py-16 md:py-24">
+        <div className="container mx-auto max-w-4xl px-6 relative z-10">
+          <div className="text-center space-y-6">
+            <h1 className="font-serif text-5xl md:text-6xl font-bold leading-tight text-foreground" data-testid="text-hero-title">
+              Never Miss A Call. <span className="text-accent">Turn Conversations Into Customers.</span>
+            </h1>
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+              InFlowCalls is an enterprise-grade AI receptionist & outbound caller that answers, qualifies and books — 24/7 — integrated with your calendar, CRM, and POS.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
+              <Link href="/demo">
                 <Button 
                   size="lg" 
-                  variant="outline" 
-                  className="h-14 px-8 text-lg border-accent/50 hover:bg-accent/10"
-                  onClick={() => setAudioModalOpen(true)}
-                  data-testid="button-listen-demo"
+                  className="bg-accent text-accent-foreground hover:bg-accent/90 h-14 px-8 text-lg hover:scale-105 transition-transform"
+                  data-testid="button-request-demo-hero"
                 >
-                  <Play className="mr-2 h-5 w-5" />
-                  Listen to demo call
+                  Request a 5-Min Demo
                 </Button>
-              </div>
-            </div>
-
-            <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-accent/20 to-primary/20 rounded-3xl flex items-center justify-center backdrop-blur-sm border border-accent/20">
-                <button 
-                  onClick={() => setAudioModalOpen(true)}
-                  className="w-24 h-24 rounded-full bg-accent text-accent-foreground flex items-center justify-center hover:scale-110 transition-transform shadow-2xl"
-                  data-testid="button-play-waveform"
-                  aria-label="Play demo"
-                >
-                  <Play className="h-12 w-12 ml-1" />
-                </button>
-              </div>
-              <div className="absolute -top-4 -right-4 w-32 h-32 bg-accent/10 rounded-full blur-3xl" />
-              <div className="absolute -bottom-4 -left-4 w-40 h-40 bg-primary/10 rounded-full blur-3xl" />
+              </Link>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="h-14 px-8 text-lg border-accent/50 hover:bg-accent/10"
+                onClick={() => setAudioModalOpen(true)}
+                data-testid="button-listen-demo"
+              >
+                <Play className="mr-2 h-5 w-5" />
+                Listen to demo call
+              </Button>
             </div>
           </div>
 
-          <div className="mt-16 pt-12 border-t border-border">
+          <div className="mt-12 pt-8 border-t border-border">
             <p className="text-center text-sm text-muted-foreground">
               SOC2-ready
             </p>
