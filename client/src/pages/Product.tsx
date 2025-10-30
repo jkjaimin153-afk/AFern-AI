@@ -28,12 +28,12 @@ export default function Product() {
     {
       icon: Globe,
       title: "Integration & Intelligence",
-      description: "Seamlessly connect with your existing tools. Collect customer information, integrate with PMS systems, support 50+ languages automatically, and deploy AI chatbots across channels.",
+      description: "Connect with your tools, collect customer info, and communicate in 50+ languages with AI chatbots across all channels.",
       benefits: [
-        "PMS & CRM integrations (ServiceTitan, HubSpot, and more)",
-        "Multi-language auto-detection and support",
-        "AI chatbot for web and messaging platforms",
-        "Automatic info collection and data sync",
+        "PMS & CRM integrations",
+        "Multi-language support",
+        "AI chatbot deployment",
+        "Automatic data collection",
       ],
     },
   ];
