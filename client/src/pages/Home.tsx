@@ -45,16 +45,12 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      <section className="relative overflow-hidden py-20 md:py-32">
+      <section className="relative overflow-hidden py-16 md:py-24">
         <div className="absolute inset-0 gradient-mesh opacity-50" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
         
         <div className="container mx-auto max-w-5xl px-6 relative z-10">
           <div className="text-center space-y-8">
-            <div className="inline-block px-4 py-2 rounded-full border border-primary/30 bg-primary/5 backdrop-blur-sm mb-4">
-              <span className="text-sm font-medium text-primary">Enterprise AI Voice Technology</span>
-            </div>
-            
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold leading-none tracking-tight" data-testid="text-hero-title">
               Never Miss A Call.{" "}
               <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
