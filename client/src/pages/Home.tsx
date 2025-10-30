@@ -96,18 +96,6 @@ export default function Home() {
           </div>
 
           <div className="mt-16 pt-12 border-t border-border">
-            <div className="flex flex-wrap items-center justify-center gap-8 mb-4">
-              {integrations.map((integration, idx) => (
-                <div 
-                  key={idx} 
-                  className="flex items-center justify-center w-16 h-16 rounded-lg bg-card border border-card-border hover-elevate"
-                  data-testid={`logo-integration-${idx}`}
-                  title={integration.name}
-                >
-                  <span className="text-xs font-bold text-muted-foreground">{integration.logo}</span>
-                </div>
-              ))}
-            </div>
             <p className="text-center text-sm text-muted-foreground">
               HIPAA-ready option • SOC2-ready
             </p>
@@ -119,21 +107,15 @@ export default function Home() {
         <div className="container mx-auto max-w-7xl px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div data-testid="kpi-answered" className="relative">
-              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full gradient-coral-peach mb-3 shadow-lg">
-                <span className="text-3xl font-bold font-serif text-white">0%</span>
-              </div>
+              <div className="text-5xl font-bold font-serif text-accent mb-2">98%</div>
               <p className="text-foreground font-medium">Answered calls automatically</p>
             </div>
             <div data-testid="kpi-booking" className="relative">
-              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary shadow-lg mb-3">
-                <span className="text-2xl font-bold font-serif text-white">0m</span>
-              </div>
+              <div className="text-5xl font-bold font-serif text-accent mb-2">5</div>
               <p className="text-foreground font-medium">Avg time to booking</p>
             </div>
             <div data-testid="kpi-businesses" className="relative">
-              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full gradient-logo shadow-lg mb-3">
-                <span className="text-3xl font-bold font-serif text-white">0+</span>
-              </div>
+              <div className="text-5xl font-bold font-serif text-accent mb-2">15+</div>
               <p className="text-foreground font-medium">Businesses onboarded</p>
             </div>
           </div>
