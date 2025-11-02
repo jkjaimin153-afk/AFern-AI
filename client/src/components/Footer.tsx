@@ -53,9 +53,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center glow-purple p-2">
-                <img src={fernLogo} alt="Afern AI Fern Logo" className="h-full w-full object-contain" />
-              </div>
+              <img src={fernLogo} alt="Afern AI Fern Logo" className="h-14 w-14 object-contain" />
               <span className="text-3xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">Afern AI</span>
             </div>
             <p className="text-muted-foreground text-lg mb-6 max-w-md">

@@ -22,9 +22,7 @@ export function Header() {
       <div className="container mx-auto max-w-7xl px-6 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-3 hover-elevate active-elevate-2 rounded-lg px-3 py-2" data-testid="link-home">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center glow-purple p-1.5">
-              <img src={ChatGPT_Image_Nov_2__2025__05_38_38_PM} alt="Afern AI Fern Logo" className="h-full w-full object-contain" />
-            </div>
+            <img src={ChatGPT_Image_Nov_2__2025__05_38_38_PM} alt="Afern AI Fern Logo" className="h-12 w-12 object-contain" />
             <span className="text-3xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">Afern AI</span>
           </Link>
 
