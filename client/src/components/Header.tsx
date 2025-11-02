@@ -4,8 +4,6 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import fernLogo from "@assets/ChatGPT Image Nov 2, 2025, 05_38_38 PM_1762126721893.png";
 
-import ChatGPT_Image_Nov_2__2025__05_38_38_PM from "@assets/ChatGPT Image Nov 2, 2025, 05_38_38 PM.png";
-
 export function Header() {
   const [location] = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -22,8 +20,8 @@ export function Header() {
       <div className="container mx-auto max-w-7xl px-6 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-3 hover-elevate active-elevate-2 rounded-lg px-3 py-2" data-testid="link-home">
-            <img src={ChatGPT_Image_Nov_2__2025__05_38_38_PM} alt="Afern AI Fern Logo" className="h-12 w-12 object-contain" />
-            <span className="text-3xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">Afern AI</span>
+            <img src={fernLogo} alt="Afern AI Fern Logo" className="h-16 w-16 object-contain drop-shadow-lg" />
+            <span className="text-3xl font-extrabold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">Afern AI</span>
           </Link>
 
           <div className="hidden md:flex items-center gap-1">
