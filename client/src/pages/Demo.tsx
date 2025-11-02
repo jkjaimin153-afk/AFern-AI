@@ -8,7 +8,6 @@ import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
-import { Play, ChevronDown, ChevronUp } from "lucide-react";
 import { trackEvent } from "../../lib/analytics";
 
 export default function Demo() {
@@ -22,7 +21,6 @@ export default function Demo() {
     message: "",
   });
 
-  const [expandedDemo, setExpandedDemo] = useState<number | null>(null);
   const { toast } = useToast();
 
   const demoMutation = useMutation({
@@ -59,126 +57,21 @@ export default function Demo() {
     demoMutation.mutate(formData);
   };
 
-  const handlePlayDemo = (demoTitle: string) => {
-    trackEvent('audio_play', 'Demo', demoTitle);
-  };
-
-  const demos = [
-    {
-      title: "Inbound Booking Call",
-      scenario: "Customer calling to schedule a service appointment",
-      audioFile: "/demo-audio/inbound-booking.mp3",
-      transcript: [
-        { speaker: "AI", text: "Thanks for calling QuickFix Plumbing, this is InFlow — how can I help today?" },
-        { speaker: "Caller", text: "I have a burst pipe in the kitchen." },
-        { speaker: "AI", text: "I'm sorry to hear that. Is anyone in immediate danger or is the leak contained?" },
-        { speaker: "Caller", text: "No danger, just lots of water." },
-        { speaker: "AI", text: "I can book an emergency visit. What's the address and preferred time?" },
-      ],
-      howItWorked: "AI detected urgency, collected address, checked calendar availability, booked appointment in ServiceTitan, sent confirmation SMS.",
-    },
-    {
-      title: "Outbound Reminder Call",
-      scenario: "Automated appointment reminder",
-      audioFile: "/demo-audio/outbound-reminder.mp3",
-      transcript: [
-        { speaker: "AI", text: "Hi, this is InFlow for Deerfield Inn. Reminder of your 2PM check-in tomorrow." },
-        { speaker: "Guest", text: "Thanks! I'll be there." },
-        { speaker: "AI", text: "Perfect! Reply 'YES' to confirm or press 1 to change your reservation." },
-        { speaker: "Guest", text: "YES" },
-        { speaker: "AI", text: "Confirmed. See you tomorrow at 2PM!" },
-      ],
-      howItWorked: "System triggered outbound call 24h before check-in, confirmed attendance, updated PMS, avoided no-show.",
-    },
-    {
-      title: "Spanish Language Call",
-      scenario: "AI auto-detects and responds in Spanish",
-      audioFile: "/demo-audio/spanish-call.mp3",
-      transcript: [
-        { speaker: "Caller", text: "Hola, necesito hacer una cita." },
-        { speaker: "AI", text: "¡Claro! ¿Para qué servicio necesitas la cita?" },
-        { speaker: "Caller", text: "Limpieza dental." },
-        { speaker: "AI", text: "Perfecto. Tengo disponibilidad el martes a las 3pm. ¿Te funciona?" },
-        { speaker: "Caller", text: "Sí, está bien." },
-        { speaker: "AI", text: "Excelente, te enviaré un mensaje de confirmación. ¡Hasta pronto!" },
-      ],
-      howItWorked: "Detected Spanish language in first 2 seconds, switched to Spanish voice model, completed full booking workflow in Spanish.",
-    },
-  ];
-
   return (
     <div className="min-h-screen">
       <section className="py-20 md:py-32 bg-gradient-to-br from-background via-primary/5 to-background">
         <div className="container mx-auto max-w-7xl px-6">
           <div className="text-center mb-16">
-            <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6" data-testid="text-demo-title">
-              Experience <span className="text-accent">InFlowCalls</span> in Action
+            <h1 className="font-serif text-5xl md:text-6xl font-semibold mb-6" data-testid="text-demo-title">
+              See <span className="text-accent">Afern AI</span> in Action
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Listen to real call scenarios and see how our AI handles complex conversations with natural language understanding.
+              Schedule a personalized demo to see how our AI receptionist can transform your business communications.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 mb-20">
-            <div>
-              <h2 className="font-serif text-3xl font-bold mb-8">Interactive Demo Library</h2>
-              <div className="space-y-4">
-                {demos.map((demo, idx) => (
-                  <Card key={idx} className="overflow-hidden" data-testid={`card-demo-${idx}`}>
-                    <div className="p-6">
-                      <div className="flex items-center justify-between mb-2">
-                        <h3 className="font-bold text-lg">{demo.title}</h3>
-                        <button
-                          onClick={() => {
-                        setExpandedDemo(expandedDemo === idx ? null : idx);
-                        if (expandedDemo !== idx) {
-                          handlePlayDemo(demo.title);
-                        }
-                      }}
-                          className="p-2 hover-elevate active-elevate-2 rounded-md"
-                          data-testid={`button-toggle-demo-${idx}`}
-                          aria-label="Toggle demo details"
-                        >
-                          {expandedDemo === idx ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
-                        </button>
-                      </div>
-                      <p className="text-sm text-muted-foreground mb-4">{demo.scenario}</p>
-                      <div className="bg-muted rounded-lg p-4">
-                        <audio 
-                          controls 
-                          className="w-full" 
-                          data-testid={`audio-demo-${idx}`}
-                          style={{ height: '40px' }}
-                        >
-                          <source src={demo.audioFile} type="audio/mpeg" />
-                          Your browser does not support the audio element.
-                        </audio>
-                      </div>
-                    </div>
-                    
-                    {expandedDemo === idx && (
-                      <div className="px-6 pb-6 space-y-4">
-                        <div className="bg-background rounded-lg p-4 space-y-3">
-                          <p className="text-xs text-muted-foreground font-semibold">TRANSCRIPT</p>
-                          {demo.transcript.map((line, lidx) => (
-                            <div key={lidx} className={`p-3 rounded ${line.speaker === "AI" ? "bg-accent/10" : "bg-muted"}`}>
-                              <span className="font-bold text-sm">{line.speaker}:</span> <span className="text-sm">{line.text}</span>
-                            </div>
-                          ))}
-                        </div>
-                        <div className="bg-accent/5 border border-accent/20 rounded-lg p-4">
-                          <p className="text-xs text-accent font-semibold mb-2">HOW IT WORKED</p>
-                          <p className="text-sm">{demo.howItWorked}</p>
-                        </div>
-                      </div>
-                    )}
-                  </Card>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <Card className="p-8 sticky top-24">
+          <div className="max-w-2xl mx-auto">
+            <Card className="p-8">
                 <h2 className="font-serif text-3xl font-bold mb-6">Request a Live Demo</h2>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
@@ -268,7 +161,6 @@ export default function Demo() {
                   </Button>
                 </form>
               </Card>
-            </div>
           </div>
         </div>
       </section>
