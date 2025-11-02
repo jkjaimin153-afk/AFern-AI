@@ -53,7 +53,7 @@ export default function Salons() {
             <Card className="p-8 bg-pink-500/5 border-pink-500/20">
               <div className="flex items-center gap-3 mb-6">
                 <Check className="h-6 w-6 text-pink-500" />
-                <h3 className="text-2xl font-bold">How InFlowCalls Helps</h3>
+                <h3 className="text-2xl font-bold">How Afern AI Helps</h3>
               </div>
               <ul className="space-y-4">
                 {solutions.map((solution, idx) => (

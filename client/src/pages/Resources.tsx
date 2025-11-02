@@ -33,7 +33,7 @@ export default function Resources() {
               <span className="text-accent">Resources</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Frequently asked questions about InFlowCalls
+              Frequently asked questions about Afern AI
             </p>
           </div>
 

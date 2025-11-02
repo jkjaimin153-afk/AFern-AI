@@ -13,7 +13,7 @@ export default function Developers() {
               Built for <span className="text-accent">Developers</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Comprehensive API, webhooks, and SDKs to integrate InFlowCalls into your existing systems.
+              Comprehensive API, webhooks, and SDKs to integrate Afern AI into your existing systems.
             </p>
           </div>
 
@@ -203,7 +203,7 @@ export default function Developers() {
 {`const express = require('express');
 const app = express();
 
-app.post('/inflowcalls/webhook', express.json(), (req, res) => {
+app.post('/afernai/webhook', express.json(), (req, res) => {
   const { event, call_id, transcript } = req.body;
   
   if (event === 'call.completed') {
@@ -228,7 +228,7 @@ app.listen(3000);`}
 
 app = Flask(__name__)
 
-@app.route('/inflowcalls/webhook', methods=['POST'])
+@app.route('/afernai/webhook', methods=['POST'])
 def handle_webhook():
     data = request.get_json()
     event = data.get('event')
@@ -270,7 +270,7 @@ if __name__ == '__main__':
                   All webhooks include an HMAC signature for verification:
                 </p>
                 <pre className="bg-muted p-4 rounded-lg overflow-x-auto text-sm">
-{`X-InFlowCalls-Signature: sha256=...`}
+{`X-AfernAI-Signature: sha256=...`}
                 </pre>
               </Card>
             </div>
@@ -282,14 +282,14 @@ if __name__ == '__main__':
                 <Download className="mr-2 h-4 w-4" />
                 Node.js SDK
               </Button>
-              <p className="text-xs text-muted-foreground">npm install inflowcalls</p>
+              <p className="text-xs text-muted-foreground">npm install afernai</p>
             </Card>
             <Card className="p-6 text-center">
               <Button variant="outline" className="w-full mb-2" data-testid="button-sdk-python">
                 <Download className="mr-2 h-4 w-4" />
                 Python SDK
               </Button>
-              <p className="text-xs text-muted-foreground">pip install inflowcalls</p>
+              <p className="text-xs text-muted-foreground">pip install afernai</p>
             </Card>
             <Card className="p-6 text-center">
               <Button variant="outline" className="w-full mb-2" data-testid="button-postman">

@@ -79,7 +79,7 @@ export default function Industries() {
               </span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Tailored AI solutions designed to meet the unique challenges of your business. Select your industry to see how InFlowCalls can transform your operations.
+              Tailored AI solutions designed to meet the unique challenges of your business. Select your industry to see how Afern AI can transform your operations.
             </p>
           </div>
 

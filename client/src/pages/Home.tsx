@@ -99,7 +99,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
             >
-              InFlowCalls is an enterprise-grade AI receptionist & outbound caller that answers, qualifies and books — 24/7 — integrated with your calendar, CRM, and POS.
+              Afern AI is an enterprise-grade AI receptionist & outbound caller that answers, qualifies and books — 24/7 — integrated with your calendar, CRM, and POS.
             </motion.p>
             
             <motion.div 
@@ -324,7 +324,7 @@ export default function Home() {
                 </span>
               </h2>
               <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-                Join hundreds of businesses automating their phone operations with InFlowCalls.
+                Join hundreds of businesses automating their phone operations with Afern AI.
               </p>
               <Link href="/demo">
                 <Button 
@@ -355,7 +355,7 @@ export default function Home() {
                 </p>
                 <div className="mt-4 p-4 bg-background rounded border border-border">
                   <p className="text-xs text-muted-foreground mb-2">Sample transcript:</p>
-                  <p className="text-sm">"Thanks for calling QuickFix Plumbing, this is InFlow — how can I help today?"</p>
+                  <p className="text-sm">"Thanks for calling QuickFix Plumbing, this is Afern — how can I help today?"</p>
                 </div>
               </div>
             </div>

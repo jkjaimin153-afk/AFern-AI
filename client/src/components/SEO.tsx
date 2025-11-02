@@ -37,15 +37,15 @@ export function SEO({ title, description, keywords }: SEOProps) {
     script.innerHTML = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "InFlowCalls",
-      "url": "https://inflowcalls.com",
-      "logo": "https://inflowcalls.com/logo.png",
+      "name": "Afern AI",
+      "url": "https://afernai.com",
+      "logo": "https://afernai.com/logo.png",
       "description": "Enterprise-grade AI receptionist and outbound calling for small businesses",
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+1-800-INFLOW",
+        "telephone": "+1-800-AFERN",
         "contactType": "Customer Service",
-        "email": "contact@inflowcalls.com"
+        "email": "contact@afernai.com"
       }
     });
     document.head.appendChild(script);

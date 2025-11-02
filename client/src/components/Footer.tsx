@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Phone, Twitter, Linkedin, Github } from "lucide-react";
+import { Leaf, Twitter, Linkedin, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
@@ -53,26 +53,26 @@ export function Footer() {
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center glow-purple">
-                <Phone className="h-7 w-7 text-white" />
+                <Leaf className="h-7 w-7 text-white" />
               </div>
-              <span className="text-3xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">InFlowCalls</span>
+              <span className="text-3xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">Afern AI</span>
             </div>
             <p className="text-muted-foreground text-lg mb-6 max-w-md">
               Enterprise-grade AI receptionist & outbound caller that answers, qualifies and books — 24/7.
             </p>
             <div className="flex space-x-2 mb-8">
               <Button variant="ghost" size="icon" className="glassmorphism border border-white/10 hover:border-primary/50" data-testid="link-twitter" aria-label="Twitter" asChild>
-                <a href="https://twitter.com/inflowcalls" target="_blank" rel="noopener noreferrer">
+                <a href="https://twitter.com/afernai" target="_blank" rel="noopener noreferrer">
                   <Twitter className="h-5 w-5" />
                 </a>
               </Button>
               <Button variant="ghost" size="icon" className="glassmorphism border border-white/10 hover:border-primary/50" data-testid="link-linkedin" aria-label="LinkedIn" asChild>
-                <a href="https://linkedin.com/company/inflowcalls" target="_blank" rel="noopener noreferrer">
+                <a href="https://linkedin.com/company/afernai" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="h-5 w-5" />
                 </a>
               </Button>
               <Button variant="ghost" size="icon" className="glassmorphism border border-white/10 hover:border-primary/50" data-testid="link-github" aria-label="GitHub" asChild>
-                <a href="https://github.com/inflowcalls" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/afernai" target="_blank" rel="noopener noreferrer">
                   <Github className="h-5 w-5" />
                 </a>
               </Button>
@@ -118,7 +118,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-8 text-center text-muted-foreground">
-          <p className="text-sm">&copy; {new Date().getFullYear()} InFlowCalls. All rights reserved.</p>
+          <p className="text-sm">&copy; {new Date().getFullYear()} Afern AI. All rights reserved.</p>
         </div>
       </div>
     </footer>

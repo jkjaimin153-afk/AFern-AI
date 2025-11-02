@@ -1,10 +1,10 @@
-# InFlowCalls - AI Receptionist & Calling Platform
+# Afern AI - AI Receptionist & Calling Platform
 
 ## Overview
 
-InFlowCalls is a premium, enterprise-grade AI receptionist and outbound calling platform designed for SMBs and mid-market customers. The application provides automated call answering, appointment booking, payment processing, and CRM integration to help businesses capture revenue from missed calls and automate customer communications 24/7.
+Afern AI is a premium, enterprise-grade AI receptionist and outbound calling platform designed for SMBs and mid-market customers. The application provides automated call answering, appointment booking, payment processing, and CRM integration to help businesses capture revenue from missed calls and automate customer communications 24/7.
 
-The platform features a marketing website with industry-specific landing pages, product demonstrations, pricing calculators, integration showcases, and lead capture forms. The design emphasizes a bright, approachable aesthetic with professional credibility, targeting service-based businesses across hospitality, home services, healthcare, legal, salons, and e-commerce sectors.
+The platform features a marketing website with industry-specific landing pages, product demonstrations, integration showcases, and lead capture forms. The design emphasizes a modern, futuristic aesthetic with professional credibility, featuring a premium fern-themed logo (Leaf icon). Targets service-based businesses across hospitality, home services, healthcare, legal, salons, and e-commerce sectors.
 
 ## User Preferences
 

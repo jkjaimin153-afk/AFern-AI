@@ -54,7 +54,7 @@ export default function HomeServices() {
             <Card className="p-8 bg-blue-500/5 border-blue-500/20">
               <div className="flex items-center gap-3 mb-6">
                 <Check className="h-6 w-6 text-blue-500" />
-                <h3 className="text-2xl font-bold">How InFlowCalls Helps</h3>
+                <h3 className="text-2xl font-bold">How Afern AI Helps</h3>
               </div>
               <ul className="space-y-4">
                 {solutions.map((solution, idx) => (
@@ -71,7 +71,7 @@ export default function HomeServices() {
             <h3 className="text-2xl font-bold mb-6">Sample Emergency Call Flow</h3>
             <div className="space-y-4 font-mono text-sm">
               <div className="p-4 bg-blue-500/10 rounded-lg" data-testid="script-line-0">
-                <span className="text-blue-500 font-bold">AI:</span> "Thanks for calling QuickFix Plumbing, this is InFlow — how can I help today?"
+                <span className="text-blue-500 font-bold">AI:</span> "Thanks for calling QuickFix Plumbing, this is Afern — how can I help today?"
               </div>
               <div className="p-4 bg-muted rounded-lg" data-testid="script-line-1">
                 <span className="text-muted-foreground font-bold">Caller:</span> "I have a burst pipe in the kitchen."

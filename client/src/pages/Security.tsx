@@ -55,7 +55,7 @@ export default function Security() {
             <Card className="p-8">
               <h2 className="font-serif text-3xl font-bold mb-6">SOC 2 Compliance</h2>
               <p className="text-muted-foreground mb-4">
-                InFlowCalls has achieved SOC 2 Type II certification, demonstrating our commitment to the highest standards of security, availability, processing integrity, confidentiality, and privacy.
+                Afern AI has achieved SOC 2 Type II certification, demonstrating our commitment to the highest standards of security, availability, processing integrity, confidentiality, and privacy.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
@@ -105,7 +105,7 @@ export default function Security() {
                 </li>
               </ul>
               <p className="text-sm text-muted-foreground">
-                Contact us at <a href="mailto:security@inflowcalls.com" className="text-accent hover:underline">security@inflowcalls.com</a> to request a BAA.
+                Contact us at <a href="mailto:security@afernai.com" className="text-accent hover:underline">security@afernai.com</a> to request a BAA.
               </p>
             </Card>
 
@@ -199,7 +199,7 @@ export default function Security() {
               </Button>
             </div>
             <p className="text-sm text-muted-foreground mt-6">
-              For security inquiries, contact <a href="mailto:security@inflowcalls.com" className="text-accent hover:underline">security@inflowcalls.com</a>
+              For security inquiries, contact <a href="mailto:security@afernai.com" className="text-accent hover:underline">security@afernai.com</a>
             </p>
           </div>
         </div>

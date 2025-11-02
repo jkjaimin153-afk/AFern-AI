@@ -80,10 +80,10 @@ export default function About() {
             <h2 className="font-serif text-3xl font-bold mb-6">Our Story</h2>
             <div className="prose prose-lg max-w-none text-muted-foreground">
               <p className="mb-4">
-                InFlowCalls was founded in 2023 when we realized that small businesses were missing out on the AI revolution. While large enterprises had dedicated teams and budgets for automation, mom-and-pop shops were still manually answering every call, often missing crucial customer inquiries during busy hours.
+                Afern AI was founded in 2023 when we realized that small businesses were missing out on the AI revolution. While large enterprises had dedicated teams and budgets for automation, mom-and-pop shops were still manually answering every call, often missing crucial customer inquiries during busy hours.
               </p>
               <p className="mb-4">
-                We built InFlowCalls to level the playing field. Our platform combines cutting-edge natural language AI with simple, affordable pricing that works for businesses of any size.
+                We built Afern AI to level the playing field. Our platform combines cutting-edge natural language AI with simple, affordable pricing that works for businesses of any size.
               </p>
               <p>
                 Today, we're proud to serve hundreds of businesses across healthcare, home services, hospitality, and more — helping them never miss a call and turn every conversation into a customer.
@@ -159,7 +159,7 @@ export default function About() {
           <Card className="mt-16 p-8 bg-gradient-to-br from-accent/5 to-primary/5 border-accent/20 text-center">
             <h3 className="font-serif text-2xl font-bold mb-4">Want to learn more?</h3>
             <p className="text-muted-foreground mb-6">
-              Get in touch with our team to see how InFlowCalls can transform your business.
+              Get in touch with our team to see how Afern AI can transform your business.
             </p>
             <Link href="/demo">
               <Button className="bg-accent text-accent-foreground hover:bg-accent/90" data-testid="button-contact-team">

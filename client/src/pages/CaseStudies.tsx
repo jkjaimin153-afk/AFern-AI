@@ -21,7 +21,7 @@ export default function CaseStudies() {
       industry: "Hospitality",
       size: "15-room boutique motel",
       challenge: "Front desk staff overwhelmed during check-in hours, after-hours calls going unanswered, manual reservation management causing double bookings",
-      solution: "Implemented InFlowCalls with Opera PMS integration, 24/7 automated check-in and booking, multilingual support for international guests",
+      solution: "Implemented Afern AI with Opera PMS integration, 24/7 automated check-in and booking, multilingual support for international guests",
       results: [
         { metric: "After-hours bookings", value: "0%", description: "increase in revenue capture" },
         { metric: "Staff time saved", value: "0 hrs/week", description: "reallocated to guest experience" },
@@ -34,7 +34,7 @@ export default function CaseStudies() {
       industry: "Home Services",
       size: "8 technicians, metro area coverage",
       challenge: "Missing emergency calls during peak hours, high cost of traditional answering service, scheduling conflicts with manual dispatch",
-      solution: "Deployed InFlowCalls with ServiceTitan integration, emergency triage and priority routing, automated appointment booking and dispatch",
+      solution: "Deployed Afern AI with ServiceTitan integration, emergency triage and priority routing, automated appointment booking and dispatch",
       results: [
         { metric: "Emergency response", value: "0%", description: "faster booking time" },
         { metric: "Missed calls", value: "0%", description: "reduction" },
@@ -123,7 +123,7 @@ export default function CaseStudies() {
           <Card className="p-8 mb-16">
             <h2 className="font-serif text-3xl font-bold mb-6">Calculate Your ROI</h2>
             <p className="text-muted-foreground mb-8">
-              Estimate potential revenue recovery from implementing InFlowCalls
+              Estimate potential revenue recovery from implementing Afern AI
             </p>
 
             <div className="grid md:grid-cols-3 gap-6 mb-8">
