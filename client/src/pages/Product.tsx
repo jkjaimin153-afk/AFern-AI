@@ -7,12 +7,13 @@ export default function Product() {
   const features = [
     {
       icon: Brain,
-      title: "AI Call Receptionist",
-      description: "Human-like conversations powered by advanced AI. Understands caller intent, context, and urgency to provide natural interactions that feel just like talking to a real person.",
+      title: "AI Voice & Chat",
+      description: "Human-like conversations powered by advanced AI across voice and chat channels. Deploy intelligent chatbots and voice assistants that understand context and provide natural interactions.",
       benefits: [
-        "Natural language understanding with 95%+ accuracy",
-        "Context-aware conversation flows",
-        "Intelligent call routing and escalation",
+        "AI-powered voice receptionist 24/7",
+        "Intelligent chatbot deployment",
+        "Natural language understanding with 98%+ accuracy",
+        "Multi-channel support (phone, web, SMS)",
       ],
     },
     {
@@ -28,12 +29,12 @@ export default function Product() {
     {
       icon: Globe,
       title: "Integration & Intelligence",
-      description: "Connect with your tools, collect customer info, and communicate in 50+ languages with AI chatbots across all channels. Seamlessly sync data for unified operations.",
+      description: "Connect with your tools, collect customer info, and communicate in 50+ languages. Seamlessly sync data for unified operations.",
       benefits: [
         "PMS & CRM integrations",
-        "Multi-language support",
-        "AI chatbot deployment",
-        "Automatic data collection",
+        "Multi-language support (50+ languages)",
+        "Automatic data collection and sync",
+        "Cross-platform deployment",
       ],
     },
   ];
@@ -43,7 +44,7 @@ export default function Product() {
       <section className="py-20 md:py-32 bg-gradient-to-br from-background via-primary/5 to-background">
         <div className="container mx-auto max-w-7xl px-6">
           <div className="text-center mb-16">
-            <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6" data-testid="text-product-title">
+            <h1 className="font-serif text-5xl md:text-6xl font-semibold mb-6" data-testid="text-product-title">
               Everything You Need to <span className="text-accent">Automate Your Communication</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">

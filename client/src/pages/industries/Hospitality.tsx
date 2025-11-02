@@ -16,8 +16,6 @@ export default function Hospitality() {
     "Multilingual support for international guests",
   ];
 
-  const integrations = ["Opera PMS", "Cloudbeds", "RoomRaccoon", "Google Calendar", "Stripe"];
-
   return (
     <div className="min-h-screen">
       <section className="py-20 md:py-32 bg-gradient-to-br from-background via-purple-500/5 to-background">
@@ -91,17 +89,6 @@ export default function Hospitality() {
                   System checks PMS availability, captures guest details, processes payment, and sends confirmation with check-in code.
                 </span>
               </div>
-            </div>
-          </Card>
-
-          <Card className="p-8 mb-16">
-            <h3 className="text-2xl font-bold mb-6">Required Integrations</h3>
-            <div className="flex flex-wrap gap-3">
-              {integrations.map((integration, idx) => (
-                <div key={idx} className="px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-sm" data-testid={`integration-${idx}`}>
-                  {integration}
-                </div>
-              ))}
             </div>
           </Card>
 

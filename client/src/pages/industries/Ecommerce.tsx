@@ -16,8 +16,6 @@ export default function Ecommerce() {
     "Integration with Shopify for real-time inventory info",
   ];
 
-  const integrations = ["Shopify", "WooCommerce", "Square POS", "Zapier", "Stripe"];
-
   return (
     <div className="min-h-screen">
       <section className="py-20 md:py-32 bg-gradient-to-br from-background via-cyan-500/5 to-background">
@@ -91,17 +89,6 @@ export default function Ecommerce() {
                   System queries Shopify API, retrieves order details, sends tracking info via SMS and email.
                 </span>
               </div>
-            </div>
-          </Card>
-
-          <Card className="p-8 mb-16">
-            <h3 className="text-2xl font-bold mb-6">Required Integrations</h3>
-            <div className="flex flex-wrap gap-3">
-              {integrations.map((integration, idx) => (
-                <div key={idx} className="px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-sm" data-testid={`integration-${idx}`}>
-                  {integration}
-                </div>
-              ))}
             </div>
           </Card>
 

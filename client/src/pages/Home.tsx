@@ -70,7 +70,7 @@ export default function Home() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <motion.h1 
-              className="text-6xl md:text-7xl lg:text-8xl font-bold leading-none tracking-tight" 
+              className="text-6xl md:text-7xl lg:text-8xl font-semibold leading-none tracking-tight" 
               data-testid="text-hero-title"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -140,7 +140,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
             {[
               { value: "98%", label: "Answered calls automatically", testid: "kpi-answered", gradient: "from-primary to-accent" },
-              { value: "5", label: "Avg time to booking", testid: "kpi-booking", gradient: "from-secondary to-primary" },
+              { value: "5 min", label: "Avg time to booking", testid: "kpi-booking", gradient: "from-secondary to-primary" },
               { value: "15+", label: "Businesses onboarded", testid: "kpi-businesses", gradient: "from-accent to-secondary" }
             ].map((stat, idx) => (
               <div
@@ -162,7 +162,7 @@ export default function Home() {
       <section className="py-24 md:py-32 relative">
         <div className="container mx-auto max-w-7xl px-6">
           <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-bold mb-6" data-testid="text-features-title">
+            <h2 className="text-5xl md:text-6xl font-semibold mb-6" data-testid="text-features-title">
               Enterprise-Grade Intelligence,{" "}
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 Effortless Setup
@@ -207,7 +207,7 @@ export default function Home() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, ease: "easeOut" }}
             >
-              <h2 className="text-5xl md:text-6xl font-bold mb-8" data-testid="text-benefits-title">
+              <h2 className="text-5xl md:text-6xl font-semibold mb-8" data-testid="text-benefits-title">
                 Built for{" "}
                 <span className="bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">
                   Modern Businesses
@@ -317,7 +317,7 @@ export default function Home() {
           <div className="relative p-12 md:p-16 rounded-3xl glassmorphism border border-white/10">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10 rounded-3xl" />
             <div className="relative">
-              <h2 className="text-5xl md:text-6xl font-bold mb-6">
+              <h2 className="text-5xl md:text-6xl font-semibold mb-6">
                 Ready to Transform Your{" "}
                 <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
                   Calling Experience?

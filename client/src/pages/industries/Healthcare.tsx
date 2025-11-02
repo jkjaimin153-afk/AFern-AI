@@ -16,8 +16,6 @@ export default function Healthcare() {
     "Intelligent triage routing urgent cases appropriately",
   ];
 
-  const integrations = ["Practice Fusion", "DrChrono", "SimplePractice", "Google Calendar", "Stripe"];
-
   return (
     <div className="min-h-screen">
       <section className="py-20 md:py-32 bg-gradient-to-br from-background via-green-500/5 to-background">
@@ -91,22 +89,6 @@ export default function Healthcare() {
                   System verifies patient in EHR, checks availability, books appointment, and sends reminder with intake forms.
                 </span>
               </div>
-            </div>
-          </Card>
-
-          <Card className="p-8 mb-16">
-            <h3 className="text-2xl font-bold mb-6">Required Integrations</h3>
-            <div className="flex flex-wrap gap-3 mb-6">
-              {integrations.map((integration, idx) => (
-                <div key={idx} className="px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-full text-sm" data-testid={`integration-${idx}`}>
-                  {integration}
-                </div>
-              ))}
-            </div>
-            <div className="bg-amber-500/10 border border-amber-500/20 rounded-lg p-4">
-              <p className="text-sm">
-                <strong>HIPAA Compliance:</strong> Business Associate Agreement (BAA) available upon request. All calls encrypted in transit and at rest.
-              </p>
             </div>
           </Card>
 

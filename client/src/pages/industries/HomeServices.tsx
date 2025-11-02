@@ -2,18 +2,8 @@ import { Card } from "@/components/ui/card";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Check, AlertCircle } from "lucide-react";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { useState } from "react";
 
 export default function HomeServices() {
-  const [missedCalls, setMissedCalls] = useState(0);
-  const [avgJobValue, setAvgJobValue] = useState(0);
-  const [conversionRate, setConversionRate] = useState(0);
-
-  const weeklyRevenue = (missedCalls * avgJobValue * conversionRate) / 100;
-  const monthlyRevenue = weeklyRevenue * 4.33;
-  const yearlyRevenue = monthlyRevenue * 12;
 
   const painPoints = [
     "Missing emergency calls during peak hours",
@@ -26,8 +16,6 @@ export default function HomeServices() {
     "Automatic emergency triage and priority routing",
     "Two-way sync with ServiceTitan and Housecall Pro",
   ];
-
-  const integrations = ["ServiceTitan", "Housecall Pro", "Jobber", "Google Calendar", "Stripe"];
 
   return (
     <div className="min-h-screen">
@@ -102,77 +90,6 @@ export default function HomeServices() {
                   System then captures address, preferred time, creates ticket in ServiceTitan, and sends confirmation text.
                 </span>
               </div>
-            </div>
-          </Card>
-
-          <Card className="p-8 mb-16">
-            <h3 className="text-2xl font-bold mb-6">Required Integrations</h3>
-            <div className="flex flex-wrap gap-3">
-              {integrations.map((integration, idx) => (
-                <div key={idx} className="px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-sm" data-testid={`integration-${idx}`}>
-                  {integration}
-                </div>
-              ))}
-            </div>
-          </Card>
-
-          <Card className="p-8">
-            <h3 className="text-2xl font-bold mb-6">ROI Calculator</h3>
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
-              <div>
-                <Label htmlFor="missed-calls">Missed calls per week</Label>
-                <Input
-                  id="missed-calls"
-                  type="number"
-                  value={missedCalls}
-                  onChange={(e) => setMissedCalls(Number(e.target.value))}
-                  placeholder="0"
-                  data-testid="input-missed-calls"
-                />
-              </div>
-              <div>
-                <Label htmlFor="avg-job-value">Average job value ($)</Label>
-                <Input
-                  id="avg-job-value"
-                  type="number"
-                  value={avgJobValue}
-                  onChange={(e) => setAvgJobValue(Number(e.target.value))}
-                  placeholder="0"
-                  data-testid="input-avg-job-value"
-                />
-              </div>
-              <div>
-                <Label htmlFor="conversion-rate">Conversion rate (%)</Label>
-                <Input
-                  id="conversion-rate"
-                  type="number"
-                  value={conversionRate}
-                  onChange={(e) => setConversionRate(Number(e.target.value))}
-                  placeholder="0"
-                  data-testid="input-conversion-rate"
-                />
-              </div>
-            </div>
-
-            <div className="bg-accent/5 border border-accent/20 rounded-lg p-6">
-              <h4 className="font-bold mb-4">Projected Recovered Revenue:</h4>
-              <div className="grid md:grid-cols-3 gap-6 text-center">
-                <div>
-                  <div className="text-3xl font-bold text-accent" data-testid="result-weekly">${weeklyRevenue.toFixed(0)}</div>
-                  <div className="text-sm text-muted-foreground">Weekly</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-accent" data-testid="result-monthly">${monthlyRevenue.toFixed(0)}</div>
-                  <div className="text-sm text-muted-foreground">Monthly</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-accent" data-testid="result-yearly">${yearlyRevenue.toFixed(0)}</div>
-                  <div className="text-sm text-muted-foreground">Yearly</div>
-                </div>
-              </div>
-              <p className="text-sm text-muted-foreground mt-4">
-                Formula: Missed Calls × Avg Job Value × Conversion Rate
-              </p>
             </div>
           </Card>
 

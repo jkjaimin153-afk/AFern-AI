@@ -16,8 +16,6 @@ export default function Salons() {
     "Smart reminder system reduces no-shows by 70%",
   ];
 
-  const integrations = ["Vagaro", "Fresha", "Schedulicity", "Google Calendar", "Square"];
-
   return (
     <div className="min-h-screen">
       <section className="py-20 md:py-32 bg-gradient-to-br from-background via-pink-500/5 to-background">
@@ -91,17 +89,6 @@ export default function Salons() {
                   System checks stylist calendar, processes deposit via Square, books appointment, sends confirmation with prep instructions.
                 </span>
               </div>
-            </div>
-          </Card>
-
-          <Card className="p-8 mb-16">
-            <h3 className="text-2xl font-bold mb-6">Required Integrations</h3>
-            <div className="flex flex-wrap gap-3">
-              {integrations.map((integration, idx) => (
-                <div key={idx} className="px-4 py-2 bg-pink-500/10 border border-pink-500/20 rounded-full text-sm" data-testid={`integration-${idx}`}>
-                  {integration}
-                </div>
-              ))}
             </div>
           </Card>
 
