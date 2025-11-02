@@ -1,11 +1,12 @@
 import { Link } from "wouter";
-import { Leaf, Twitter, Linkedin, Github } from "lucide-react";
+import { Twitter, Linkedin, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
+import fernLogo from "@assets/generated_images/Fern_leaf_logo_icon_c81c6d01.png";
 
 export function Footer() {
   const [email, setEmail] = useState("");
@@ -52,8 +53,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center glow-purple">
-                <Leaf className="h-7 w-7 text-white" />
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center glow-purple p-2">
+                <img src={fernLogo} alt="Afern AI Fern Logo" className="h-full w-full object-contain" />
               </div>
               <span className="text-3xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">Afern AI</span>
             </div>

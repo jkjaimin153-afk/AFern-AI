@@ -1,7 +1,8 @@
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Leaf, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import fernLogo from "@assets/generated_images/Fern_leaf_logo_icon_c81c6d01.png";
 
 export function Header() {
   const [location] = useLocation();
@@ -19,8 +20,8 @@ export function Header() {
       <div className="container mx-auto max-w-7xl px-6 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-3 hover-elevate active-elevate-2 rounded-lg px-3 py-2" data-testid="link-home">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center glow-purple">
-              <Leaf className="h-6 w-6 text-white" />
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center glow-purple p-1.5">
+              <img src={fernLogo} alt="Afern AI Fern Logo" className="h-full w-full object-contain" />
             </div>
             <span className="text-3xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">Afern AI</span>
           </Link>
