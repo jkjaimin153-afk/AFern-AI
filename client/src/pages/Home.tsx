@@ -199,113 +199,62 @@ export default function Home() {
           className="absolute inset-0 gradient-mesh opacity-30"
           style={{ y: useTransform(scrollY, [0, 2000], [0, 200]) }}
         />
-        <div className="container mx-auto max-w-7xl px-6 relative">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-            >
-              <h2 className="text-5xl md:text-6xl font-semibold mb-8" data-testid="text-benefits-title">
-                Built for{" "}
-                <span className="bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">
-                  Modern Businesses
-                </span>
-              </h2>
-              <div className="space-y-6">
-                {benefits.map((benefit, idx) => (
-                  <motion.div 
-                    key={idx} 
-                    className="flex items-start gap-4 group" 
-                    data-testid={`benefit-${idx}`}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true, margin: "-50px" }}
-                    transition={{ duration: 0.5, delay: idx * 0.1, ease: "easeOut" }}
-                  >
-                    <div className="mt-1 flex-shrink-0">
-                      <motion.div 
-                        className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center glow-purple"
-                        whileHover={{ scale: 1.2, rotate: 5 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <Check className="h-5 w-5 text-white" />
-                      </motion.div>
-                    </div>
-                    <p className="text-lg md:text-xl text-foreground/90 group-hover:text-foreground transition-colors duration-300">{benefit}</p>
-                  </motion.div>
-                ))}
-              </div>
-              <motion.div 
-                className="mt-10"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-              >
-                <Link href="/product">
-                  <Button 
-                    size="lg" 
-                    variant="outline" 
-                    className="border-primary/30 glassmorphism h-12 px-8 text-lg font-semibold transition-all duration-300 hover:scale-105"
-                    data-testid="button-explore-features"
-                  >
-                    Explore All Features
-                  </Button>
-                </Link>
-              </motion.div>
-            </motion.div>
-
-            <motion.div 
-              className="relative"
-              initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-            >
-              <div className="relative p-8 rounded-2xl glassmorphism border border-white/10">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl" />
-                <div className="relative space-y-8">
-                  {[
-                    { icon: Phone, gradient: "from-accent to-accent/60", width1: "w-3/4", width2: "w-1/2", delay: 0 },
-                    { icon: Calendar, gradient: "from-primary to-primary/60", width1: "w-2/3", width2: "w-1/3", delay: 0.2 },
-                    { icon: TrendingUp, gradient: "from-secondary to-secondary/60", width1: "w-4/5", width2: "w-2/5", delay: 0.4 }
-                  ].map((item, idx) => (
+        <div className="container mx-auto max-w-5xl px-6 relative">
+          <motion.div
+            className="text-center"
+            initial={{ opacity: 0, y: -40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
+            <h2 className="text-5xl md:text-6xl font-semibold mb-12" data-testid="text-benefits-title">
+              Built for{" "}
+              <span className="bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">
+                Modern Businesses
+              </span>
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6 mb-12">
+              {benefits.map((benefit, idx) => (
+                <motion.div 
+                  key={idx} 
+                  className="flex items-start gap-4 group text-left p-6 rounded-xl glassmorphism border border-white/10 hover-elevate" 
+                  data-testid={`benefit-${idx}`}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.5, delay: idx * 0.1, ease: "easeOut" }}
+                >
+                  <div className="mt-1 flex-shrink-0">
                     <motion.div 
-                      key={idx}
-                      className="flex items-center gap-5"
-                      initial={{ opacity: 0, x: 20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: item.delay }}
+                      className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center glow-purple"
+                      whileHover={{ scale: 1.2, rotate: 5 }}
+                      transition={{ duration: 0.3 }}
                     >
-                      <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${item.gradient} flex items-center justify-center glow-purple flex-shrink-0`}>
-                        <item.icon className="h-8 w-8 text-white" />
-                      </div>
-                      <div className="flex-1 space-y-3">
-                        <motion.div 
-                          className={`h-3 bg-gradient-to-r from-accent/40 to-transparent rounded-full ${item.width1}`}
-                          initial={{ width: 0 }}
-                          whileInView={{ width: "100%" }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 0.8, delay: item.delay + 0.3 }}
-                        />
-                        <motion.div 
-                          className={`h-3 bg-gradient-to-r from-accent/20 to-transparent rounded-full ${item.width2}`}
-                          initial={{ width: 0 }}
-                          whileInView={{ width: "100%" }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 0.8, delay: item.delay + 0.5 }}
-                        />
-                      </div>
+                      <Check className="h-5 w-5 text-white" />
                     </motion.div>
-                  ))}
-                </div>
-              </div>
-              <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 via-accent/20 to-secondary/20 rounded-3xl blur-2xl -z-10 opacity-50" />
+                  </div>
+                  <p className="text-lg text-foreground/90 group-hover:text-foreground transition-colors duration-300">{benefit}</p>
+                </motion.div>
+              ))}
+            </div>
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+            >
+              <Link href="/product">
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-primary/30 glassmorphism h-12 px-8 text-lg font-semibold transition-all duration-300 hover:scale-105"
+                  data-testid="button-explore-features"
+                >
+                  Explore All Features
+                </Button>
+              </Link>
             </motion.div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
