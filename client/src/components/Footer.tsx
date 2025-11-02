@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
-import fernLogo from "@assets/generated_images/Fern_leaf_logo_icon_c81c6d01.png";
+import fernLogo from "@assets/generated_images/Dark_pastel_green_fern_leaf_d14c42a6.png";
 
 export function Footer() {
   const [email, setEmail] = useState("");
