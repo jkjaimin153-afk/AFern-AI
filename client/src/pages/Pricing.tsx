@@ -85,7 +85,7 @@ export default function Pricing() {
   const faqs = [
     {
       question: "How accurate is the AI?",
-      answer: "Our AI handles 95%+ of routine calls with high accuracy. For complex situations, calls are seamlessly transferred to your team with full context.",
+      answer: "Our AI handles 98%+ of routine calls with high accuracy. For complex situations, calls are seamlessly transferred to your team with full context.",
     },
     {
       question: "Do you integrate with my PMS/CRM?",
