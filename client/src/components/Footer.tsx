@@ -59,7 +59,7 @@ export function Footer() {
             <p className="text-muted-foreground text-lg mb-6 max-w-md">
               Enterprise-grade AI receptionist & outbound caller that answers, qualifies and books — 24/7.
             </p>
-            <div className="flex space-x-2">
+            <div className="flex space-x-2 mb-8">
               <Button variant="ghost" size="icon" className="glassmorphism border border-white/10 hover:border-primary/50" data-testid="link-twitter" aria-label="Twitter" asChild>
                 <a href="https://twitter.com/afernai" target="_blank" rel="noopener noreferrer">
                   <Twitter className="h-5 w-5" />
@@ -76,6 +76,26 @@ export function Footer() {
                 </a>
               </Button>
             </div>
+            <form onSubmit={handleNewsletterSubmit} className="flex gap-3">
+              <Input
+                type="email"
+                placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                className="glassmorphism border-white/10 h-12 text-base"
+                data-testid="input-newsletter-email"
+                aria-label="Newsletter email"
+              />
+              <Button 
+                type="submit" 
+                className="bg-gradient-to-r from-primary to-accent text-white hover:opacity-90 h-12 px-6 font-semibold"
+                disabled={newsletterMutation.isPending}
+                data-testid="button-newsletter-submit"
+              >
+                {newsletterMutation.isPending ? "..." : "Subscribe"}
+              </Button>
+            </form>
           </div>
 
           <div className="lg:pl-12">

@@ -5,7 +5,6 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { FloatingDemoButton } from "@/components/FloatingDemoButton";
 import { useAnalytics } from "../hooks/use-analytics";
 import { initGA } from "../lib/analytics";
 import { useEffect } from "react";
@@ -78,7 +77,6 @@ function App() {
             <Router />
           </main>
           <Footer />
-          <FloatingDemoButton />
         </div>
         <Toaster />
       </TooltipProvider>
