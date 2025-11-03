@@ -1,7 +1,8 @@
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import afernLogo from "@assets/AfernAI_Logo_Web_1762208534257.png";
 
 export function Header() {
   const [location] = useLocation();
@@ -18,11 +19,8 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-white/10 backdrop-blur-xl" style={{ background: "rgba(10, 15, 30, 0.8)" }}>
       <div className="container mx-auto max-w-7xl px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center space-x-3 hover-elevate active-elevate-2 rounded-lg px-3 py-2" data-testid="link-home">
-            <div className="h-16 w-16 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center drop-shadow-lg">
-              <Phone className="h-8 w-8 text-white" />
-            </div>
-            <span className="text-4xl font-extrabold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">Afern AI</span>
+          <Link href="/" className="flex items-center hover-elevate active-elevate-2 rounded-lg px-3 py-2" data-testid="link-home">
+            <img src={afernLogo} alt="Afern AI Logo" className="h-16 w-auto" />
           </Link>
 
           <div className="hidden md:flex items-center gap-1">
