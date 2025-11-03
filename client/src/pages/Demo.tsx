@@ -121,7 +121,6 @@ export default function Demo() {
                     <Label htmlFor="website">Website</Label>
                     <Input
                       id="website"
-                      type="url"
                       value={formData.website}
                       onChange={(e) => setFormData({ ...formData, website: e.target.value })}
                       data-testid="input-demo-website"
