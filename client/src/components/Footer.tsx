@@ -57,8 +57,11 @@ export function Footer() {
               </div>
               <span className="text-3xl font-extrabold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">Afern AI</span>
             </div>
-            <p className="text-muted-foreground text-lg mb-6 max-w-md">
+            <p className="text-muted-foreground text-lg mb-4 max-w-md">
               Enterprise-grade AI receptionist & outbound caller that answers, qualifies and books — 24/7.
+            </p>
+            <p className="text-muted-foreground text-lg mb-6">
+              Contact us: <a href="mailto:admin@afernai.com" className="text-primary hover:text-accent transition-colors font-semibold" data-testid="link-footer-email">admin@afernai.com</a>
             </p>
             <div className="flex space-x-2 mb-8">
               <Button variant="ghost" size="icon" className="glassmorphism border border-white/10 hover:border-primary/50" data-testid="link-twitter" aria-label="Twitter" asChild>

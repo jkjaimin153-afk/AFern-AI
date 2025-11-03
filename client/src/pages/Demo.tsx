@@ -65,8 +65,11 @@ export default function Demo() {
             <h1 className="font-serif text-5xl md:text-6xl font-semibold mb-6" data-testid="text-demo-title">
               See <span className="text-accent">Afern AI</span> in Action
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-4">
               Schedule a personalized demo to see how our AI receptionist can transform your business communications.
+            </p>
+            <p className="text-lg text-muted-foreground">
+              Or reach us directly at <a href="mailto:admin@afernai.com" className="text-primary hover:text-accent transition-colors font-semibold" data-testid="link-contact-email">admin@afernai.com</a>
             </p>
           </div>
 
