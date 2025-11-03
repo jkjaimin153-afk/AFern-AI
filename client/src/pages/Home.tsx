@@ -1,13 +1,11 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Play, Check, Phone, Calendar, TrendingUp, Brain, Shield, Clock } from "lucide-react";
-import { useState, useEffect, useRef } from "react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Check, Phone, Calendar, TrendingUp, Brain, Shield, Clock } from "lucide-react";
+import { useRef } from "react";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 
 export default function Home() {
-  const [audioModalOpen, setAudioModalOpen] = useState(false);
 
   const integrations = [
     { name: "Google Calendar", logo: "GC" },
@@ -117,16 +115,6 @@ export default function Home() {
                   Request a 5-Min Demo
                 </Button>
               </Link>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="h-14 px-10 text-lg font-semibold glassmorphism border-white/10 transition-all duration-300 hover:scale-105 hover:border-primary/30"
-                onClick={() => setAudioModalOpen(true)}
-                data-testid="button-listen-demo"
-              >
-                <Play className="mr-2 h-5 w-5" />
-                Listen to demo call
-              </Button>
             </motion.div>
           </motion.div>
         </div>
@@ -289,40 +277,6 @@ export default function Home() {
           <div className="absolute -inset-8 bg-gradient-to-r from-primary/20 via-accent/20 to-secondary/20 rounded-3xl blur-3xl -z-10 opacity-50" />
         </div>
       </section>
-
-      <Dialog open={audioModalOpen} onOpenChange={setAudioModalOpen}>
-        <DialogContent className="max-w-2xl" data-testid="modal-audio-demo">
-          <DialogHeader>
-            <DialogTitle className="font-serif text-2xl">Demo Call Examples</DialogTitle>
-          </DialogHeader>
-          <div className="space-y-6">
-            <div className="space-y-3">
-              <h4 className="font-semibold">Booking Call Example</h4>
-              <div className="bg-muted rounded-lg p-4">
-                <p className="text-sm text-muted-foreground italic">
-                  Audio player placeholder - Booking scenario
-                </p>
-                <div className="mt-4 p-4 bg-background rounded border border-border">
-                  <p className="text-xs text-muted-foreground mb-2">Sample transcript:</p>
-                  <p className="text-sm">"Thanks for calling QuickFix Plumbing, this is Afern — how can I help today?"</p>
-                </div>
-              </div>
-            </div>
-            <div className="space-y-3">
-              <h4 className="font-semibold">Payment Capture Example</h4>
-              <div className="bg-muted rounded-lg p-4">
-                <p className="text-sm text-muted-foreground italic">
-                  Audio player placeholder - Payment scenario
-                </p>
-                <div className="mt-4 p-4 bg-background rounded border border-border">
-                  <p className="text-xs text-muted-foreground mb-2">Sample transcript:</p>
-                  <p className="text-sm">"I can help secure your appointment with a deposit. May I collect your payment information?"</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </DialogContent>
-      </Dialog>
     </div>
   );
 }
