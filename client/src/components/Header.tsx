@@ -22,7 +22,7 @@ export function Header() {
             <div className="h-16 w-16 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center drop-shadow-lg">
               <Phone className="h-8 w-8 text-white" />
             </div>
-            <span className="text-3xl font-extrabold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">Afern AI</span>
+            <span className="text-4xl font-extrabold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">Afern AI</span>
           </Link>
 
           <div className="hidden md:flex items-center gap-1">

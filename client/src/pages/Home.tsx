@@ -70,7 +70,7 @@ export default function Home() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <motion.h1 
-              className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight tracking-tight" 
+              className="text-5xl md:text-6xl lg:text-7xl font-semibold leading-tight tracking-tight" 
               data-testid="text-hero-title"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
