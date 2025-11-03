@@ -139,7 +139,7 @@ export default function Home() {
         <div className="container mx-auto max-w-7xl px-6 relative">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
             {[
-              { value: "98%", label: "Answered calls automatically", testid: "kpi-answered", gradient: "from-primary to-accent" },
+              { value: "98%", label: "Calls answered automatically", testid: "kpi-answered", gradient: "from-primary to-accent" },
               { value: "5 min", label: "Avg time to booking", testid: "kpi-booking", gradient: "from-secondary to-primary" },
               { value: "15+", label: "Businesses onboarded", testid: "kpi-businesses", gradient: "from-accent to-secondary" }
             ].map((stat, idx) => (
