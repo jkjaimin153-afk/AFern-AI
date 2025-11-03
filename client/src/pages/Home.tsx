@@ -70,7 +70,7 @@ export default function Home() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <motion.h1 
-              className="text-6xl md:text-7xl lg:text-8xl font-semibold leading-none tracking-tight" 
+              className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight tracking-tight" 
               data-testid="text-hero-title"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -81,7 +81,7 @@ export default function Home() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
-                Stop loosing leads to missed calls,{" "}
+                Stop losing leads to missed calls,{" "}
               </motion.span>
               <motion.span 
                 className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent"
@@ -89,7 +89,7 @@ export default function Home() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
               >
-                let ai handeln your customer 24/7
+                let AI handle your customers 24/7
               </motion.span>
             </motion.h1>
             
