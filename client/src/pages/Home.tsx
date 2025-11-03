@@ -81,7 +81,7 @@ export default function Home() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
-                Never Miss A Call.{" "}
+                Stop loosing leads to missed calls,{" "}
               </motion.span>
               <motion.span 
                 className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent"
@@ -89,7 +89,7 @@ export default function Home() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
               >
-                Turn Conversations Into Customers.
+                let ai handeln your customer 24/7
               </motion.span>
             </motion.h1>
             
@@ -99,7 +99,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
             >
-              Afern AI is an enterprise-grade AI receptionist & outbound caller that answers, qualifies and books — 24/7 — integrated with your calendar, CRM, and POS.
+              AI-powered receptionist that answers calls and books appointments automatically.
             </motion.p>
             
             <motion.div 
