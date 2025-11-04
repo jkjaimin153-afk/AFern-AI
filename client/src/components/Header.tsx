@@ -4,6 +4,8 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import afernLogo from "@assets/AfernAI_Logo_Web_1762208534257.png";
 
+import Afern_Logo_ from "@assets/Afern Logo .jpg";
+
 export function Header() {
   const [location] = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -20,7 +22,7 @@ export function Header() {
       <div className="container mx-auto max-w-7xl px-6 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-3 hover-elevate active-elevate-2 rounded-lg px-3 py-2" data-testid="link-home">
-            <img src={afernLogo} alt="Afern AI Logo" className="h-16 w-auto" />
+            <img src={Afern_Logo_} alt="Afern AI Logo" className="h-16 w-auto" />
             <span className="text-4xl font-extrabold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">Afern AI</span>
           </Link>
 
