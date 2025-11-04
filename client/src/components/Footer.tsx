@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
-import afernLogo from "@assets/AfernAI_Logo_Web_1762208534257.png";
+import afernLogo from "@assets/Afern Logo _1762221920984.jpg";
 
 export function Footer() {
   const [email, setEmail] = useState("");
@@ -53,7 +53,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
-              <img src={afernLogo} alt="Afern AI Logo" className="h-16 w-auto" />
+              <img src={afernLogo} alt="Afern AI Logo" className="h-16 w-auto rounded-lg" />
               <span className="text-3xl font-extrabold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">Afern AI</span>
             </div>
             <p className="text-muted-foreground text-lg mb-4 max-w-md">
