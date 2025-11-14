@@ -1,104 +1,128 @@
-import { Card } from "@/components/ui/card";
-import { Link } from "wouter";
+import { SectionHeading } from "@/components/SectionHeading";
 import { Button } from "@/components/ui/button";
-import { Check, AlertCircle } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Link } from "wouter";
+import { Check } from "lucide-react";
+
+const PAIN_POINTS = [
+  "Front desk teams juggling phone lines, walk-ins, and VIP guests simultaneously.",
+  "After-hours booking requests and concierge inquiries left unanswered.",
+  "Reservations, loyalty perks, and upsells scattered across multiple systems.",
+];
+
+const SOLUTIONS = [
+  "Afern concierge answers in multiple languages, books rooms, and manages late arrivals automatically.",
+  "Keeps Opera, Cloudbeds, Mews, and guest apps in sync so staff see a single source of truth.",
+  "Automates upsells for late checkout, amenities, spa bookings, and experiences.",
+];
+
+const PLAYBOOK = [
+  {
+    speaker: "AI",
+    content: "Welcome to the Meridian Boutique—I'm your digital concierge. How can I assist this evening?",
+  },
+  {
+    speaker: "Guest",
+    content: "We're arriving late Friday and need a room for two nights.",
+  },
+  {
+    speaker: "AI",
+    content: "Absolutely. Shall I reserve a deluxe king or premium suite? Late arrival? I’ll note that for our team.",
+  },
+  {
+    speaker: "Guest",
+    content: "Deluxe king, arriving around 11 PM.",
+  },
+  {
+    speaker: "AI",
+    content: "Done. Would you like airport transfer or add breakfast? I can include it now for a preferred rate.",
+  },
+];
 
 export default function Hospitality() {
-  const painPoints = [
-    "Front desk staff overwhelmed during check-in rushes",
-    "After-hours booking requests going unanswered",
-    "Manual reservation management across multiple platforms",
-  ];
-
-  const solutions = [
-    "24/7 automated check-in and reservation handling",
-    "Seamless PMS integration for real-time availability",
-    "Multilingual support for international guests",
-  ];
-
   return (
-    <div className="min-h-screen">
-      <section className="py-20 md:py-32 bg-gradient-to-br from-background via-purple-500/5 to-background">
-        <div className="container mx-auto max-w-7xl px-6">
-          <div className="mb-16">
-            <Link href="/industries">
-              <Button variant="ghost" className="mb-6" data-testid="link-back-industries">
-                ← Back to Industries
-              </Button>
-            </Link>
-            <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6" data-testid="text-hospitality-title">
-              AI Receptionist for <span className="text-purple-500">Hospitality</span>
-            </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl">
-              Perfect for motels, boutique hotels, and vacation rentals that need round-the-clock guest support without the overhead.
-            </p>
-          </div>
+    <div className="min-h-screen bg-background">
+      <section className="relative overflow-hidden py-24 md:py-32">
+        <div className="absolute inset-0 gradient-soft opacity-45" />
+        <div className="absolute -right-16 top-12 h-64 w-64 orb-glow blur-3xl opacity-60" />
 
-          <div className="grid md:grid-cols-2 gap-12 mb-16">
-            <Card className="p-8">
-              <div className="flex items-center gap-3 mb-6">
-                <AlertCircle className="h-6 w-6 text-destructive" />
-                <h3 className="text-2xl font-bold">Common Challenges</h3>
-              </div>
-              <ul className="space-y-4">
-                {painPoints.map((point, idx) => (
-                  <li key={idx} className="flex items-start gap-3" data-testid={`pain-point-${idx}`}>
-                    <div className="w-2 h-2 rounded-full bg-destructive mt-2 flex-shrink-0" />
-                    <span className="text-muted-foreground">{point}</span>
-                  </li>
+        <div className="container relative z-10 mx-auto max-w-5xl px-6">
+          <Link href="/industries">
+            <Button
+              variant="ghost"
+              className="mb-8 inline-flex h-11 rounded-full border border-border px-5 text-sm text-foreground/70 hover:text-foreground"
+              data-testid="link-back-industries"
+            >
+              ← Browse industries
+            </Button>
+          </Link>
+
+          <SectionHeading
+            align="left"
+            eyebrow="Hospitality"
+            title="Premium guest journeys without expanding the front desk."
+            description="Hotels, resorts, and vacation rentals deploy Afern to offer concierge-level service around the clock—over phone, SMS, and web."
+          />
+
+          <div className="mt-14 grid gap-6 md:grid-cols-2">
+            <Card className="border-border bg-white shadow-[0_24px_40px_-30px_rgba(15,23,42,0.15)]" data-testid="card-pain-points">
+              <CardHeader>
+                <CardTitle className="text-2xl font-semibold text-foreground">What hospitality teams struggle with</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4 text-base text-muted-foreground">
+                {PAIN_POINTS.map((item, idx) => (
+                  <div key={idx} className="flex items-start gap-3" data-testid={`pain-point-${idx}`}>
+                    <span className="mt-1 h-2 w-2 rounded-full bg-accent/80" />
+                    <span>{item}</span>
+                  </div>
                 ))}
-              </ul>
+              </CardContent>
             </Card>
 
-            <Card className="p-8 bg-purple-500/5 border-purple-500/20">
-              <div className="flex items-center gap-3 mb-6">
-                <Check className="h-6 w-6 text-purple-500" />
-                <h3 className="text-2xl font-bold">How Afern AI Helps</h3>
-              </div>
-              <ul className="space-y-4">
-                {solutions.map((solution, idx) => (
-                  <li key={idx} className="flex items-start gap-3" data-testid={`solution-${idx}`}>
-                    <Check className="h-5 w-5 text-purple-500 mt-0.5 flex-shrink-0" />
-                    <span>{solution}</span>
-                  </li>
+            <Card className="border-border bg-white shadow-[0_24px_40px_-30px_rgba(15,23,42,0.15)]" data-testid="card-solutions">
+              <CardHeader>
+                <CardTitle className="text-2xl font-semibold text-foreground">How Afern fixes it</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4 text-base text-muted-foreground">
+                {SOLUTIONS.map((item, idx) => (
+                  <div key={idx} className="flex items-start gap-3" data-testid={`solution-${idx}`}>
+                    <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-accent" />
+                    <span>{item}</span>
+                  </div>
                 ))}
-              </ul>
+              </CardContent>
             </Card>
           </div>
 
-          <Card className="p-8 mb-16 bg-card/50 backdrop-blur-sm">
-            <h3 className="text-2xl font-bold mb-6">Sample Check-in Call Flow</h3>
-            <div className="space-y-4 font-mono text-sm">
-              <div className="p-4 bg-purple-500/10 rounded-lg" data-testid="script-line-0">
-                <span className="text-purple-500 font-bold">AI:</span> "Welcome to Deerfield Inn. How may I help you today?"
+          <Card className="mt-14 border-border bg-white shadow-[0_24px_40px_-30px_rgba(15,23,42,0.15)]">
+            <CardHeader>
+              <CardTitle className="text-lg text-foreground">Sample late-night booking flow</CardTitle>
+            </CardHeader>
+            <CardContent className="grid gap-3 font-mono text-sm text-muted-foreground">
+              {PLAYBOOK.map((line, idx) => (
+                <div
+                  key={idx}
+                  className="rounded-2xl border border-border bg-slate-50 px-4 py-3"
+                  data-testid={`script-line-${idx}`}
+                >
+                  <span className="mr-2 font-semibold text-accent">{line.speaker}:</span>
+                  {line.content}
+                </div>
+              ))}
+              <div className="mt-2 rounded-2xl border border-border bg-white px-4 py-3 text-xs uppercase tracking-[0.35em] text-muted-foreground/80 shadow-[0_16px_32px_-24px_rgba(15,23,42,0.18)]">
+                PMS updated • Confirmation sent • Upsell logged • Staff receives arrival briefing
               </div>
-              <div className="p-4 bg-muted rounded-lg" data-testid="script-line-1">
-                <span className="text-muted-foreground font-bold">Guest:</span> "I'd like to book a room for this weekend."
-              </div>
-              <div className="p-4 bg-purple-500/10 rounded-lg" data-testid="script-line-2">
-                <span className="text-purple-500 font-bold">AI:</span> "Certainly! What dates are you looking at?"
-              </div>
-              <div className="p-4 bg-muted rounded-lg" data-testid="script-line-3">
-                <span className="text-muted-foreground font-bold">Guest:</span> "Friday and Saturday night, checking out Sunday."
-              </div>
-              <div className="p-4 bg-purple-500/10 rounded-lg" data-testid="script-line-4">
-                <span className="text-purple-500 font-bold">AI:</span> "Perfect. We have availability. Would you like a king or two queens?"
-              </div>
-              <div className="p-4 bg-background rounded-lg border border-border mt-4">
-                <span className="text-xs text-muted-foreground">
-                  System checks PMS availability, captures guest details, processes payment, and sends confirmation with check-in code.
-                </span>
-              </div>
-            </div>
+            </CardContent>
           </Card>
 
-          <div className="mt-16 text-center">
+          <div className="mt-16 flex justify-center">
             <Link href="/demo">
-              <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90" data-testid="button-hospitality-demo">
-                Schedule a Demo for Hospitality
+              <Button className="h-14 w-full max-w-xl rounded-full bg-gradient-to-r from-[#2563EB] to-[#1F3557] px-12 text-base font-semibold text-white shadow-[0_28px_60px_-24px_rgba(37,99,235,0.28)] hover:opacity-95">
+                Request a hospitality demo
               </Button>
             </Link>
           </div>
+
         </div>
       </section>
     </div>
