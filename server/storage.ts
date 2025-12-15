@@ -60,6 +60,12 @@ export class MemStorage implements IStorage {
     const request: DemoRequest = { 
       ...insertRequest, 
       id,
+      phone: insertRequest.phone ?? null,
+      business: insertRequest.business ?? null,
+      website: insertRequest.website ?? null,
+      industry: insertRequest.industry ?? null,
+      message: insertRequest.message ?? null,
+      integrations: insertRequest.integrations ?? null,
       createdAt: new Date()
     };
     this.demoRequests.set(id, request);
@@ -71,6 +77,12 @@ export class MemStorage implements IStorage {
     const submission: ContactSubmission = {
       ...insertSubmission,
       id,
+      phone: insertSubmission.phone ?? null,
+      business: insertSubmission.business ?? null,
+      website: insertSubmission.website ?? null,
+      industry: insertSubmission.industry ?? null,
+      message: insertSubmission.message ?? null,
+      integrations: insertSubmission.integrations ?? null,
       createdAt: new Date()
     };
     this.contactSubmissions.set(id, submission);
@@ -93,6 +105,8 @@ export class MemStorage implements IStorage {
     const request: IntegrationRequest = {
       ...insertRequest,
       id,
+      email: insertRequest.email ?? null,
+      notes: insertRequest.notes ?? null,
       createdAt: new Date()
     };
     this.integrationRequests.set(id, request);
