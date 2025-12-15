@@ -20,10 +20,20 @@ export function log(message: string, source = "express") {
 }
 
 export async function setupVite(app: Express, server: Server) {
+  const port = parseInt(process.env.PORT || '3000', 10);
   const serverOptions = {
     middlewareMode: true,
-    hmr: { server },
+    hmr: { 
+      server,
+      clientPort: port,
+      protocol: 'ws',
+    },
     allowedHosts: true as const,
+    host: true,
+    watch: {
+      usePolling: false,
+      interval: 100,
+    },
   };
 
   const vite = await createViteServer({
@@ -54,10 +64,13 @@ export async function setupVite(app: Express, server: Server) {
 
       // always reload the index.html file from disk incase it changes
       let template = await fs.promises.readFile(clientTemplate, "utf-8");
-      template = template.replace(
-        `src="/src/main.tsx"`,
-        `src="/src/main.tsx?v=${nanoid()}"`,
-      );
+      // Only add cache busting in development, and use a stable version
+      if (process.env.NODE_ENV === "development") {
+        template = template.replace(
+          `src="/src/main.tsx"`,
+          `src="/src/main.tsx?v=dev"`,
+        );
+      }
       const page = await vite.transformIndexHtml(url, template);
       res.status(200).set({ "Content-Type": "text/html" }).end(page);
     } catch (e) {

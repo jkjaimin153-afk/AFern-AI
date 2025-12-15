@@ -1,51 +1,42 @@
-import { SectionHeading } from "@/components/SectionHeading";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "wouter";
-import { Check } from "lucide-react";
+import { Check, ArrowRight, AlertCircle, Clock, FileText } from "lucide-react";
+import { motion } from "framer-motion";
 
-const PAIN_POINTS = [
-  "Traditional call centres lack HIPAA safeguards and audit trails.",
-  "High no-show rates strain provider schedules and revenue.",
-  "Staff time consumed by confirmations, intake, and triage.",
+const challenges = [
+  { icon: AlertCircle, text: "After-hours appointment requests go unanswered, losing bookings and frustrating patients" },
+  { icon: Clock, text: "High no-show rates strain provider schedules and revenue" },
+  { icon: FileText, text: "Staff time consumed by confirmations and intake that could be automated" },
 ];
 
-const SOLUTIONS = [
-  "HIPAA-aligned AI concierge with encrypted recordings, audit trails, and access controls.",
-  "Smart reminders, insurance capture, and rescheduling tools that cut no-shows.",
-  "Clinical triage flows that flag urgent cases and collect intake forms upfront.",
+const managed = [
+  "HIPAA-aligned AI voice agents answer calls 24/7, schedule appointments, and provide secure patient communication",
+  "AI chat agents automate intake forms, insurance verification, and reminders across web, SMS, and patient portals",
+  "Automated workflows sync appointments with EHR systems and send HIPAA-compliant reminders",
 ];
 
-const PLAYBOOK = [
-  {
-    speaker: "AI",
-    content:
-      "Thank you for calling Riverbend Wellness—this is Afern, your virtual care coordinator. How can I help?",
-  },
-  {
-    speaker: "Patient",
-    content: "I need to schedule a follow-up adjustment next week.",
-  },
-  {
-    speaker: "AI",
-    content:
-      "Of course. I’ll look up your chart. Can you confirm your date of birth so I can pull up the right profile?",
-  },
-  {
-    speaker: "Patient",
-    content: "It’s June 4th, 1988.",
-  },
-  {
-    speaker: "AI",
-    content:
-      "Thanks, I found you. Tuesday at 2:15 PM or Thursday at 11:30 AM are available. Which works better?",
-  },
+const impact = [
+  "Reduce no-show rates by 30-50% through automated reminders",
+  "Free up 10-15 hours per week of staff time",
+  "Ensure 100% HIPAA compliance with encrypted communications",
 ];
+
+const container = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.1 },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
 
 export default function Healthcare() {
   return (
-    <div className="min-h-screen bg-background">
-      <section className="relative overflow-hidden py-24 md:py-32">
+    <div className="min-h-screen bg-background page-dots">
+      <section className="relative overflow-hidden py-20 md:py-28">
         <div className="absolute inset-0 gradient-soft opacity-45" />
         <div className="absolute -left-16 top-16 h-60 w-60 orb-glow blur-3xl opacity-45" />
 
@@ -54,78 +45,97 @@ export default function Healthcare() {
             <Button
               variant="ghost"
               className="mb-8 inline-flex h-11 rounded-full border border-border px-5 text-sm text-foreground/70 hover:text-foreground"
-              data-testid="link-back-industries"
             >
               ← Browse industries
             </Button>
           </Link>
 
-          <SectionHeading
-            align="left"
-            eyebrow="Healthcare & Wellness"
-            title="Secure, compliant conversations that respect patient experience."
-            description="Clinics, dental groups, and wellness practices deploy Afern to protect PHI, reduce no-shows, and free staff for in-person care."
-          />
-
-          <div className="mt-14 grid gap-6 md:grid-cols-2">
-            <Card className="border-border bg-white shadow-[0_24px_40px_-30px_rgba(15,23,42,0.15)]" data-testid="card-pain-points">
-              <CardHeader>
-                <CardTitle className="text-2xl font-semibold text-foreground">What care teams struggle with</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4 text-base text-muted-foreground">
-                {PAIN_POINTS.map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-3" data-testid={`pain-point-${idx}`}>
-                    <span className="mt-1 h-2 w-2 rounded-full bg-accent/80" />
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </CardContent>
-            </Card>
-
-            <Card className="border-border bg-white shadow-[0_24px_40px_-30px_rgba(15,23,42,0.15)]" data-testid="card-solutions">
-              <CardHeader>
-                <CardTitle className="text-2xl font-semibold text-foreground">How Afern fixes it</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4 text-base text-muted-foreground">
-                {SOLUTIONS.map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-3" data-testid={`solution-${idx}`}>
-                    <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-accent" />
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </CardContent>
-            </Card>
+          <div className="mb-16">
+            <h1 className="text-4xl md:text-5xl font-semibold text-foreground mb-4">Healthcare & Wellness</h1>
+            <p className="text-lg text-foreground font-medium max-w-3xl">
+              Managed patient communication that schedules appointments, reduces no-shows, and protects PHI with full HIPAA compliance.
+            </p>
           </div>
 
-          <Card className="mt-14 border-border bg-white shadow-[0_24px_40px_-30px_rgba(15,23,42,0.15)]">
-            <CardHeader>
-              <CardTitle className="text-lg text-foreground">Sample appointment booking flow</CardTitle>
-            </CardHeader>
-            <CardContent className="grid gap-3 font-mono text-sm text-muted-foreground">
-              {PLAYBOOK.map((line, idx) => (
-                <div
-                  key={idx}
-                  className="rounded-2xl border border-border bg-slate-50 px-4 py-3"
-                  data-testid={`script-line-${idx}`}
-                >
-                  <span className="mr-2 font-semibold text-accent">{line.speaker}:</span>
-                  {line.content}
-                </div>
+          <motion.section
+            className="mb-16"
+            variants={container}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <h2 className="text-xl font-semibold text-foreground mb-8 text-muted-foreground uppercase tracking-wide">Top Challenges</h2>
+            <div className="grid gap-8 md:grid-cols-3">
+              {challenges.map((challenge, idx) => (
+                <motion.div key={idx} variants={item} className="flex items-start gap-4">
+                  <div className="mt-1 flex-shrink-0">
+                    <challenge.icon className="h-5 w-5 text-accent" />
+                  </div>
+                  <p className="text-base text-muted-foreground leading-relaxed">{challenge.text}</p>
+                </motion.div>
               ))}
-              <div className="mt-2 rounded-2xl border border-border bg-white px-4 py-3 text-xs uppercase tracking-[0.35em] text-muted-foreground/80 shadow-[0_16px_32px_-24px_rgba(15,23,42,0.18)]">
-                PHI protected • Intake forms dispatched • Visit reminders scheduled • Notes synced to EHR
-              </div>
-            </CardContent>
-          </Card>
+            </div>
+          </motion.section>
 
-          <div className="mt-16 flex justify-center">
+          <motion.section
+            className="mb-16"
+            variants={container}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <div className="grid md:grid-cols-5 gap-8 items-start">
+              <div className="md:col-span-2">
+                <h2 className="text-2xl font-semibold text-foreground">What We Manage</h2>
+                <p className="text-sm text-muted-foreground mt-2">Voice, chat, and workflows—fully managed</p>
+              </div>
+              <div className="md:col-span-3 space-y-4 pl-0 md:pl-8 border-l-0 md:border-l border-border/30">
+                {managed.map((solution, idx) => (
+                  <motion.div key={idx} variants={item} className="flex items-start gap-3">
+                    <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-accent" />
+                    <p className="text-base text-foreground leading-relaxed">{solution}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </motion.section>
+
+          <motion.section
+            className="mb-16"
+            variants={container}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <div className="rounded-2xl bg-gradient-to-br from-[#F6F9FF] via-[#EDF4FF] to-white px-8 py-10 md:px-12 md:py-12">
+              <h2 className="text-xl font-semibold text-foreground mb-8 text-muted-foreground uppercase tracking-wide">Business Impact</h2>
+              <div className="grid md:grid-cols-3 gap-8">
+                {impact.map((outcome, idx) => (
+                  <motion.div key={idx} variants={item} className="flex items-start gap-3">
+                    <div className="mt-1 flex h-6 w-6 items-center justify-center rounded-full bg-accent/10 flex-shrink-0">
+                      <Check className="h-4 w-4 text-accent" />
+                    </div>
+                    <p className="text-lg text-foreground font-medium leading-relaxed">{outcome}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </motion.section>
+
+          <motion.div
+            className="flex justify-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             <Link href="/demo">
-              <Button className="h-14 w-full max-w-xl rounded-full bg-gradient-to-r from-[#2563EB] to-[#1F3557] px-12 text-base font-semibold text-white shadow-[0_28px_60px_-24px_rgba(37,99,235,0.28)] hover:opacity-95">
-                Request a healthcare demo
+              <Button className="h-14 rounded-full bg-gradient-to-r from-[#2563EB] to-[#1F3557] px-12 text-base font-semibold text-white shadow-[0_28px_60px_-24px_rgba(37,99,235,0.28)] hover:opacity-95">
+                See how it works for Healthcare
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
-          </div>
-
+          </motion.div>
         </div>
       </section>
     </div>

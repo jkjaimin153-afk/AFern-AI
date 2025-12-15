@@ -29,8 +29,8 @@ export default function Demo() {
     },
     onSuccess: () => {
       toast({
-        title: "Demo Requested!",
-        description: "We'll be in touch within 24 hours to schedule your demo.",
+        title: "Strategy Call Scheduled!",
+        description: "We'll be in touch within 24 hours to confirm your strategy call.",
       });
       setFormData({
         name: "",
@@ -63,19 +63,19 @@ export default function Demo() {
         <div className="container mx-auto max-w-7xl px-6">
           <div className="text-center mb-16">
             <h1 className="font-serif text-5xl md:text-6xl font-semibold mb-6" data-testid="text-demo-title">
-              See <span className="text-accent">Afern AI</span> in Action
+              Book a <span className="text-accent">Strategy Call</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-4">
-              Schedule a personalized demo to see how our AI receptionist can transform your business communications.
+              Let&apos;s discuss your customer communication needs and design the right MCCS solution for your business.
             </p>
             <p className="text-lg text-muted-foreground">
-              Or reach us directly at <a href="mailto:admin@afernai.com" className="text-primary hover:text-accent transition-colors font-semibold" data-testid="link-contact-email">admin@afernai.com</a>
+              Or reach us directly at <a href="mailto:info@afernai.com" className="text-primary hover:text-accent transition-colors font-semibold" data-testid="link-contact-email">info@afernai.com</a>
             </p>
           </div>
 
           <div className="max-w-2xl mx-auto">
             <Card className="p-8">
-                <h2 className="font-serif text-3xl font-bold mb-6">Request a Live Demo</h2>
+                <h2 className="font-serif text-3xl font-bold mb-6">Schedule Your Strategy Call</h2>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <Label htmlFor="name">Full Name *</Label>
@@ -159,7 +159,7 @@ export default function Demo() {
                     disabled={demoMutation.isPending}
                     data-testid="button-submit-demo"
                   >
-                    {demoMutation.isPending ? "Submitting..." : "Request a 5-Min Demo"}
+                    {demoMutation.isPending ? "Submitting..." : "Book a Strategy Call"}
                   </Button>
                 </form>
               </Card>

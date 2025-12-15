@@ -1,51 +1,42 @@
-import { SectionHeading } from "@/components/SectionHeading";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "wouter";
-import { Check } from "lucide-react";
+import { Check, ArrowRight, AlertCircle, Clock, FileText } from "lucide-react";
+import { motion } from "framer-motion";
 
-const PAIN_POINTS = [
-  "Potential clients contact firms after-hours and rarely receive a timely response.",
-  "Conflict checks, NDAs, and intake questionnaires delay engagement.",
-  "Billable staff spend hours on follow-ups, reminders, and document collection.",
+const challenges = [
+  { icon: AlertCircle, text: "After-hours client inquiries go unanswered, losing business opportunities" },
+  { icon: FileText, text: "Conflict checks and intake questionnaires delay engagement" },
+  { icon: Clock, text: "Billable staff spend hours on follow-ups and document collection" },
 ];
 
-const SOLUTIONS = [
-  "24/7 intake concierge that screens new matters, captures facts, and books consultations.",
-  "Automated conflict checks and NDA workflows connected to Clio, MyCase, or your CRM.",
-  "Digital document vault for retainers, ID verification, and payment capture.",
+const managed = [
+  "AI voice agents answer calls 24/7, screen new matters, and book consultations",
+  "AI chat agents automate intake forms, conflict checks, and NDA workflows connected to Clio, MyCase, or CRM",
+  "Automated workflows sync client information with case management systems and track matter status",
 ];
 
-const PLAYBOOK = [
-  {
-    speaker: "AI",
-    content:
-      "Thank you for contacting Westbridge Legal—I'm your virtual intake specialist. Are you seeking help with business or personal matters?",
-  },
-  {
-    speaker: "Caller",
-    content: "A contract dispute with a former supplier.",
-  },
-  {
-    speaker: "AI",
-    content:
-      "I can arrange a consultation. I'll run a quick conflict check—could you share your name and the other party involved?",
-  },
-  {
-    speaker: "Caller",
-    content: "It's Michael Reyes. The other party is Horizon Manufacturing.",
-  },
-  {
-    speaker: "AI",
-    content:
-      "Thanks, no conflicts detected. We can meet Wednesday at 2 PM in person or Thursday at 11 AM via video. Which do you prefer?",
-  },
+const impact = [
+  "Capture 100% of inbound inquiries, including after-hours calls",
+  "Reduce intake time from days to hours",
+  "Free up 15-20 hours per week of attorney time",
 ];
+
+const container = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.1 },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
 
 export default function Legal() {
   return (
-    <div className="min-h-screen bg-background">
-      <section className="relative overflow-hidden py-24 md:py-32">
+    <div className="min-h-screen bg-background page-dots">
+      <section className="relative overflow-hidden py-20 md:py-28">
         <div className="absolute inset-0 gradient-soft opacity-40" />
         <div className="absolute right-10 top-20 h-60 w-60 orb-glow blur-3xl opacity-55" />
 
@@ -54,78 +45,97 @@ export default function Legal() {
             <Button
               variant="ghost"
               className="mb-8 inline-flex h-11 rounded-full border border-border px-5 text-sm text-foreground/70 hover:text-foreground"
-              data-testid="link-back-industries"
             >
               ← Browse industries
             </Button>
           </Link>
 
-          <SectionHeading
-            align="left"
-            eyebrow="Legal & Professional Services"
-            title="Conflict-aware intake and premium client experience."
-            description="Boutique law firms, consultancies, and accountants rely on Afern to qualify matters, manage documents, and initiate retainers around the clock."
-          />
-
-          <div className="mt-14 grid gap-6 md:grid-cols-2">
-            <Card className="border-border bg-white shadow-[0_24px_40px_-30px_rgba(15,23,42,0.15)]" data-testid="card-pain-points">
-              <CardHeader>
-                <CardTitle className="text-2xl font-semibold text-foreground">What legal teams struggle with</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4 text-base text-muted-foreground">
-                {PAIN_POINTS.map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-3" data-testid={`pain-point-${idx}`}>
-                    <span className="mt-1 h-2 w-2 rounded-full bg-accent/80" />
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </CardContent>
-            </Card>
-
-            <Card className="border-border bg-white shadow-[0_24px_40px_-30px_rgba(15,23,42,0.15)]" data-testid="card-solutions">
-              <CardHeader>
-                <CardTitle className="text-2xl font-semibold text-foreground">How Afern fixes it</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4 text-base text-muted-foreground">
-                {SOLUTIONS.map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-3" data-testid={`solution-${idx}`}>
-                    <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-accent" />
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </CardContent>
-            </Card>
+          <div className="mb-16">
+            <h1 className="text-4xl md:text-5xl font-semibold text-foreground mb-4">Legal & Professional Services</h1>
+            <p className="text-lg text-foreground font-medium max-w-3xl">
+              Managed client communication that qualifies matters, performs conflict checks, and initiates retainers 24/7.
+            </p>
           </div>
 
-          <Card className="mt-14 border-border bg-white shadow-[0_24px_40px_-30px_rgba(15,23,42,0.15)]">
-            <CardHeader>
-              <CardTitle className="text-lg text-foreground">Sample conflict-free intake flow</CardTitle>
-            </CardHeader>
-            <CardContent className="grid gap-3 font-mono text-sm text-muted-foreground">
-              {PLAYBOOK.map((line, idx) => (
-                <div
-                  key={idx}
-                  className="rounded-2xl border border-border bg-slate-50 px-4 py-3"
-                  data-testid={`script-line-${idx}`}
-                >
-                  <span className="mr-2 font-semibold text-accent">{line.speaker}:</span>
-                  {line.content}
-                </div>
+          <motion.section
+            className="mb-16"
+            variants={container}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <h2 className="text-xl font-semibold text-foreground mb-8 text-muted-foreground uppercase tracking-wide">Top Challenges</h2>
+            <div className="grid gap-8 md:grid-cols-3">
+              {challenges.map((challenge, idx) => (
+                <motion.div key={idx} variants={item} className="flex items-start gap-4">
+                  <div className="mt-1 flex-shrink-0">
+                    <challenge.icon className="h-5 w-5 text-accent" />
+                  </div>
+                  <p className="text-base text-muted-foreground leading-relaxed">{challenge.text}</p>
+                </motion.div>
               ))}
-              <div className="mt-2 rounded-2xl border border-border bg-white px-4 py-3 text-xs uppercase tracking-[0.35em] text-muted-foreground/80 shadow-[0_16px_32px_-24px_rgba(15,23,42,0.18)]">
-                Conflict cleared • NDA issued • Consultation booked • Retainer invoice sent
-              </div>
-            </CardContent>
-          </Card>
+            </div>
+          </motion.section>
 
-          <div className="mt-16 flex justify-center">
+          <motion.section
+            className="mb-16"
+            variants={container}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <div className="grid md:grid-cols-5 gap-8 items-start">
+              <div className="md:col-span-2">
+                <h2 className="text-2xl font-semibold text-foreground">What We Manage</h2>
+                <p className="text-sm text-muted-foreground mt-2">Voice, chat, and workflows—fully managed</p>
+              </div>
+              <div className="md:col-span-3 space-y-4 pl-0 md:pl-8 border-l-0 md:border-l border-border/30">
+                {managed.map((solution, idx) => (
+                  <motion.div key={idx} variants={item} className="flex items-start gap-3">
+                    <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-accent" />
+                    <p className="text-base text-foreground leading-relaxed">{solution}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </motion.section>
+
+          <motion.section
+            className="mb-16"
+            variants={container}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <div className="rounded-2xl bg-gradient-to-br from-[#F6F9FF] via-[#EDF4FF] to-white px-8 py-10 md:px-12 md:py-12">
+              <h2 className="text-xl font-semibold text-foreground mb-8 text-muted-foreground uppercase tracking-wide">Business Impact</h2>
+              <div className="grid md:grid-cols-3 gap-8">
+                {impact.map((outcome, idx) => (
+                  <motion.div key={idx} variants={item} className="flex items-start gap-3">
+                    <div className="mt-1 flex h-6 w-6 items-center justify-center rounded-full bg-accent/10 flex-shrink-0">
+                      <Check className="h-4 w-4 text-accent" />
+                    </div>
+                    <p className="text-lg text-foreground font-medium leading-relaxed">{outcome}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </motion.section>
+
+          <motion.div
+            className="flex justify-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             <Link href="/demo">
-              <Button className="h-14 w-full max-w-xl rounded-full bg-gradient-to-r from-[#2563EB] to-[#1F3557] px-12 text-base font-semibold text-white shadow-[0_28px_60px_-24px_rgba(37,99,235,0.28)] hover:opacity-95">
-                Request a legal intake demo
+              <Button className="h-14 rounded-full bg-gradient-to-r from-[#2563EB] to-[#1F3557] px-12 text-base font-semibold text-white shadow-[0_28px_60px_-24px_rgba(37,99,235,0.28)] hover:opacity-95">
+                See how it works for Legal Services
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
-          </div>
-
+          </motion.div>
         </div>
       </section>
     </div>

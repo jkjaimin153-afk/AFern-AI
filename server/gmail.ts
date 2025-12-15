@@ -52,7 +52,7 @@ export async function sendEmailNotification(subject: string, body: string) {
     const gmail = await getUncachableGmailClient();
     
     const email = [
-      'To: admin@afernai.com',
+      'To: info@afernai.com',
       'Subject: ' + subject,
       'Content-Type: text/html; charset=utf-8',
       '',

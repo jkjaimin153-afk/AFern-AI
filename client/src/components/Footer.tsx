@@ -1,12 +1,11 @@
 import { Link } from "wouter";
-import { Twitter, Linkedin, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
-import afernLogo from "@assets/Afern Logo _1762221920984.jpg";
+import afernLogo from "@assets/ChatGPT Image Nov 3, 2025, 07_54_54 PM.png";
 
 export function Footer() {
   const [email, setEmail] = useState("");
@@ -40,11 +39,12 @@ export function Footer() {
   };
 
   const quickLinks = [
-    { name: "Solutions", href: "/product" },
+    { name: "Services", href: "/product" },
     { name: "Industries", href: "/industries" },
+    { name: "How It Works", href: "/how-it-works" },
     { name: "Resources", href: "/resources" },
     { name: "Data & Privacy", href: "/security" },
-    { name: "Request Demo", href: "/demo" },
+    { name: "Book a Strategy Call", href: "/demo" },
   ];
 
   return (
@@ -55,33 +55,36 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
           <div className="lg:col-span-2">
             <div className="mb-6 flex items-center gap-3">
-              <img src={afernLogo} alt="Afern AI Logo" className="h-14 w-auto rounded-md logo-tint" />
+              <img src={afernLogo} alt="Afern AI Logo" className="h-14 w-auto" />
               <div>
                 <p className="text-[2.4rem] font-semibold tracking-tight text-foreground">Afern AI</p>
               </div>
             </div>
             <p className="text-muted-foreground text-base md:text-lg mb-4 max-w-xl">
-              Modern automation designed to move your business forward.
+              Managed Customer Communication Services for modern businesses.
             </p>
             <p className="text-muted-foreground text-lg mb-6">
-              Contact us: <a href="mailto:admin@afernai.com" className="text-primary hover:text-accent transition-colors font-semibold" data-testid="link-footer-email">admin@afernai.com</a>
+              Contact us: <a href="mailto:info@afernai.com" className="text-primary hover:text-accent transition-colors font-semibold" data-testid="link-footer-email">info@afernai.com</a>
             </p>
             <div className="flex space-x-2 mb-8">
-              <Button variant="ghost" size="icon" className="glassmorphism border border-border hover:border-accent/30" data-testid="link-twitter" aria-label="Twitter" asChild>
-                <a href="https://twitter.com/afernai" target="_blank" rel="noopener noreferrer">
-                  <Twitter className="h-5 w-5" />
-                </a>
-              </Button>
-              <Button variant="ghost" size="icon" className="glassmorphism border border-border hover:border-accent/30" data-testid="link-linkedin" aria-label="LinkedIn" asChild>
-                <a href="https://linkedin.com/company/afernai" target="_blank" rel="noopener noreferrer">
-                  <Linkedin className="h-5 w-5" />
-                </a>
-              </Button>
-              <Button variant="ghost" size="icon" className="glassmorphism border border-border hover:border-accent/30" data-testid="link-github" aria-label="GitHub" asChild>
-                <a href="https://github.com/afernai" target="_blank" rel="noopener noreferrer">
-                  <Github className="h-5 w-5" />
-                </a>
-              </Button>
+              <a 
+                href="https://linkedin.com/company/afern-ai/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-14 h-14 rounded-md border border-border hover:border-accent/30 transition-colors bg-white p-2"
+                data-testid="link-linkedin"
+                aria-label="LinkedIn"
+              >
+                <img 
+                  src="https://static.vecteezy.com/system/resources/previews/018/930/587/non_2x/linkedin-logo-linkedin-icon-transparent-free-png.png" 
+                  alt="LinkedIn" 
+                  className="h-10 w-10 object-contain"
+                  onError={(e) => {
+                    // Fallback to SVG if image fails to load
+                    e.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230077B5'%3E%3Cpath d='M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z'/%3E%3C/svg%3E";
+                  }}
+                />
+              </a>
             </div>
             <form onSubmit={handleNewsletterSubmit} className="flex gap-3">
               <Input

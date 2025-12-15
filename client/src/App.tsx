@@ -11,6 +11,7 @@ import { useEffect } from "react";
 import Home from "@/pages/Home";
 import Product from "@/pages/Product";
 import Industries from "@/pages/Industries";
+import HowItWorks from "@/pages/HowItWorks";
 import HomeServices from "@/pages/industries/HomeServices";
 import Hospitality from "@/pages/industries/Hospitality";
 import Healthcare from "@/pages/industries/Healthcare";
@@ -40,6 +41,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/product" component={Product} />
       <Route path="/industries" component={Industries} />
+      <Route path="/how-it-works" component={HowItWorks} />
       <Route path="/industries/home-services" component={HomeServices} />
       <Route path="/industries/hospitality" component={Hospitality} />
       <Route path="/industries/healthcare" component={Healthcare} />

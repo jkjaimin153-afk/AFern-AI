@@ -52,8 +52,8 @@ export default function Industries() {
 
         <div className="container relative z-10 mx-auto max-w-6xl px-6">
           <SectionHeading
-            title="Premium experiences for every client-facing team."
-            description="Select a vertical to explore tailored conversational playbooks, integrations, and websites that launch in weeks."
+            title="Solutions for Every Industry"
+            description="Managed customer communication services tailored to your industry. Select a vertical to explore how we handle phone, chat, web, and automation for businesses like yours."
             className="space-y-6"
           />
 
@@ -83,15 +83,15 @@ export default function Industries() {
         <div className="container mx-auto max-w-5xl px-6">
           <div className="rounded-3xl border border-border bg-white p-12 text-center shadow-[0_28px_56px_-30px_rgba(15,23,42,0.16)]">
             <SectionHeading
-              title="Need a bespoke integration or specialised workflow?"
-              description="Our engineers connect to proprietary booking systems, data warehouses, and CRMs to keep your team in flow."
+              title="Need Enterprise Solutions or Custom Integrations?"
+              description="Our team builds custom communication systems and connects to proprietary booking systems, data warehouses, and CRMs for enterprise clients."
               align="center"
               className="max-w-3xl text-center"
             >
               <div className="mt-10 flex justify-center">
                 <Link href="/demo">
                   <Button className="h-15 w-full max-w-sm rounded-full bg-gradient-to-r from-[#2563EB] to-[#1F3557] px-14 text-lg font-semibold text-white shadow-[0_24px_48px_-20px_rgba(31,41,55,0.28)] hover:opacity-95">
-                    Talk about custom builds
+                    Book a Strategy Call
                   </Button>
                 </Link>
               </div>

@@ -1,0 +1,40 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="navyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563EB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1F3557;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Triangle with rounded corners -->
+  <path d="M 30 30 Q 30 25 35 25 L 165 25 Q 170 25 170 30 L 170 150 Q 170 155 165 155 L 100 185 Q 95 185 95 180 L 95 150 Q 95 145 90 145 L 35 145 Q 30 145 30 140 Z" 
+        fill="url(#navyGradient)" 
+        stroke="none"
+        filter="url(#glow)"/>
+  
+  <!-- Leafy branch - organic curve from bottom-left upward and right -->
+  <g filter="url(#glow)">
+    <!-- Main stem curving upward -->
+    <path d="M 50 160 Q 55 145 65 130 Q 75 115 85 105 Q 95 95 105 88 Q 110 85 115 83" 
+          stroke="#1F3557" 
+          stroke-width="2.5" 
+          fill="none" 
+          stroke-linecap="round"
+          stroke-linejoin="round"/>
+    
+    <!-- Individual leaves branching off to the right -->
+    <ellipse cx="68" cy="138" rx="7" ry="11" fill="#1F3557" transform="rotate(-25 68 138)"/>
+    <ellipse cx="78" cy="123" rx="6" ry="10" fill="#1F3557" transform="rotate(20 78 123)"/>
+    <ellipse cx="88" cy="111" rx="6" ry="9" fill="#1F3557" transform="rotate(-15 88 111)"/>
+    <ellipse cx="98" cy="98" rx="5" ry="8" fill="#1F3557" transform="rotate(30 98 98)"/>
+    <ellipse cx="108" cy="91" rx="4" ry="7" fill="#1F3557" transform="rotate(-20 108 91)"/>
+    <ellipse cx="83" cy="118" rx="5" ry="8" fill="#1F3557" transform="rotate(10 83 118)"/>
+  </g>
+</svg>

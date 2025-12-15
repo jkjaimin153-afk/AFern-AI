@@ -79,27 +79,27 @@ export default function Security() {
               </ul>
             </Card>
 
-            <Card className="p-8 bg-green-500/5 border-green-500/20">
+            <Card className="p-8">
               <h2 className="font-serif text-3xl font-bold mb-6">HIPAA Compliance</h2>
               <p className="text-muted-foreground mb-4">
                 Healthcare providers can obtain a Business Associate Agreement (BAA) to ensure full HIPAA compliance for protected health information (PHI).
               </p>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-green-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <FileCheck className="h-3 w-3 text-green-500" />
+                  <div className="w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <FileCheck className="h-3 w-3 text-accent" />
                   </div>
                   <span className="text-sm">Encrypted call recordings and transcripts</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-green-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <FileCheck className="h-3 w-3 text-green-500" />
+                  <div className="w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <FileCheck className="h-3 w-3 text-accent" />
                   </div>
                   <span className="text-sm">Access controls and audit logging</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-green-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <FileCheck className="h-3 w-3 text-green-500" />
+                  <div className="w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <FileCheck className="h-3 w-3 text-accent" />
                   </div>
                   <span className="text-sm">Data retention and destruction policies</span>
                 </li>

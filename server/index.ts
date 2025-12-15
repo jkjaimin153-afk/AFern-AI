@@ -9,6 +9,17 @@ declare module 'http' {
     rawBody: unknown
   }
 }
+app.use((req, res, next) => {
+  // CORS headers
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
+  if (req.method === 'OPTIONS') {
+    return res.sendStatus(200);
+  }
+  next();
+});
+
 app.use(express.json({
   verify: (req, _res, buf) => {
     req.rawBody = buf;
@@ -67,26 +78,25 @@ app.use((req, res, next) => {
   }
 
   // ALWAYS serve the app on the port specified in the environment variable PORT
-  // Other ports are firewalled. Default to 5000 if not specified.
+  // Default to 3000 if not specified (5000 may be in use by macOS ControlCenter)
   // this serves both the API and the client.
-  // It is the only port that is not firewalled.
-  const port = parseInt(process.env.PORT || '5000', 10);
+  const port = parseInt(process.env.PORT || '3000', 10);
   const listenOptions: import("net").ListenOptions = {
     port,
     host: "0.0.0.0",
   };
 
-  const startServer = (options: import("net").ListenOptions) => server.listen(options, () => {
-    log(`serving on port ${options.port}`);
+  server.listen(listenOptions, () => {
+    log(`serving on port ${listenOptions.port}`);
   });
-
-  try {
-    startServer({ ...listenOptions, reusePort: true });
-  } catch (err: any) {
-    if (err?.code === "ENOTSUP") {
-      startServer(listenOptions);
+  
+  server.on('error', (err: any) => {
+    if (err.code === 'EADDRINUSE') {
+      log(`Port ${listenOptions.port} is already in use. Please use a different port.`);
+      process.exit(1);
     } else {
+      log(`Server error: ${err.message}`);
       throw err;
     }
-  }
+  });
 })();

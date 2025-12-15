@@ -207,6 +207,11 @@
     filter: hue-rotate(230deg) saturate(120%) brightness(110%);
   }
 
+  .logo-navy {
+    filter: hue-rotate(200deg) saturate(150%) brightness(0.9) contrast(1.1);
+    mix-blend-mode: normal;
+  }
+
   @keyframes soft-glow {
     from {
       transform: translate3d(-4%, 0, 0);

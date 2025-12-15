@@ -221,13 +221,13 @@ export default function Pricing() {
           </div>
 
           <div className="text-center">
-            <h2 className="font-serif text-3xl font-bold mb-4">Need a Custom Enterprise Solution?</h2>
+            <h2 className="font-serif text-3xl font-bold mb-4">Need Enterprise Solutions or Custom Integrations?</h2>
             <p className="text-muted-foreground mb-8">
-              Talk to our sales team about volume discounts, custom SLAs, and on-premise deployment options.
+              Talk to our team about enterprise service tiers, custom communication systems, volume discounts, and SLA options.
             </p>
             <Link href="/demo">
               <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90" data-testid="button-enterprise-contact">
-                Contact Enterprise Sales
+                Book a Strategy Call
               </Button>
             </Link>
           </div>
